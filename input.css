@@ -1,0 +1,12 @@
+@tailwind base;
+
+
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+    @import url('./assets/fonts/Oxygen/Oxygen-Regular.ttf');
+}
+.main-button{
+    @apply text-center transition ease-in delay-500 text-white border-2 border-[#2E3192] hover:bg-white hover:text-[#2E3192] bg-[#2E3192] inline-block text-[14px] leading-[23px] font-oxygen py-3  rounded-full font-bold w-full
+}
