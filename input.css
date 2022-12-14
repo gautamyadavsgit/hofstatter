@@ -11,3 +11,9 @@
 .main-button{
     @apply text-center transition ease-in delay-500 text-white border-2 border-[#2E3192] hover:bg-white hover:text-[#2E3192] bg-[#2E3192] inline-block text-[14px] leading-[23px] font-oxygen py-3  rounded-full font-bold w-full
 }
+.login-container{
+    @apply 2xl:w-[40%] xl:w-[45%] lg:w-[50%] md:w-[65%] w-[90%] px-[20px] h-[auto] py-[40px] 2xl:px-[80px] rounded-[20px] shadow-[0px_0px_6px_6px_#E7EEF6]
+}
+.input-login{
+    @apply focus:outline-none bg-[#E7EEF6] lg:w-[300px] m-auto grid justify-center mt-[18px] h-[45px] px-[89px] py-[13px] box-border placeholder:text-[14px] placeholder:font-oxygen placeholder:text-center
+}
