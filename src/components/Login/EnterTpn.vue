@@ -1,7 +1,7 @@
 <template>
   <div class="container m-auto font-oxygen">
-    <div class="flex items-center justify-center h-screen mx-2">
-      <div class="login-container">
+    <login-card>
+      <div class="logo-area">
         <div class="m-auto flex w-[40%]">
           <div class="w-2/6">
             <div
@@ -12,8 +12,10 @@
             <p class="text-[22px] leading-[22px] font-bold">LOGO</p>
           </div>
         </div>
-        <div class="m-auto mt-[50px] w-full">
-          <form>
+      </div>
+      <form>
+        <div class="content-area">
+          <div class="m-auto w-full">
             <div class="mb-5">
               <label
                 class="text-center block text-[16px] leading-[20px] font-normal"
@@ -28,19 +30,18 @@
                 class="input-login"
               />
             </div>
-
-            <div class="m-auto mt-[124px] w-[300px]">
-              <a href="/dashboard" class="main-button">Login</a>
-            </div>
-
-            <div class="m-auto w-[300px] mt-6 items-center">
-              <router-link to="/sms-login" class="main-button"
-                >Back</router-link
-              >
-            </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </div>
+        <div class="btn-area">
+          <div class="m-auto w-[300px]">
+            <a href="/dashboard" class="main-button">Login</a>
+          </div>
+
+          <div class="m-auto w-[300px] mt-6 items-center">
+            <router-link to="/sms-login" class="main-button">Back</router-link>
+          </div>
+        </div>
+      </form>
+    </login-card>
   </div>
 </template>
