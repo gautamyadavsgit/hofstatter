@@ -34,7 +34,9 @@
             </div>
 
             <div class="m-auto w-[300px] mt-6 items-center">
-              <a href="/sms-login.html" class="main-button">Back</a>
+              <router-link to="/sms-login" class="main-button"
+                >Back</router-link
+              >
             </div>
           </form>
         </div>

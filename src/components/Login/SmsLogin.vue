@@ -49,7 +49,7 @@
             </div>
 
             <div class="m-auto w-[300px] mt-6 items-center">
-              <a href="/index.html" class="main-button">Back</a>
+              <router-link to="/" class="main-button">Back</router-link>
             </div>
           </form>
         </div>
