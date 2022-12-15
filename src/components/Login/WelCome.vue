@@ -58,12 +58,12 @@
             Please choose your preferred login method
           </h3>
         </div>
-        <div class="m-auto mt-6 w-full">
+        <div class="m-auto mt-6 w-[300px]">
           <router-link to="/sms-login" class="main-button">
             Social Security Number / SMS TAN
           </router-link>
         </div>
-        <div class="m-auto mt-6 w-full">
+        <div class="m-auto mt-6 w-[300px]">
           <router-link to="/austria-login" class="main-button">
             <span>
               <svg
