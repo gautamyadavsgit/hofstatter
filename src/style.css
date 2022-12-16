@@ -2,23 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.main-button{
-    @apply text-center transition ease-in delay-500 text-white border-2 border-blue hover:bg-white hover:text-blue bg-blue inline-block text-[14px] leading-[23px] font-oxygen py-3  rounded-full font-bold w-full
+.main-button {
+  @apply text-center transition  text-white border-2 border-blue hover:bg-white hover:text-blue bg-blue inline-block text-[14px] leading-[23px] font-oxygen py-3  rounded-full font-bold w-full;
 }
-.login-container{
-    @apply 2xl:w-[36%] xl:w-[36%] lg:w-[46%] md:w-[65%] w-[90%] px-[20px] lg:h-[600px] py-[40px] lg:px-[80px] rounded-[20px] md:shadow-[0px_0px_6px_6px_#E7EEF6]
+.login-container {
+  @apply 2xl:w-[36%] xl:w-[36%] lg:w-[46%] md:w-[65%] w-[90%] px-[20px] lg:h-[600px] py-[40px] lg:px-[80px] rounded-[20px] md:shadow-[0px_0px_6px_6px_#E7EEF6];
 }
-.input-login{
-    @apply focus:outline-none bg-[#E7EEF6] lg:w-[300px] m-auto grid justify-center mt-[18px] h-[45px] px-[89px] py-[13px] box-border placeholder:text-[14px] placeholder:text-center
+.input-login {
+  @apply focus:outline-none bg-[#E7EEF6] lg:w-[300px] m-auto grid justify-center mt-[18px] h-[45px] px-[89px] py-[13px] box-border placeholder:text-[14px] placeholder:text-center;
 }
-.content-area{
-    @apply h-[300px] max-h-[300px]
+.content-area {
+  @apply h-[300px] max-h-[300px];
 }
-.logo-area{
-    @apply h-[70px]
+.logo-area {
+  @apply h-[70px];
 }
-.btn-area{
-    @apply  mt-6 py-2
+.btn-area {
+  @apply mt-6 py-2;
 }

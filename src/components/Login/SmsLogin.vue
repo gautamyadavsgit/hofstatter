@@ -1,18 +1,7 @@
 <template>
   <div class="container m-auto font-oxygen">
     <login-card>
-      <div class="logo-area">
-        <div class="m-auto flex w-[40%]">
-          <div class="w-2/6">
-            <div
-              class="w-[25px] h-[25px] bg-[#666AC5] rounded-[50%] m-auto"
-            ></div>
-          </div>
-          <div class="w-4/6">
-            <p class="text-[22px] leading-[22px] font-bold">LOGO</p>
-          </div>
-        </div>
-      </div>
+      <logo-area></logo-area>
       <form>
         <div class="content-area">
           <div class="m-auto w-full">
@@ -45,20 +34,26 @@
               />
             </div>
           </div>
+        </div>
+        <div class="btn-area">
+          <div class="m-auto w-[300px]">
+            <router-link to="/enter-tpn" class="main-button"
+              >Request SMS TAN</router-link
+            >
           </div>
-          <div class="btn-area">
-            <div class="m-auto w-[300px]">
-              <router-link to="/enter-tpn" class="main-button"
-                >Request SMS TAN</router-link
-              >
-            </div>
 
-            <div class="m-auto w-[300px] mt-6 items-center">
-              <router-link to="/" class="main-button">Back</router-link>
-            </div>
+          <div class="m-auto w-[300px] mt-6 items-center">
+            <a class="main-button" @click="$router.go(-1)">
+              <span
+                ><font-awesome-icon icon="fas fa-long-arrow-alt-left"
+              /></span>
+              Back</a
+            >
           </div>
-        
+        </div>
       </form>
     </login-card>
   </div>
 </template>
+
+<script></script>
