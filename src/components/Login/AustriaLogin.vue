@@ -85,7 +85,7 @@
           </div>
           <div class="btn-area">
             <div class="m-auto mt-6 w-[300px]">
-              <router-link to="/enter-tpn" class="main-button"
+              <router-link to="/dashboard" class="main-button"
                 >Identity</router-link
               >
             </div>
