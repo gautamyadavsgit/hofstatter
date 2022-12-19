@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center h-screen">
     <div class="login-container">
-        <slot></slot>
+      <slot></slot>
     </div>
   </div>
 </template>
