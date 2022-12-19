@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
 .main-button {
   @apply text-center transition  text-white border-2 border-blue hover:bg-white hover:text-blue bg-blue inline-block text-[14px] leading-[23px] font-oxygen py-3  rounded-full font-bold w-full;
 }

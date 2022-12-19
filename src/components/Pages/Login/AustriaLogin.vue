@@ -46,7 +46,7 @@ import AusLoginImg from '../../../assets/images/auslogin.svg'
 export default {
   data() {
     return {
-      AusLoginImg,
+      AusLoginImg, // adding image as datapropery
     }
   },
 }

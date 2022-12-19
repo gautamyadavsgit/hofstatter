@@ -3,8 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: '#2E3192',
+        'blue': '#2E3192',
         'light-blue': '#666AC5',
+        'site-grey':'#C5C6E5',
       },
       fontFamily: {
         oxygen: ['Oxygen-Regular', 'sans-serif'],

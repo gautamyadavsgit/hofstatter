@@ -1,4 +1,5 @@
 <template>
+  <!-- component for dynamic logo area -->
   <div class="logo-area">
     <div class="m-auto flex w-[40%]">
       <div class="w-2/6">
