@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import AusLoginImg from '../../assets/images/auslogin.svg'
+import AusLoginImg from '../../../assets/images/auslogin.svg'
 
 export default {
   data() {

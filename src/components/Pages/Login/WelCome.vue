@@ -38,9 +38,9 @@
 </template>
 
 <script>
-import WelComeImg from '../../assets/images/welcome.svg'
-import KeyBlueImg from '../../assets/images/keyblue.svg'
-import KeyWhiteImg from '../../assets/images/keywhite.svg'
+import WelComeImg from '../../../assets/images/welcome.svg'
+import KeyBlueImg from '../../../assets/images/keyblue.svg'
+import KeyWhiteImg from '../../../assets/images/keywhite.svg'
 export default {
   data() {
     return {

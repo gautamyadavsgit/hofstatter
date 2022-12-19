@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import WelCome from '../components/Login/WelCome.vue'
-import AustriaLogin from '../components/Login/AustriaLogin.vue'
-import SmsLogin from '../components/Login/SmsLogin.vue'
-import EnterTpn from '../components/Login/EnterTpn.vue'
+import WelCome from '../components/Pages/Login/WelCome.vue'
+import AustriaLogin from '../components/Pages/Login/AustriaLogin.vue'
+import SmsLogin from '../components/Pages/Login/SmsLogin.vue'
+import EnterTpn from '../components/Pages/Login/EnterTpn.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
