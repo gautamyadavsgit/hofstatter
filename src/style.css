@@ -32,3 +32,6 @@
 .btn-area {
   @apply mt-6 py-2;
 }
+.router-link-exact-active svg {
+  @apply text-blue;
+}

@@ -15,7 +15,7 @@
         </div>
         <div class="btn-area">
           <div class="m-auto w-[300px]">
-            <a href="/dashboard" class="main-button">Login</a>
+            <router-link to="/dashboard" class="main-button">Login</router-link>
           </div>
           <back-button></back-button>
         </div>

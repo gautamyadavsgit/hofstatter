@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue'
 export default {
   props: {
     link: {
@@ -23,9 +22,6 @@ export default {
       required: true,
       default: 'material-symbols:home',
     },
-  },
-  components: {
-    'iconify-icon': Icon,
   },
 }
 </script>
