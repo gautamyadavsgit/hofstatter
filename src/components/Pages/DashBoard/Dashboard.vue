@@ -1,27 +1,32 @@
 <template>
-  <!-- This is an example component -->
-  <div class="h-full bg-white">
-    <div class="flex flex-row">
-      <!-- Sidebar -->
-      <side-nav></side-nav>
-
-      <div
-        class="px-4 py-4 text-gray-700 bg-[#E7EEF680] h-screen w-screen rounded-t-[30px] rounded-l-[30px]"
-      >
-        <top-nav></top-nav>
+  <page-wrapper sidebar>
+    <template v-slot:main>
+      <div class="grid grid-cols-12">
+        <div class="col-span-12">
+          <main-card customStyle="mt-14">
+            <div class="grid grid-cols-2">
+              <div>
+                <div class="mb-5">
+                  <main-heading customStyle="text-[24px] leading-[30px] pb-2">
+                    Hallo, Gautam Yadav
+                  </main-heading>
+                  <p class="font-oxygen text-[#82837E] text-base"
+                    >“Du hast 2 Anfragen in deinem Board”</p
+                  >
+                </div>
+                <div class="pt-5 grid grid-cols-3 gap-4 m-auto">
+                  <main-button>Impffragebogen</main-button>
+                  <main-button>Lungentest</main-button>
+                  <router-link to="/">Lungentest ></router-link>
+                </div>
+              </div>
+              <div> </div>
+            </div>
+          </main-card>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="clear-both"></div>
+    </template>
+  </page-wrapper>
 </template>
 
-<script>
-import SideNavVue from '../../Layout/Common/SideNav.vue'
-import TopNavVue from '../../Layout/Common/TopNav.vue'
-export default {
-  components: {
-    'side-nav': SideNavVue,
-    'top-nav': TopNavVue,
-  },
-}
-</script>
+<script></script>
