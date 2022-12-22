@@ -11,6 +11,7 @@ import PageWrapper from './components/Layout/Common/PageWrapper.vue'
 import MainCard from './components/Layout/Common/MainCard.vue'
 import MainHeading from './components/Layout/Common/MainHeading.vue'
 import MainButton from './components/Layout/Common/MainButton.vue'
+import MainIcon from './components/Layout/Common/MainIcon.vue'
 // importing font awesome library for the icons
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -26,6 +27,7 @@ app.component('page-wrapper', PageWrapper)
 app.component('main-card', MainCard)
 app.component('main-heading', MainHeading)
 app.component('main-button', MainButton)
+app.component('main-icon', MainIcon)
 
 app.component('font-awesome-icon', FontAwesomeIcon) // adding the font awesome component
 app.component('login-card', LoginCard) // Login card component for Base card in all the login screens
