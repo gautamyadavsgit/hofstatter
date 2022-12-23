@@ -11,9 +11,9 @@
                   <main-heading customStyle="text-[24px] leading-[30px] pb-2">
                     Hallo, Gautam Yadav
                   </main-heading>
-                  <p class="font-oxygen text-[#82837E] text-base"
-                    >“Du hast 2 Anfragen in deinem Board”</p
-                  >
+                  <p class="font-oxygen text-[#82837E] text-base">
+                    “Du hast 2 Anfragen in deinem Board”
+                  </p>
                 </div>
                 <div class="pt-6 grid grid-cols-3 gap-2 m-auto">
                   <main-button>Impffragebogen</main-button>
@@ -63,9 +63,9 @@
                 </div>
               </div>
             </div>
-            <p class="mt-4"
-              ><span class="font-bold text-blue"> GEÖFFNET,</span> heute von 08:00 bis 14:00 und
-              15:00 bis 20:00
+            <p class="mt-4">
+              <span class="font-bold text-blue"> GEÖFFNET,</span> heute von
+              08:00 bis 14:00 und 15:00 bis 20:00
             </p>
           </main-card>
         </div>
@@ -74,7 +74,9 @@
             <main-heading>Dauermedikament bestellen</main-heading>
             <div class="flex">
               <div>
-                <p class="mt-8">E-Rezept für deine Dauermedikamente bestellen. </p>
+                <p class="mt-8">
+                  E-Rezept für deine Dauermedikamente bestellen.
+                </p>
               </div>
               <div>
                 <main-icon
@@ -103,7 +105,7 @@
                   <p class="font-bold text-blue mb-3">PCR Ergebnis</p>
                   <p>11 November 2022</p>
                 </div>
-                <div class="col-span-9"> </div>
+                <div class="col-span-9"></div>
               </div>
               <div class="grid grid-cols-12">
                 <div class="col-span-3">
@@ -117,7 +119,7 @@
                   <p class="font-bold text-blue mb-3">Röntgenbefund</p>
                   <p>11 November 2022</p>
                 </div>
-                <div class="col-span-9"> </div>
+                <div class="col-span-9"></div>
               </div>
               <div class="grid grid-cols-12">
                 <div class="col-span-3">
@@ -131,7 +133,7 @@
                   <p class="font-bold text-blue mb-3">Blutbefund</p>
                   <p>11 November 2022</p>
                 </div>
-                <div class="col-span-9"> </div>
+                <div class="col-span-9"></div>
               </div>
             </div>
           </main-card>
@@ -183,11 +185,11 @@
 </template>
 
 <script>
-import DoctorsImg from '../../icons/DoctorsImg.vue'
+import DoctorsImg from "../../icons/DoctorsImg.vue";
 
 export default {
   components: {
-    'doctors-img': DoctorsImg,
+    "doctors-img": DoctorsImg,
   },
-}
+};
 </script>

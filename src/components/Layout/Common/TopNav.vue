@@ -4,7 +4,9 @@
       <div class="sm:flex w-[60%] hidden">
         <!-- logo -->
         <div class="md:w-48 flex-shrink-0">
-          <span class="text-blue text-[26px] font-oxygen font-bold"> Medical Care </span>
+          <span class="text-blue text-[26px] font-oxygen font-bold">
+            Medical Care
+          </span>
         </div>
 
         <!-- search -->
@@ -38,12 +40,14 @@
               <ul class="flex justify-center items-center">
                 <li
                   class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2 border-blue"
-                  >English
+                >
+                  English
                 </li>
                 <li
                   class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2"
-                  >German</li
                 >
+                  German
+                </li>
               </ul>
             </div>
           </div>
@@ -53,17 +57,22 @@
             <span
               class="animate-ping absolute inline-flex h-[10px] w-[10px] top-[8%] left-[55%] rounded-full bg-blue"
             ></span>
-            <iconify-icon icon="mdi:bell-notification" class="text-[26px] text-blue"></iconify-icon>
+            <iconify-icon
+              icon="mdi:bell-notification"
+              class="text-[26px] text-blue"
+            ></iconify-icon>
           </div>
         </div>
 
         <!-- user profile -->
         <div class="flex justify-between">
           <div>
-            <span class="font-oxygen font-bold text-[18px] block whitespace-nowrap"
+            <span
+              class="font-oxygen font-bold text-[18px] block whitespace-nowrap"
               >Gautam Yadav</span
             >
-            <span class="font-oxygen font-normal text-[16px] inline-block float-right"
+            <span
+              class="font-oxygen font-normal text-[16px] inline-block float-right"
               >Patient</span
             >
           </div>
@@ -83,12 +92,12 @@
 
 <script>
 // import SearchIcon from '../../icons/SearchIcon.vue'
-import TranslateIcon from '../../icons/TranslateIcon.vue'
+import TranslateIcon from "../../icons/TranslateIcon.vue";
 
 export default {
   components: {
     // 'search-icon': SearchIcon,
-    'translate-icon': TranslateIcon,
+    "translate-icon": TranslateIcon,
   },
-}
+};
 </script>

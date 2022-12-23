@@ -1,5 +1,11 @@
 <template>
-  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clip-path="url(#clip0_32_40)">
       <rect width="30" height="30" fill="#F3F7FB" />
       <rect x="0.5" y="0.5" width="29" height="29" rx="4.5" stroke="#2E3192" />

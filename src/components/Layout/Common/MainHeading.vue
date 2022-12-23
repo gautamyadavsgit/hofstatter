@@ -11,8 +11,8 @@ export default {
     customStyle: {
       type: String,
       required: false,
-      default: 'text-[20px] leading-[25px] ',
+      default: "text-[20px] leading-[25px] ",
     },
   },
-}
+};
 </script>

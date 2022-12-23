@@ -1,8 +1,0 @@
-{
-  "htmlWhitespaceSensitivity": "strict",
-  "printWidth": 100,
-  "singleQuote": true,
-  "semi": false,
-  "endOfLine": "auto",
-  "jsxSingleQuote": true
-}

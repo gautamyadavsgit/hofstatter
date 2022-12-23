@@ -9,8 +9,16 @@
   >
     <rect width="330" height="264.535" fill="url(#pattern0)" />
     <defs>
-      <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-        <use xlink:href="#image0_32_56" transform="scale(0.000336815 0.000420168)" />
+      <pattern
+        id="pattern0"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
+        <use
+          xlink:href="#image0_32_56"
+          transform="scale(0.000336815 0.000420168)"
+        />
       </pattern>
       <image
         id="image0_32_56"

@@ -3,7 +3,10 @@
   <li class="mb-6">
     <router-link :to="link">
       <span>
-        <iconify-icon :icon="icon" class="text-[30px] m-auto text-site-grey hover:text-blue" />
+        <iconify-icon
+          :icon="icon"
+          class="text-[30px] m-auto text-site-grey hover:text-blue"
+        />
       </span>
     </router-link>
   </li>
@@ -15,13 +18,13 @@ export default {
     link: {
       type: String,
       required: true,
-      default: '/',
+      default: "/",
     },
     icon: {
       type: String,
       required: true,
-      default: 'material-symbols:home',
+      default: "material-symbols:home",
     },
   },
-}
+};
 </script>

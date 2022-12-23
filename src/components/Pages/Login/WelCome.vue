@@ -4,7 +4,9 @@
       <logo-area></logo-area>
       <div class="content-area">
         <div class="m-auto w-full">
-          <h2 class="text-center font-bold text-[30px] leading-[38px] text-[#2E3192] font-oxygen">
+          <h2
+            class="text-center font-bold text-[30px] leading-[38px] text-[#2E3192] font-oxygen"
+          >
             WELCOME
           </h2>
         </div>
@@ -12,7 +14,9 @@
           <img :src="WelComeImg" class="m-auto" />
         </div>
         <div class="m-auto mt-[10px] w-full">
-          <h3 class="text-center font-normal text-[18px] leading-[23px] font-oxygen">
+          <h3
+            class="text-center font-normal text-[18px] leading-[23px] font-oxygen"
+          >
             Please choose your preferred login method
           </h3>
         </div>
@@ -38,16 +42,16 @@
 </template>
 
 <script>
-import WelComeImg from '../../../assets/images/welcome.svg'
-import KeyBlueImg from '../../../assets/images/keyblue.svg'
-import KeyWhiteImg from '../../../assets/images/keywhite.svg'
+import WelComeImg from "../../../assets/images/welcome.svg";
+import KeyBlueImg from "../../../assets/images/keyblue.svg";
+import KeyWhiteImg from "../../../assets/images/keywhite.svg";
 export default {
   data() {
     return {
       WelComeImg, // data property for welcome image
       KeyBlueImg,
       KeyWhiteImg,
-    }
+    };
   },
-}
+};
 </script>

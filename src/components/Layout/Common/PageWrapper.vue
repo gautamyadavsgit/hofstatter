@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import SideNavVue from './SideNav.vue'
-import TopNavVue from './TopNav.vue'
+import SideNavVue from "./SideNav.vue";
+import TopNavVue from "./TopNav.vue";
 export default {
   props: {
     sidebar: {
@@ -44,8 +44,8 @@ export default {
     },
   },
   components: {
-    'side-nav': SideNavVue,
-    'top-nav': TopNavVue,
+    "side-nav": SideNavVue,
+    "top-nav": TopNavVue,
   },
-}
+};
 </script>
