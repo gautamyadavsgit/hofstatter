@@ -3,6 +3,7 @@ import WelCome from '../components/Pages/Login/WelCome.vue'
 import AustriaLogin from '../components/Pages/Login/AustriaLogin.vue'
 import SmsLogin from '../components/Pages/Login/SmsLogin.vue'
 import EnterTpn from '../components/Pages/Login/EnterTpn.vue'
+import Dashboard from '../components/Pages/DashBoard/DashBoard.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/enter-tpn',
       name: 'enter-tpn',
       component: EnterTpn,
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: Dashboard,
     },
   ],
 })

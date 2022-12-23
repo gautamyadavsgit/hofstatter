@@ -1,0 +1,94 @@
+<template>
+  <header class="sticky z-50 top-0 bg-[#f3f7fa] pt-4">
+    <div class="mx-auto px-2 py-4 flex justify-between">
+      <div class="sm:flex w-[60%] hidden">
+        <!-- logo -->
+        <div class="md:w-48 flex-shrink-0">
+          <span class="text-blue text-[26px] font-oxygen font-bold"> Medical Care </span>
+        </div>
+
+        <!-- search -->
+        <!-- <div
+        class="w-full max-w-xs xl:max-w-lg 2xl:max-w-2xl rounded-md hidden xl:flex justify-center"
+      >
+        <div
+          class="w-[60%] lg:w-[300px] rounded-full h-[40px] border-none bg-white flex justify-between"
+        >
+          <form class="py-2 px-2">
+            <input
+              class="border-none w-[75%] rounded-full py-2 px-2 focus:outline-none h-full"
+              type="text"
+              placeholder="suche"
+            />
+          </form>
+          <button class="bg-blue py-2 px-2 rounded-tr-full rounded-br-full w-[15%]" type="submit">
+            <search-icon class="m-auto"></search-icon>
+          </button>
+        </div>
+      </div> -->
+      </div>
+      <div class="flex justify-between w-[40%]">
+        <!-- translation -->
+        <div class="hidden sm:flex md:w-48 m-auto">
+          <div class="relative group">
+            <translate-icon> </translate-icon>
+            <div
+              class="absolute top-12 left-[-50px] hidden group-hover:block bg-white z-40 before:absolute before:bg-blue"
+            >
+              <ul class="flex justify-center items-center">
+                <li
+                  class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2 border-blue"
+                  >English
+                </li>
+                <li
+                  class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2"
+                  >German</li
+                >
+              </ul>
+            </div>
+          </div>
+          <!-- notification -->
+
+          <div class="relative ml-[10px] m-auto">
+            <span
+              class="animate-ping absolute inline-flex h-[10px] w-[10px] top-[8%] left-[55%] rounded-full bg-blue"
+            ></span>
+            <iconify-icon icon="mdi:bell-notification" class="text-[26px] text-blue"></iconify-icon>
+          </div>
+        </div>
+
+        <!-- user profile -->
+        <div class="flex justify-between">
+          <div>
+            <span class="font-oxygen font-bold text-[18px] block whitespace-nowrap"
+              >Gautam Yadav</span
+            >
+            <span class="font-oxygen font-normal text-[16px] inline-block float-right"
+              >Patient</span
+            >
+          </div>
+          <div class="ml-[20px]">
+            <span>
+              <img
+                src="https://randomuser.me/api/portraits/women/56.jpg"
+                class="w-[50px] h-[50px] rounded-full border-2 border-solid border-black"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script>
+// import SearchIcon from '../../icons/SearchIcon.vue'
+import TranslateIcon from '../../icons/TranslateIcon.vue'
+
+export default {
+  components: {
+    // 'search-icon': SearchIcon,
+    'translate-icon': TranslateIcon,
+  },
+}
+</script>
