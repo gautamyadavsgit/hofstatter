@@ -1,7 +1,7 @@
 <!-- component for wrapping pages -->
 <template>
-  <div class="h-full bg-white">
-    <div class="flex flex-row">
+  <div class="h-full max-w-screen-2xl m-auto">
+    <div class="flex flex-row bg-white">
       <!-- sidenav -->
       <div class="bg-white block w-20">
         <div class="fixed z-50">
@@ -10,19 +10,21 @@
       </div>
       <div>
         <div
-          class="px-4 pb-4 text-gray-700 bg-[#E7EEF680] h-screen w-screen fixed overflow-y-scroll rounded-l-[30px]"
+          class="px-4 pb-4 text-gray-700 bg-[#E7EEF680] w-full h-screen overflow-y-scroll rounded-l-[30px]"
         >
           <div class="grid grid-cols-12">
             <!-- set the div width of 70% if page has sidebar -->
             <div :class="sidebar ? 'col-span-9' : 'col-span-12'">
               <!-- adding top navigation bar -->
               <top-nav></top-nav>
-
-              <slot name="main"> </slot>
+              <!-- main page content -->
+              <slot></slot>
             </div>
             <!-- if condition for checking if page has sidebar -->
             <div v-if="sidebar" class="col-span-3">
-              <slot name="sidebar"></slot>
+              <div class="fixed">
+                <slot name="sidebar"></slot>
+              </div>
             </div>
           </div>
         </div>
