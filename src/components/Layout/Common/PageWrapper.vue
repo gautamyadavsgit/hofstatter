@@ -12,7 +12,7 @@
         <div
           class="px-4 pb-4 text-gray-700 bg-[#E7EEF680] w-full h-screen overflow-y-scroll rounded-l-[30px]"
         >
-          <div class="w-full flex">
+          <div class="w-full" :class="sidebar ? 'flex' : ''">
             <!-- set the div width of 70% if page has sidebar -->
             <div :class="sidebar ? 'w-[70%]' : 'col-span-12'">
               <!-- adding top navigation bar -->
@@ -22,7 +22,7 @@
             </div>
             <!-- if condition for checking if page has sidebar -->
             <div v-if="sidebar" class="w-[30%]">
-              <div class="sticky top-[0]">
+              <div class="top-[0] sticky">
                 <slot name="sidebar"></slot>
               </div>
             </div>

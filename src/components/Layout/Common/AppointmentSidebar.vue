@@ -1,7 +1,7 @@
 <template>
   <div class="py-4 pl-2">
     <main-card class="">
-      <div class="pb-2 h-[30%]">
+      <div class="pb-2">
         <div>
           <div class="flex justify-between py-2">
             <main-heading class="py-2">Termine</main-heading>
@@ -20,7 +20,7 @@
         }"
         is-expanded
       />
-      <div class="h-[200px] overflow-scroll no-scrollbar w-full">
+      <div class="">
         <ul class="list-none mt-2">
           <li class="my-2" v-for="user in users" :key="user.id">
             <div
@@ -53,6 +53,22 @@
             </div>
           </li>
         </ul>
+      </div>
+      <div class="py-4">
+        <div class="grid grid-cols-2">
+          <div>
+            <main-button>Termin Buchen</main-button>
+          </div>
+          <div class="text-center">
+            <router-link to="/" class="text-blue font-bold"
+              >Alle anzeigen
+              <iconify-icon
+                class="inline m-auto"
+                icon="material-symbols:chevron-right-rounded"
+              ></iconify-icon>
+            </router-link>
+          </div>
+        </div>
       </div>
     </main-card>
   </div>
