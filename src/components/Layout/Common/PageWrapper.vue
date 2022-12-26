@@ -1,6 +1,6 @@
 <!-- component for wrapping pages -->
 <template>
-  <div class="h-full max-w-screen-2xl m-auto">
+  <div class="h-full max-w-screen-2xl m-auto font-oxygen">
     <div class="flex flex-row bg-white">
       <!-- sidenav -->
       <div class="bg-white block w-20">
@@ -12,17 +12,17 @@
         <div
           class="px-4 pb-4 text-gray-700 bg-[#E7EEF680] w-full h-screen overflow-y-scroll rounded-l-[30px]"
         >
-          <div class="grid grid-cols-12">
+          <div class="w-full flex">
             <!-- set the div width of 70% if page has sidebar -->
-            <div :class="sidebar ? 'col-span-9' : 'col-span-12'">
+            <div :class="sidebar ? 'w-[70%]' : 'col-span-12'">
               <!-- adding top navigation bar -->
               <top-nav></top-nav>
               <!-- main page content -->
               <slot></slot>
             </div>
             <!-- if condition for checking if page has sidebar -->
-            <div v-if="sidebar" class="col-span-3">
-              <div class="fixed">
+            <div v-if="sidebar" class="w-[30%]">
+              <div class="sticky top-[0]">
                 <slot name="sidebar"></slot>
               </div>
             </div>

@@ -1,7 +1,7 @@
 <!-- base component for buttons -->
 <template>
   <div
-    class="h-auto w-auto bg-white shadow-[0px_0px_6px_6px_#E7EEF6] relative my-2 mx-1 font-oxygen rounded-[10px] px-4 py-4"
+    class="h-auto w-auto bg-white shadow-[0px_0px_6px_6px_#E7EEF6] hover:shadow-[4px_4px_10px_#2e319299] transition delay-100 ease-in-out relative my-2 mx-1 font-oxygen rounded-[10px] px-4 py-4"
     :class="customStyle"
   >
     <slot></slot>

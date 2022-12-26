@@ -1,40 +1,126 @@
 <template>
   <div class="py-4 pl-2">
     <main-card class="">
-      <div class="flex pb-2">
+      <div class="pb-2 h-[30%]">
         <div>
-          <main-heading class="py-2">Termine</main-heading>
-
+          <div class="flex justify-between py-2">
+            <main-heading class="py-2">Termine</main-heading>
+            <main-icon icon="material-symbols:add"></main-icon>
+          </div>
           <p class="text-base text-[#82837E]">
             Du hast 6 Termine in deine Kalender
           </p>
         </div>
-        <div></div>
       </div>
-      <v-date-picker
-        class=""
-        v-model="date"
-        :min-date="new Date()"
-        mode="dateTime"
-        :timezone="timezone"
-        color="green"
-        title-position="left"
+      <v-calendar
+        :attributes="attributes"
+        :masks="{
+          title: 'MMM YYYY',
+          weekdays: 'WWW',
+        }"
         is-expanded
-        :masks="{ title: 'D MMM YYYY', weekdays: 'WWW' }"
       />
+      <div class="h-[200px] overflow-scroll no-scrollbar w-full">
+        <ul class="list-none mt-2">
+          <li class="my-2" v-for="user in users" :key="user.id">
+            <div
+              :class="user.color"
+              class="p-2 flex rounded-lg w-full justify-between"
+            >
+              <div class="flex justify-between">
+                <img
+                  :src="user.img"
+                  class="inline-block rounded-full h-[55px] w-[55px] border border-black"
+                />
+                <div class="py-1 pl-3">
+                  <h4 class="font-bold font-oxygen text-sm">
+                    {{ user.name }}
+                  </h4>
+                  <p class="text-xs">2:00PM , 06.12.2022</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-end">
+                <main-icon
+                  icon="maki:cross"
+                  bgStyle="bg-[#F8CBC8]"
+                  icoStyle="!text-sm text-[#FD5957]"
+                ></main-icon>
+                <main-icon
+                  icon="clarity:edit-solid"
+                  icoStyle="!text-sm"
+                ></main-icon>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </main-card>
   </div>
 </template>
 
 <script>
+const randomDate = (start, end) => {
+  return new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  );
+};
+
+const a = randomDate(new Date(2022, 12, 1), new Date());
+const b = randomDate(new Date(2022, 12, 1), new Date());
+const c = randomDate(new Date(2022, 12, 1), new Date());
+const d = randomDate(new Date(2022, 12, 1), new Date());
+
 export default {
   data() {
     return {
-      date: new Date(),
-      timezone: "",
-      theme: {
-        border: "none",
-      },
+      users: [
+        {
+          id: "1",
+          name: "Dr. Pickem Christian",
+          img: "https://randomuser.me/api/portraits/women/3.jpg",
+          color: "bg-[#DAF8F480]",
+        },
+        {
+          id: "2",
+          name: "Dr. Jennie Nichols",
+          img: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
+          color: "bg-[#FFDFDF80]",
+        },
+        {
+          id: "3",
+          name: "Dr. Ken Butler",
+          img: "https://randomuser.me/api/portraits/men/87.jpg",
+          color: "bg-[#FFF3D780]",
+        },
+        {
+          id: "4",
+          name: "Dr. Natasha Romanoff",
+          img: "https://randomuser.me/api/portraits/women/33.jpg",
+          color: "bg-[#E7E7FF80]",
+        },
+      ],
+      attributes: [
+        {
+          key: a,
+          highlight: true,
+          dates: a,
+        },
+        {
+          key: b,
+          highlight: "red",
+          dates: b,
+        },
+        {
+          key: c,
+          highlight: "purple",
+          dates: c,
+        },
+        {
+          key: d,
+          highlight: "green",
+          dates: d,
+        },
+      ],
     };
   },
 };

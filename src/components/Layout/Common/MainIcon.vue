@@ -16,13 +16,13 @@ export default {
     bgStyle: {
       type: String,
       required: false,
-      default: "bg-blue",
+      default: "bg-[#E7EEF6]",
     },
     // icoStyle for icon style
     icoStyle: {
       type: String,
       required: false,
-      default: "border-blue",
+      default: "text-blue",
     },
     // icon for icon name
     icon: {
