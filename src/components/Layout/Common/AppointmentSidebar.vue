@@ -14,7 +14,7 @@
       <v-date-picker
         class=""
         v-model="date"
-        :min-date="date"
+        :min-date="new Date()"
         mode="dateTime"
         :timezone="timezone"
         color="green"
