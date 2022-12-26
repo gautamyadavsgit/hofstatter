@@ -15,15 +15,25 @@ import MainHeading from "./components/Layout/Common/MainHeading.vue";
 import MainButton from "./components/Layout/Common/MainButton.vue";
 import MainIcon from "./components/Layout/Common/MainIcon.vue";
 
+//importing appointment component
+import AppointmentSidbar from "./components/Layout/Common/AppointmentSidebar.vue";
+
+// adding v-calndar
+import VCalendar from "v-calendar";
+import "v-calendar/dist/style.css";
+
 const app = createApp(App);
 
 app.use(router);
+app.use(VCalendar);
 // registering layout components
 app.component("page-wrapper", PageWrapper);
 app.component("main-card", MainCard);
 app.component("main-heading", MainHeading);
 app.component("main-button", MainButton);
 app.component("main-icon", MainIcon);
+
+app.component("appointment-sidebar", AppointmentSidbar); // register appointment component
 
 app.component("login-card", LoginCard); // Login card component for Base card in all the login screens
 app.component("logo-area", LogoArea); // adding logo

@@ -1,6 +1,6 @@
 <template>
   <!-- This is an example component -->
-  <div class="w-20 bg-white">
+  <div class="w-20">
     <div class="z-50 mt-7 w-20">
       <a href="#">
         <dashboard-logo
@@ -9,7 +9,7 @@
       </a>
     </div>
     <div class="h-[80%] fixed overflow-scroll no-scrollbar">
-      <nav class="bg-white w-20 justify-between flex flex-col h-auto">
+      <nav class="w-20 justify-between flex flex-col h-auto">
         <div class="mt-10">
           <ul>
             <nav-bar-link
