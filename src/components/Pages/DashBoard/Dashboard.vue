@@ -2,21 +2,25 @@
   <page-wrapper sidebar>
     <div class="grid grid-cols-12">
       <div class="col-span-12">
-        <main-card customStyle="mt-[3.5rem]">
+        <main-card customStyle="md:mt-[3.5rem]">
           <div class="grid grid-cols-12 mb-3">
-            <div class="col-span-6">
-              <div class="mb-6">
-                <main-heading customStyle="text-[24px] leading-[30px] pb-2">
+            <div class="col-span-12 md:col-span-6">
+              <div class="md:mb-6">
+                <main-heading
+                  customStyle="md:text-[24px] md:leading-[30px] text-lg pb-2"
+                >
                   Hallo, Gautam Yadav
                 </main-heading>
                 <p class="font-oxygen text-[#82837E] text-base">
                   “Du hast 2 Anfragen in deinem Board”
                 </p>
               </div>
-              <div class="pt-6 grid grid-cols-3 gap-2 m-auto">
+              <div
+                class="pt-6 flex justify-around md:grid md:grid-cols-3 md:gap-2 m-auto"
+              >
                 <main-button>Impffragebogen</main-button>
                 <main-button>Lungentest</main-button>
-                <div class="m-auto ml-0">
+                <div class="m-auto ml-0 hidden md:block">
                   <router-link to="/" class="text-blue font-bold"
                     >Alle anzeigen
                     <iconify-icon
@@ -27,7 +31,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-span-6 relative">
+            <div class="col-span-6 relative hidden md:block">
               <div class="absolute top-[-40%] left-[30%]">
                 <doctors-img></doctors-img>
               </div>
@@ -35,27 +39,27 @@
           </div>
         </main-card>
       </div>
-      <div class="col-span-6">
+      <div class="md:col-span-6 col-span-12">
         <main-card>
           <div class="flex">
             <div>
               <main-heading>Kontaktiere uns</main-heading>
             </div>
             <div class="w-full">
-              <div class="w-[50%] flex float-right mr-0">
+              <div class="w-[50%] flex float-right">
                 <main-icon
                   icon="mdi:map-marker"
-                  bgStyle="bg-[#E7EEF6]"
-                  icoStyle="text-blue"
+                  bgStyle="bg-[#E7EEF6] px-1 py-1"
+                  icoStyle="text-blue "
                 ></main-icon>
                 <main-icon
                   icon="clarity:phone-handset-solid"
-                  bgStyle="bg-[#A9E2DC]"
+                  bgStyle="bg-[#A9E2DC] px-1 py-1"
                   icoStyle="text-[#00958F]"
                 ></main-icon>
                 <main-icon
                   icon="clarity:chat-bubble-outline-badged"
-                  bgStyle="bg-[#D6F0FE]"
+                  bgStyle="bg-[#D6F0FE] px-1 py-1"
                   icoStyle="text-[#009FF9]"
                 ></main-icon>
               </div>
@@ -67,7 +71,7 @@
           </p>
         </main-card>
       </div>
-      <div class="col-span-6">
+      <div class="md:col-span-6 col-span-12">
         <main-card>
           <main-heading>Dauermedikament bestellen</main-heading>
           <div class="flex">
@@ -88,8 +92,8 @@
       <div class="col-span-12">
         <main-card>
           <main-heading>Befunde</main-heading>
-          <div class="grid grid-cols-3 mt-5">
-            <div class="grid grid-cols-12">
+          <div class="grid grid-cols-12 mt-5 text-center">
+            <div class="col-span-4">
               <div class="col-span-3">
                 <main-icon
                   icon="healthicons:health-worker-form-outline"
@@ -103,7 +107,7 @@
               </div>
               <div class="col-span-9"></div>
             </div>
-            <div class="grid grid-cols-12">
+            <div class="col-span-4">
               <div class="col-span-3">
                 <main-icon
                   icon="healthicons:health-worker-form-outline"
@@ -117,7 +121,7 @@
               </div>
               <div class="col-span-9"></div>
             </div>
-            <div class="grid grid-cols-12">
+            <div class="col-span-4">
               <div class="col-span-3">
                 <main-icon
                   icon="healthicons:health-worker-form-outline"
@@ -134,11 +138,11 @@
           </div>
         </main-card>
       </div>
-      <div class="col-span-12">
+      <div class="col-span-12 font-oxygen">
         <main-card>
           <main-heading>Notfalldatenblatt</main-heading>
-          <div class="grid grid-cols-3 mt-5">
-            <div>
+          <div class="grid grid-cols-12 mt-5">
+            <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
               <p class="pb-2 text-lg">Art</p>
               <ul class="list-none">
                 <li class="text-blue font-bold">Notfalldatenblatt</li>
@@ -148,20 +152,22 @@
                 <!-- ... -->
               </ul>
             </div>
-            <div class="flex justify-center">
-              <div class="inline-block">
-                <p class="pb-2 text-lg">Art</p>
-                <ul class="list-none">
-                  <li class="">Notfalldatenblatt</li>
-                  <li class="">Letztes EKG</li>
-                  <li class="">Anästhesiepass</li>
-                  <li class="">Patientenverfügung</li>
-                  <!-- ... -->
-                </ul>
+            <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
+              <div class="flex justify-center">
+                <div class="inline-block">
+                  <p class="pb-2 text-lg">Art</p>
+                  <ul class="list-none">
+                    <li class="">Notfalldatenblatt</li>
+                    <li class="">Letztes EKG</li>
+                    <li class="">Anästhesiepass</li>
+                    <li class="">Patientenverfügung</li>
+                    <!-- ... -->
+                  </ul>
+                </div>
               </div>
             </div>
-            <div>
-              <div class="m-auto inline-block float-right">
+            <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
+              <div class="m-auto inline-block md:float-right">
                 <p class="pb-2 text-lg">Art</p>
                 <ul class="list-none">
                   <li class="">Notfalldatenblatt</li>

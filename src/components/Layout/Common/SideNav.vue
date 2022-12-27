@@ -1,14 +1,16 @@
 <template>
   <!-- This is an example component -->
   <div class="w-20">
-    <div class="z-50 mt-7 w-20">
+    <div class="z-50 mt-7 w-20 invisible md:visible">
       <a href="#">
         <dashboard-logo
           class="rounded-full w-10 h-10 mb-10 mx-auto"
         ></dashboard-logo>
       </a>
     </div>
-    <div class="h-[80%] fixed overflow-scroll no-scrollbar">
+    <div
+      class="h-[80%] fixed overflow-scroll no-scrollbar bg-white md:bg-transparent"
+    >
       <nav class="w-20 justify-between flex flex-col h-auto">
         <div class="mt-10">
           <ul>

@@ -3,7 +3,7 @@
   <span class="py-2 px-2 inline-block rounded-lg mx-1" :class="bgStyle">
     <iconify-icon
       :icon="icon"
-      class="text-2xl"
+      class="text-lg md:text-2xl"
       :class="icoStyle"
       :inline:="true"
     ></iconify-icon>

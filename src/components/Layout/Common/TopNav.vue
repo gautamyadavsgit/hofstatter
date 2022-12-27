@@ -1,7 +1,7 @@
 <template>
   <header class="sticky z-50 top-0 bg-[#f3f7fa] pt-4">
     <div class="mx-auto px-2 py-4 flex justify-between">
-      <div class="sm:flex w-[60%] hidden">
+      <div class="sm:flex">
         <!-- logo -->
         <div class="md:w-48 flex-shrink-0">
           <span class="text-blue text-[26px] font-oxygen font-bold">
@@ -29,9 +29,9 @@
         </div>
       </div> -->
       </div>
-      <div class="flex justify-between w-[40%]">
+      <div class="flex justify-between">
         <!-- translation -->
-        <div class="hidden sm:flex md:w-48 m-auto">
+        <div class="flex md:w-48 m-auto">
           <div class="relative group">
             <translate-icon> </translate-icon>
             <div
@@ -66,7 +66,7 @@
 
         <!-- user profile -->
         <div class="flex justify-between">
-          <div>
+          <div class="hidden md:block">
             <span
               class="font-oxygen font-bold text-[18px] block whitespace-nowrap"
               >Gautam Yadav</span
