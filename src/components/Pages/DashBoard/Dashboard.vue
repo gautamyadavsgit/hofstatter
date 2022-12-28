@@ -44,7 +44,7 @@
               <main-heading>Kontaktiere uns</main-heading>
             </div>
             <div class="w-full">
-              <div class="w-[50%] flex float-right">
+              <div class="w-[60%] flex float-right">
                 <main-icon
                   icon="mdi:map-marker"
                   bgStyle="bg-[#E7EEF6] px-1 py-1"
@@ -90,46 +90,52 @@
       <div class="col-span-12">
         <main-card>
           <main-heading>Befunde</main-heading>
-          <div class="grid grid-cols-12 mt-5 text-center">
+          <div class="grid grid-cols-12 mt-5 text-center md:text-left">
             <div class="col-span-4">
-              <div class="col-span-3">
-                <main-icon
-                  icon="healthicons:health-worker-form-outline"
-                  bgStyle="bg-[#A9E2DC] !py-2 !px-2"
-                  icoStyle="text-[#00958F] !text-[30px] !leading-[36px]"
-                ></main-icon>
+              <div class="grid grid-cols-12">
+                <div class="col-span-12 md:col-span-3">
+                  <main-icon
+                    icon="healthicons:health-worker-form-outline"
+                    bgStyle="bg-[#A9E2DC] !py-2 !px-2"
+                    icoStyle="text-[#00958F] !text-[30px] !leading-[36px]"
+                  ></main-icon>
+                </div>
+                <div class="col-span-12 md:col-span-9">
+                  <p class="font-bold text-blue mb-2">PCR Ergebnis</p>
+                  <p>11 November 2022</p>
+                </div>
+                <div class="col-span-9"></div>
               </div>
-              <div class="col-span-9">
-                <p class="font-bold text-blue mb-3">PCR Ergebnis</p>
-                <p>11 November 2022</p>
-              </div>
-              <div class="col-span-9"></div>
             </div>
             <div class="col-span-4">
-              <div class="col-span-3">
-                <main-icon
-                  icon="healthicons:health-worker-form-outline"
-                  bgStyle="bg-[#FCE3AA] !py-2 !px-2"
-                  icoStyle="text-[#FEB500] !text-[30px] !leading-[36px]"
-                ></main-icon>
+              <div class="grid grid-cols-12">
+                <div class="col-span-12 md:col-span-3">
+                  <main-icon
+                    icon="healthicons:health-worker-form-outline"
+                    bgStyle="bg-[#FCE3AA] !py-2 !px-2"
+                    icoStyle="text-[#FEB500] !text-[30px] !leading-[36px]"
+                  ></main-icon>
+                </div>
+                <div class="col-span-12 md:col-span-9">
+                  <p class="font-bold text-blue mb-2">Röntgenbefund</p>
+                  <p>11 November 2022</p>
+                </div>
+                <div class="col-span-9"></div>
               </div>
-              <div class="col-span-9">
-                <p class="font-bold text-blue mb-3">Röntgenbefund</p>
-                <p>11 November 2022</p>
-              </div>
-              <div class="col-span-9"></div>
             </div>
             <div class="col-span-4">
-              <div class="col-span-3">
-                <main-icon
-                  icon="healthicons:health-worker-form-outline"
-                  bgStyle="bg-[#F8CBC8] !py-2 !px-2"
-                  icoStyle="text-[#FD5957] !text-[30px] !leading-[36px]"
-                ></main-icon>
-              </div>
-              <div class="col-span-9">
-                <p class="font-bold text-blue mb-3">Blutbefund</p>
-                <p>11 November 2022</p>
+              <div class="grid grid-cols-12">
+                <div class="col-span-12 md:col-span-3">
+                  <main-icon
+                    icon="healthicons:health-worker-form-outline"
+                    bgStyle="bg-[#F8CBC8] !py-2 !px-2"
+                    icoStyle="text-[#FD5957] !text-[30px] !leading-[36px]"
+                  ></main-icon>
+                </div>
+                <div class="col-span-12 md:col-span-9">
+                  <p class="font-bold text-blue mb-2">Blutbefund</p>
+                  <p>11 November 2022</p>
+                </div>
               </div>
               <div class="col-span-9"></div>
             </div>
@@ -194,11 +200,5 @@ export default {
   components: {
     "doctors-img": DoctorsImg,
   },
-  // data() {
-  //   return {
-  //     date: new Date(),
-  //     timezone: "",
-  //   };
-  // },
 };
 </script>

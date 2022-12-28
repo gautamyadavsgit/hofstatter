@@ -14,33 +14,7 @@
       <nav class="w-20 justify-between flex flex-col h-auto">
         <div class="my-10">
           <ul>
-            <nav-bar-link
-              link="/dashboard"
-              icon="ci:home-alt-fill"
-            ></nav-bar-link>
-            <nav-bar-link
-              link="/"
-              icon="healthicons:i-schedule-school-date-time"
-            ></nav-bar-link>
-            <nav-bar-link link="/" icon="carbon:request-quote"></nav-bar-link>
-            <nav-bar-link link="/" icon="ri:heart-pulse-fill"></nav-bar-link>
-            <nav-bar-link link="/" icon="healthicons:medicines"></nav-bar-link>
-            <nav-bar-link link="/" icon="bxs:injection"></nav-bar-link>
-            <nav-bar-link
-              link="/"
-              icon="mdi:question-mark-circle"
-            ></nav-bar-link>
-            <nav-bar-link link="/" icon="entypo:chat"></nav-bar-link>
-          </ul>
-        </div>
-        <div class="mt-10">
-          <ul>
-            <nav-bar-link link="/" icon="fa-regular:hospital"></nav-bar-link>
-            <nav-bar-link
-              link="/"
-              icon="ant-design:setting-filled"
-            ></nav-bar-link>
-            <nav-bar-link link="/" icon="mdi:user"></nav-bar-link>
+            <the-menu cStyle="mb-6" :sideNav="true" />
           </ul>
         </div>
       </nav>
@@ -48,13 +22,13 @@
   </div>
 </template>
 <script>
-import NavBarLinkVue from "../NavBarLink.vue";
 import DashboardLogo from "../../../icons/DashboardLogo.vue";
+import TheMenusVue from "./TheMenus.vue";
 
 export default {
   components: {
-    "nav-bar-link": NavBarLinkVue,
     "dashboard-logo": DashboardLogo,
+    "the-menu": TheMenusVue,
   },
 };
 </script>

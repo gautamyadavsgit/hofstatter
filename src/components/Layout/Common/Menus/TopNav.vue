@@ -8,26 +8,6 @@
             Medical Care
           </span>
         </div>
-
-        <!-- search -->
-        <!-- <div
-        class="w-full max-w-xs xl:max-w-lg 2xl:max-w-2xl rounded-md hidden xl:flex justify-center"
-      >
-        <div
-          class="w-[60%] lg:w-[300px] rounded-full h-[40px] border-none bg-white flex justify-between"
-        >
-          <form class="py-2 px-2">
-            <input
-              class="border-none w-[75%] rounded-full py-2 px-2 focus:outline-none h-full"
-              type="text"
-              placeholder="suche"
-            />
-          </form>
-          <button class="bg-blue py-2 px-2 rounded-tr-full rounded-br-full w-[15%]" type="submit">
-            <search-icon class="m-auto"></search-icon>
-          </button>
-        </div>
-      </div> -->
       </div>
       <div class="flex justify-between">
         <!-- translation -->

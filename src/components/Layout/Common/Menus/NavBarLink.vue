@@ -1,6 +1,6 @@
 <!-- component for adding navbar links -->
 <template>
-  <li class="mb-6">
+  <li>
     <router-link :to="link">
       <span>
         <iconify-icon

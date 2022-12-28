@@ -1,25 +1,52 @@
-import { createApp } from "vue";
+import { createApp, defineAsyncComponent } from "vue";
 import App from "./App.vue";
 
 import router from "./router"; // importing router
 // importing login component
-import LoginCard from "./components/Layout/Login/LoginCard.vue";
-import LogoArea from "./components/Layout/Login/LogoArea.vue";
-import BackButton from "./components/Layout/Login/BackButton.vue";
+// import LoginCard from "./components/Layout/Login/LoginCard.vue";
+const LoginCard = defineAsyncComponent(() =>
+  import("./components/Layout/Login/LoginCard.vue")
+);
+// import LogoArea from "./components/Layout/Login/LogoArea.vue";
+const LogoArea = defineAsyncComponent(() =>
+  import("./components/Layout/Login/LogoArea.vue")
+);
+// import BackButton from "./components/Layout/Login/BackButton.vue";
+const BackButton = defineAsyncComponent(() =>
+  import("./components/Layout/Login/BackButton.vue")
+);
 
-import { Icon } from "@iconify/vue";
 // importing Layout component
-import PageWrapper from "./components/Layout/Common/PageWrapper.vue";
-import MainCard from "./components/Layout/Common/MainCard.vue";
-import MainHeading from "./components/Layout/Common/MainHeading.vue";
-import MainButton from "./components/Layout/Common/MainButton.vue";
-import MainIcon from "./components/Layout/Common/MainIcon.vue";
-
+// import PageWrapper from "./components/Layout/Common/PageWrapper.vue";
+const PageWrapper = defineAsyncComponent(() =>
+  import("./components/Layout/Common/PageWrapper.vue")
+);
+// import MainCard from "./components/Layout/Common/UI/MainCard.vue";
+const MainCard = defineAsyncComponent(() =>
+  import("./components/Layout/Common/UI/MainCard.vue")
+);
+// import MainHeading from "./components/Layout/Common/UI/MainHeading.vue";
+const MainHeading = defineAsyncComponent(() =>
+  import("./components/Layout/Common/UI/MainHeading.vue")
+);
+// import MainButton from "./components/Layout/Common/UI/MainButton.vue";
+const MainButton = defineAsyncComponent(() =>
+  import("./components/Layout/Common/UI/MainButton.vue")
+);
+// import MainIcon from "./components/Layout/Common/UI/MainIcon.vue";
+const MainIcon = defineAsyncComponent(() =>
+  import("./components/Layout/Common/UI/MainIcon.vue")
+);
+// importing iconnify icons
+import { Icon } from "@iconify/vue";
 //importing appointment component
-import AppointmentSidbar from "./components/Layout/Common/AppointmentSidebar.vue";
-
+// import AppointmentSidbar from "./components/Layout/Common/AppointmentSidebar.vue";
+const AppointmentSidbar = defineAsyncComponent(() =>
+  import("./components/Layout/Common/AppointmentSidebar.vue")
+);
 // adding v-calndar
-import VCalendar from "v-calendar";
+// import VCalendar from "v-calendar";
+const VCalendar = defineAsyncComponent(() => import("v-calendar"));
 import "v-calendar/dist/style.css";
 
 const app = createApp(App);
