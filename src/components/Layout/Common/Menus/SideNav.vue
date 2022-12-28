@@ -9,10 +9,10 @@
       </a>
     </div>
     <div
-      class="h-[80%] fixed overflow-scroll no-scrollbar bg-white md:bg-transparent"
+      class="md:h-[80%] h-[70%] fixed overflow-scroll no-scrollbar bg-white md:bg-transparent"
     >
       <nav class="w-20 justify-between flex flex-col h-auto">
-        <div class="mt-10">
+        <div class="my-10">
           <ul>
             <nav-bar-link
               link="/dashboard"
@@ -48,8 +48,8 @@
   </div>
 </template>
 <script>
-import NavBarLinkVue from "../../Layout/Common/NavBarLink.vue";
-import DashboardLogo from "../../icons/DashboardLogo.vue";
+import NavBarLinkVue from "../NavBarLink.vue";
+import DashboardLogo from "../../../icons/DashboardLogo.vue";
 
 export default {
   components: {

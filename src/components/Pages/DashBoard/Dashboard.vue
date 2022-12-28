@@ -4,7 +4,7 @@
       <div class="col-span-12">
         <main-card customStyle="md:mt-[3.5rem]">
           <div class="grid grid-cols-12 mb-3">
-            <div class="col-span-12 md:col-span-6">
+            <div class="col-span-12 md:col-span-7">
               <div class="md:mb-6">
                 <main-heading
                   customStyle="md:text-[24px] md:leading-[30px] text-lg pb-2"
@@ -15,11 +15,9 @@
                   “Du hast 2 Anfragen in deinem Board”
                 </p>
               </div>
-              <div
-                class="pt-6 flex justify-around md:grid md:grid-cols-3 md:gap-2 m-auto"
-              >
+              <div class="pt-6 flex md:grid md:grid-cols-3 md:gap-2 m-auto">
                 <main-button>Impffragebogen</main-button>
-                <main-button>Lungentest</main-button>
+                <main-button class="ml-10 md:ml-0">Lungentest</main-button>
                 <div class="m-auto ml-0 hidden md:block">
                   <router-link to="/" class="text-blue font-bold"
                     >Alle anzeigen
@@ -31,8 +29,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-span-6 relative hidden md:block">
-              <div class="absolute top-[-40%] left-[30%]">
+            <div class="col-span-5 relative hidden md:block">
+              <div class="absolute top-[-40%]">
                 <doctors-img></doctors-img>
               </div>
             </div>
@@ -76,7 +74,7 @@
           <main-heading>Dauermedikament bestellen</main-heading>
           <div class="flex">
             <div>
-              <p class="mt-8">E-Rezept für deine Dauermedikamente bestellen.</p>
+              <p class="mt-5">E-Rezept für deine Dauermedikamente bestellen.</p>
             </div>
             <div>
               <main-icon

@@ -2,17 +2,22 @@
 <template>
   <div class="h-full max-w-screen-2xl m-auto font-oxygen">
     <div class="flex flex-row bg-white">
+      <!-- mobile menu -->
+      <mobile-menu></mobile-menu>
+      <!-- side button for opening sidenavbar in mobile  -->
+      <Teleport to="body">
+        <button
+          class="border-2 p-0 border-white fixed pt-3 pb-2 top-60 right-0 bg-blue z-[99] md:hidden block rounded-[10px_0px_0px_10px] shadow-[0px_0px_10px_#2e319299] hover:shadow-[4px_4px_10px_#2e319299]"
+          @click="showNavbar"
+        >
+          <main-icon
+            icon="fluent:apps-list-24-filled"
+            bgStyle="bg-blue !px-0 !py-0"
+            icoStyle="text-white text-3xl"
+          ></main-icon>
+        </button>
+      </Teleport>
       <!-- sidenav -->
-      <button
-        class="fixed py-2 top-52 right-[-0px] bg-blue z-[99] md:hidden block"
-        @click="showNabar"
-      >
-        <main-icon
-          icon="ph:caret-double-left-bold"
-          bgStyle="bg-blue !px-0"
-          icoStyle="text-white text-3xl"
-        ></main-icon>
-      </button>
       <Transition>
         <!-- adding dynamic class for navbar animation -->
         <div class="bg-white w-20 fixed md:static md:block z-50" v-if="navBar">
@@ -48,8 +53,9 @@
 </template>
 
 <script>
-import SideNavVue from "./SideNav.vue";
-import TopNavVue from "./TopNav.vue";
+import SideNavVue from "./Menus/SideNav.vue";
+import TopNavVue from "./Menus/TopNav.vue";
+import MobileMenu from "./Menus/MobileMenu.vue";
 export default {
   props: {
     sidebar: {
@@ -66,9 +72,10 @@ export default {
   components: {
     "side-nav": SideNavVue,
     "top-nav": TopNavVue,
+    "mobile-menu": MobileMenu,
   },
   methods: {
-    showNabar() {
+    showNavbar() {
       this.navBar = !this.navBar;
     },
   },
@@ -84,6 +91,15 @@ export default {
 }
 
 .v-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+.v-leave-from {
+  left: 0px;
+}
+.v-leave-to {
+  left: -100px;
+}
+.v-leave-active {
   transition: all 0.3s ease-in-out;
 }
 </style>
