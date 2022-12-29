@@ -72,14 +72,13 @@
 </template>
 
 <script>
-// import SearchIcon from '../../icons/SearchIcon.vue'
-import { defineAsyncComponent } from "vue";
-const TranslateIcon = defineAsyncComponent(() =>
-  import("../../../icons/TranslateIcon.vue")
-);
+// import { defineAsyncComponent } from "vue";
+// const TranslateIcon = defineAsyncComponent(() =>
+//   import("../../../icons/TranslateIcon.vue")
+// );
+import TranslateIcon from "../../../icons/TranslateIcon.vue";
 export default {
   components: {
-    // 'search-icon': SearchIcon,
     "translate-icon": TranslateIcon,
   },
 };

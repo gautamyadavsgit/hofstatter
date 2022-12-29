@@ -23,12 +23,14 @@
   </div>
 </template>
 <script>
-import { defineAsyncComponent } from "vue";
-const DashboardLogo = defineAsyncComponent(() =>
-  import("../../../icons/DashboardLogo.vue")
-);
-const TheMenusVue = defineAsyncComponent(() => import("./TheMenus.vue"));
+// import { defineAsyncComponent } from "vue";
+// const DashboardLogo = defineAsyncComponent(() =>
+//   import("../../../icons/DashboardLogo.vue")
+// );
+// const TheMenusVue = defineAsyncComponent(() => import("./TheMenus.vue"));
 
+import DashboardLogo from "../../../icons/DashboardLogo.vue";
+import TheMenusVue from "./TheMenus.vue";
 export default {
   components: {
     "dashboard-logo": DashboardLogo,

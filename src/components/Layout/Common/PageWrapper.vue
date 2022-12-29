@@ -43,10 +43,13 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue";
-const SideNavVue = defineAsyncComponent(() => import("./Menus/SideNav.vue"));
-const TopNavVue = defineAsyncComponent(() => import("./Menus/TopNav.vue"));
-const MobileMenu = defineAsyncComponent(() => import("./Menus/MobileMenu.vue"));
+// import { defineAsyncComponent } from "vue";
+// const SideNavVue = defineAsyncComponent(() => import("./Menus/SideNav.vue"));
+// const TopNavVue = defineAsyncComponent(() => import("./Menus/TopNav.vue"));
+// const MobileMenu = defineAsyncComponent(() => import("./Menus/MobileMenu.vue"));
+import SideNavVue from "./Menus/SideNav.vue";
+import TopNavVue from "./Menus/TopNav.vue";
+import MobileMenu from "./Menus/MobileMenu.vue";
 export default {
   props: {
     sidebar: {
