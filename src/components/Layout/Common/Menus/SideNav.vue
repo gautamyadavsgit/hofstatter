@@ -22,8 +22,11 @@
   </div>
 </template>
 <script>
-import DashboardLogo from "../../../icons/DashboardLogo.vue";
-import TheMenusVue from "./TheMenus.vue";
+import { defineAsyncComponent } from "vue";
+const DashboardLogo = defineAsyncComponent(() =>
+  import("../../../icons/DashboardLogo.vue")
+);
+const TheMenusVue = defineAsyncComponent(() => import("./TheMenus.vue"));
 
 export default {
   components: {

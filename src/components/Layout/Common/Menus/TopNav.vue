@@ -72,8 +72,10 @@
 
 <script>
 // import SearchIcon from '../../icons/SearchIcon.vue'
-import TranslateIcon from "../../../icons/TranslateIcon.vue";
-
+import { defineAsyncComponent } from "vue";
+const TranslateIcon = defineAsyncComponent(() =>
+  import("../../../icons/TranslateIcon.vue")
+);
 export default {
   components: {
     // 'search-icon': SearchIcon,

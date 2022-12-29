@@ -194,7 +194,10 @@
 </template>
 
 <script>
-import DoctorsImg from "../../icons/DoctorsImg.vue";
+import { defineAsyncComponent } from "vue";
+const DoctorsImg = defineAsyncComponent(() =>
+  import("../../icons/DoctorsImg.vue")
+);
 
 export default {
   components: {

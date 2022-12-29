@@ -26,7 +26,7 @@
   ></nav-bar-link>
   <nav-bar-link link="/" icon="bxs:injection" :class="cStyle"></nav-bar-link>
   <nav-bar-link
-    link="/"
+    link="/anfragen"
     icon="mdi:question-mark-circle"
     :class="cStyle"
   ></nav-bar-link>
@@ -46,7 +46,8 @@
 </template>
 
 <script>
-import NavBarLinkVue from "./NavBarLink.vue";
+import { defineAsyncComponent } from "vue";
+const NavBarLinkVue = defineAsyncComponent(() => import("./NavBarLink.vue"));
 export default {
   props: {
     cStyle: {

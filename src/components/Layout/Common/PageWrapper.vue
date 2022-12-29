@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="w-full">
         <div
           class="md:px-4 md:pb-4 text-gray-700 bg-[#E7EEF680] w-full md:h-screen md:overflow-y-scroll md:rounded-l-[30px]"
         >
@@ -43,9 +43,10 @@
 </template>
 
 <script>
-import SideNavVue from "./Menus/SideNav.vue";
-import TopNavVue from "./Menus/TopNav.vue";
-import MobileMenu from "./Menus/MobileMenu.vue";
+import { defineAsyncComponent } from "vue";
+const SideNavVue = defineAsyncComponent(() => import("./Menus/SideNav.vue"));
+const TopNavVue = defineAsyncComponent(() => import("./Menus/TopNav.vue"));
+const MobileMenu = defineAsyncComponent(() => import("./Menus/MobileMenu.vue"));
 export default {
   props: {
     sidebar: {

@@ -10,7 +10,8 @@
   </div>
 </template>
 <script>
-import TheMenusVue from "./TheMenus.vue";
+import { defineAsyncComponent } from "vue";
+const TheMenusVue = defineAsyncComponent(() => import("./TheMenus.vue"));
 export default {
   components: {
     "the-menu": TheMenusVue,
