@@ -1,5 +1,5 @@
 <template>
-  <!-- This is an example component -->
+  <!-- sidebar nav component for show navigation only in the desktop -->
   <div class="w-20">
     <div class="z-50 mt-7 w-20 invisible md:visible">
       <a href="#">
@@ -14,6 +14,7 @@
       <nav class="w-20 justify-between flex flex-col h-auto">
         <div class="my-10">
           <ul>
+            <!-- themenu component for add menus in the sidenavbad addding a extra prop sideNav = true for adding gap between profile menus and main menus -->
             <the-menu cStyle="mb-6" :sideNav="true" />
           </ul>
         </div>

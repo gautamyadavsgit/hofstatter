@@ -15,11 +15,13 @@
 <script>
 export default {
   props: {
+    // data prop for link
     link: {
       type: String,
       required: true,
       default: "/",
     },
+    // data prop for icon
     icon: {
       type: String,
       required: true,

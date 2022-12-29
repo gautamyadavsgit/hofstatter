@@ -8,6 +8,7 @@
 <script>
 export default {
   props: {
+    // custom style props for adding extra classes
     customStyle: {
       type: String,
       required: false,

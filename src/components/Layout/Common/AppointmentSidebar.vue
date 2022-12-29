@@ -12,6 +12,7 @@
           </p>
         </div>
       </div>
+      <!-- current appointment calendar -->
       <v-calendar
         :attributes="attributes"
         :masks="{
@@ -20,7 +21,8 @@
         }"
         is-expanded
       />
-      <div class="">
+      <!-- doctors data for appointments -->
+      <div>
         <ul class="list-none mt-2">
           <li class="my-2" v-for="user in users" :key="user.id">
             <div
@@ -54,6 +56,7 @@
           </li>
         </ul>
       </div>
+      <!-- btns area -->
       <div class="py-4">
         <div class="grid grid-cols-2">
           <div>
@@ -81,6 +84,7 @@ const randomDate = (start, end) => {
   );
 };
 
+// dates for which dates to be highlighted
 const a = randomDate(new Date(2022, 12, 1), new Date());
 const b = randomDate(new Date(2022, 12, 1), new Date());
 const c = randomDate(new Date(2022, 12, 1), new Date());
@@ -115,6 +119,7 @@ export default {
           color: "bg-[#E7E7FF80]",
         },
       ],
+      // attributes for highlighting dates
       attributes: [
         {
           key: a,

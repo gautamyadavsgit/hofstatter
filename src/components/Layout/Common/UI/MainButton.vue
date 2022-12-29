@@ -19,16 +19,19 @@
 <script>
 export default {
   props: {
+    // mode prop for adding extra classes
     mode: {
       type: String,
       required: false,
       default: null,
     },
+    // link for checking the element is button or anchor
     link: {
       type: Boolean,
       required: false,
       default: true,
     },
+    // to prop for adding link if element is anchor
     to: {
       type: String,
       required: false,

@@ -1,4 +1,5 @@
 <template>
+  <!-- themenus component for adding menus in both desktop and mobile  -->
   <nav-bar-link
     link="/dashboard"
     icon="ci:home-alt-fill"

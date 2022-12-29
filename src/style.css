@@ -4,6 +4,15 @@
 
 @layer components {
   /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar{
+    width: 8px;
+    background-color: #C5C6E5;
+  }
+  ::-webkit-scrollbar-thumb{
+    width: 8px;
+    background-color: #2E3192;
+    border-radius: 10px;
+  }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -34,4 +43,7 @@
 }
 .router-link-exact-active svg {
   @apply text-blue;
+}
+.que-pagination {
+  @apply flex justify-center  [&>.active]:text-white [&>.active]:rounded-full [&>.disabled]:text-site-grey [&>.active]:bg-blue  [&>.disabled]:cursor-not-allowed  [&>*]:cursor-pointer  md:[&>*]:px-2 md:py-1 md:[&>*]:mx-1 [&>*]:px-1 [&>*]:mx-[1px] font-oxygen font-bold;
 }

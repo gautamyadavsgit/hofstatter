@@ -1,7 +1,10 @@
 <template>
+  <!-- adding a sidebar prop in page wrapper to show a side bar area in main page -->
   <page-wrapper sidebar>
     <div class="grid grid-cols-12">
+      <!-- first box started -->
       <div class="col-span-12">
+        <!-- custom style prop for adding custom classes in maincard -->
         <main-card customStyle="md:mt-[3.5rem]">
           <div class="grid grid-cols-12 mb-3">
             <div class="col-span-12 md:col-span-7">
@@ -37,6 +40,7 @@
           </div>
         </main-card>
       </div>
+      <!-- seccond box started -->
       <div class="md:col-span-6 col-span-12">
         <main-card>
           <div class="flex">
@@ -45,6 +49,7 @@
             </div>
             <div class="w-full">
               <div class="w-[60%] flex float-right">
+                <!-- adding bgStyle prop for adding background classes and icostyle prop for icon styles -->
                 <main-icon
                   icon="mdi:map-marker"
                   bgStyle="bg-[#E7EEF6] px-1 py-1"
@@ -87,6 +92,7 @@
           </div>
         </main-card>
       </div>
+      <!-- third box started -->
       <div class="col-span-12">
         <main-card>
           <main-heading>Befunde</main-heading>
@@ -142,6 +148,7 @@
           </div>
         </main-card>
       </div>
+      <!-- fourth box started -->
       <div class="col-span-12 font-oxygen">
         <main-card>
           <main-heading>Notfalldatenblatt</main-heading>
@@ -186,8 +193,9 @@
         </main-card>
       </div>
     </div>
-
+    <!-- template for sidebar adding a sidebar prop for identify  -->
     <template #sidebar>
+      <!-- appointment sidebar component registered in main js -->
       <appointment-sidebar />
     </template>
   </page-wrapper>
@@ -195,6 +203,7 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
+// importing heavy images as vue componenets
 const DoctorsImg = defineAsyncComponent(() =>
   import("../../icons/DoctorsImg.vue")
 );
