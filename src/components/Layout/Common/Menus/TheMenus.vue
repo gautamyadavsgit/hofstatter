@@ -16,7 +16,7 @@
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/"
+    link="/health-status"
     icon="ri:heart-pulse-fill"
     :class="cStyle"
   ></nav-bar-link>

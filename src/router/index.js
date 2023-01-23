@@ -24,6 +24,7 @@ import Anfragen from "../components/Pages/DashBoard/AnfRagen.vue";
 // const Anfragen = defineAsyncComponent(() =>
 //   import("../components/Pages/DashBoard/AnfRagen.vue")
 // );
+import PatientHealth from "../components/Pages/DashBoard/PatientHealth.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -56,6 +57,11 @@ const router = createRouter({
       path: "/anfragen",
       name: "Anfragen",
       component: Anfragen,
+    },
+    {
+      path: "/health-status",
+      name: "HealthStatus",
+      component: PatientHealth,
     },
   ],
 });

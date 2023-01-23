@@ -4,13 +4,13 @@
 
 @layer components {
   /* Hide scrollbar for Chrome, Safari and Opera */
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     width: 8px;
-    background-color: #C5C6E5;
+    background-color: #c5c6e5;
   }
-  ::-webkit-scrollbar-thumb{
+  ::-webkit-scrollbar-thumb {
     width: 8px;
-    background-color: #2E3192;
+    background-color: #2e3192;
     border-radius: 10px;
   }
   .no-scrollbar::-webkit-scrollbar {
@@ -46,4 +46,7 @@
 }
 .que-pagination {
   @apply flex justify-center  [&>.active]:text-white [&>.active]:rounded-full [&>.disabled]:text-site-grey [&>.active]:bg-blue  [&>.disabled]:cursor-not-allowed  [&>*]:cursor-pointer  md:[&>*]:px-2 md:py-1 md:[&>*]:mx-1 [&>*]:px-1 [&>*]:mx-[1px] font-oxygen font-bold;
+}
+.main-card {
+  @apply h-auto w-auto bg-white shadow-[0px_0px_6px_6px_#E7EEF6] hover:shadow-[4px_4px_10px_#2e319299] transition delay-100 ease-in-out relative my-2 mx-1 font-oxygen rounded-[10px] px-2 py-2 md:px-4 md:py-4;
 }

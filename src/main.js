@@ -37,6 +37,7 @@ import MainButton from "./components/Layout/Common/UI/MainButton.vue";
 //   import("./components/Layout/Common/UI/MainIcon.vue")
 // );
 import MainIcon from "./components/Layout/Common/UI/MainIcon.vue";
+import SmallText from "./components/Layout/Common/UI/SmallText.vue";
 // importing iconnify icons
 import { Icon } from "@iconify/vue";
 //importing appointment component
@@ -58,6 +59,7 @@ app.component("main-card", MainCard);
 app.component("main-heading", MainHeading);
 app.component("main-button", MainButton);
 app.component("main-icon", MainIcon);
+app.component("small-text", SmallText);
 
 app.component("appointment-sidebar", AppointmentSidbar); // register appointment component
 
