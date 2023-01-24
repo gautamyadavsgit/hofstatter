@@ -44,6 +44,7 @@
     icon="ant-design:setting-filled"
     :class="cStyle"
   ></nav-bar-link>
+  <nav-bar-link link="/" icon="mdi:folder-user" :class="cStyle"></nav-bar-link>
   <nav-bar-link link="/" icon="mdi:user" :class="cStyle"></nav-bar-link>
 </template>
 
