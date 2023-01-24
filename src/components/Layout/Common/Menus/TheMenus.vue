@@ -32,12 +32,13 @@
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link link="/" icon="entypo:chat" :class="cStyle"></nav-bar-link>
-  <div v-if="sideNav" class="mt-10 inline-block"></div>
   <nav-bar-link
-    link="/"
+    link="/diagnostic-center"
     icon="fa-regular:hospital"
     :class="cStyle"
   ></nav-bar-link>
+  <div v-if="sideNav" class="mt-10 inline-block"></div>
+
   <nav-bar-link
     link="/"
     icon="ant-design:setting-filled"
