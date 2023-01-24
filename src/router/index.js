@@ -25,6 +25,7 @@ import Anfragen from "../components/Pages/DashBoard/AnfRagen.vue";
 //   import("../components/Pages/DashBoard/AnfRagen.vue")
 // );
 import PatientHealth from "../components/Pages/DashBoard/PatientHealth.vue";
+import PatientDiagnosticCenter from "../components/Pages/DashBoard/PatientDiagnosticCenter.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -62,6 +63,11 @@ const router = createRouter({
       path: "/health-status",
       name: "HealthStatus",
       component: PatientHealth,
+    },
+    {
+      path: "/diagnostic-center",
+      name: "PatientDiagnosticCenter",
+      component: PatientDiagnosticCenter,
     },
   ],
 });
