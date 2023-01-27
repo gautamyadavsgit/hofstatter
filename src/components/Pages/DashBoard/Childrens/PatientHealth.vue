@@ -183,10 +183,10 @@
 import HumanBodyImg from "@/components/icons/PatientHealth/HumanBody.vue";
 import CoronaImg from "@/components/icons/PatientHealth/CoronaImg.vue";
 // importing components
-import OrgansAreaVue from "../components/PatientHealth/OrgansArea.vue";
-import TemperatureChart from "../components/PatientHealth/Charts/TemperatureChart.vue";
-import BloodPressureChart from "../components/PatientHealth/Charts/BloodPressureChart.vue";
-import HealthParameter from "../components/PatientHealth/HealthParameter.vue"; // different health condition boxes
+import OrgansAreaVue from "../../components/PatientHealth/OrgansArea.vue";
+import TemperatureChart from "../../components/PatientHealth/Charts/TemperatureChart.vue";
+import BloodPressureChart from "../../components/PatientHealth/Charts/BloodPressureChart.vue";
+import HealthParameter from "../../components/PatientHealth/HealthParameter.vue"; // different health condition boxes
 //importing organ icons
 import HeartIcon from "@/components/icons/PatientHealth/HeartIcon.vue";
 import KidneysIcon from "@/components/icons/PatientHealth/KidneysIcon.vue";

@@ -6,9 +6,11 @@
       </div>
       <div class="w-2/5">
         <p class="text-base font-bold">{{ organName }}</p>
-        <small class="text-xs text-light-grey font-oxygen">{{
-          organHealth + " %"
-        }}</small>
+        <small
+          class="text-xs text-light-grey font-oxygen counter"
+          :data-count="organHealthValue"
+          >{{ organHealthValue + " %" }}</small
+        >
       </div>
       <div class="w-1/5">
         <svg
@@ -29,8 +31,8 @@
     </div>
     <div class="w-full bg-gray-200 h-[7px] mt-2 rounded-2xl">
       <div
-        class="bg-blue h-[7px] rounded-2xl"
-        :style="'width:' + organHealth + '%'"
+        class="bg-blue h-[7px] rounded-2xl duration-1000 ease-in-out"
+        :style="'width:' + organHealthValue + '%'"
         :class="barColor"
       ></div>
     </div>
@@ -51,6 +53,11 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      organHealthValue: 0,
+    };
+  },
   computed: {
     // computed propery for applying the progress bar color according to the organHealth
     barColor() {
@@ -62,6 +69,12 @@ export default {
         return "bg-[#00958F]";
       }
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      // this.organHealthValue = this.organHealth;
+      this.organHealthValue = this.organHealth;
+    }, 500);
   },
 };
 </script>

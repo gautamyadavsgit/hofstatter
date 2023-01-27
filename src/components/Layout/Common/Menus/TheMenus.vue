@@ -25,7 +25,11 @@
     icon="healthicons:medicines"
     :class="cStyle"
   ></nav-bar-link>
-  <nav-bar-link link="/" icon="bxs:injection" :class="cStyle"></nav-bar-link>
+  <nav-bar-link
+    link="/vaccination"
+    icon="bxs:injection"
+    :class="cStyle"
+  ></nav-bar-link>
   <nav-bar-link
     link="/anfragen"
     icon="mdi:question-mark-circle"

@@ -205,7 +205,7 @@
 import { defineAsyncComponent } from "vue";
 // importing heavy images as vue componenets
 const DoctorsImg = defineAsyncComponent(() =>
-  import("../../icons/DoctorsImg.vue")
+  import("../../../icons/DoctorsImg.vue")
 );
 
 export default {

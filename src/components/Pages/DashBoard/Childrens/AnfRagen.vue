@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import UnsuscribeIcon from "../../icons/Anfragen/UnsubscribeIcon.vue";
+import UnsuscribeIcon from "../../../icons/Anfragen/UnsubscribeIcon.vue";
 // imorting pagination Library
 import Paginate from "vuejs-paginate-next";
 

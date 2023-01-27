@@ -34,6 +34,16 @@ export default {
       options: {
         responsive: true,
         maintainAspectRatio: true,
+        // adding animation in the first time
+        animations: {
+          tension: {
+            duration: 6000,
+            easing: "ease in out",
+            from: 0,
+            to: 1,
+            loop: false,
+          },
+        },
       },
       chartData: {
         Title: "36 &deg;",
