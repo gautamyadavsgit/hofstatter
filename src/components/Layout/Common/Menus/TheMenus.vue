@@ -35,7 +35,7 @@
     icon="mdi:question-mark-circle"
     :class="cStyle"
   ></nav-bar-link>
-  <nav-bar-link link="/" icon="entypo:chat" :class="cStyle"></nav-bar-link>
+  <nav-bar-link link="/chat" icon="entypo:chat" :class="cStyle"></nav-bar-link>
   <nav-bar-link
     link="/diagnostic-center"
     icon="fa-regular:hospital"

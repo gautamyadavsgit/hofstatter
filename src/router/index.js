@@ -94,6 +94,13 @@ const router = createRouter({
           name: "PatientVaccination",
           component: PatientVaccination,
         },
+        {
+          path: "/chat",
+          name: "PatientChat",
+          component: defineAsyncComponent(() =>
+            import("../components/Pages/DashBoard/Childrens/PatientChat.vue")
+          ),
+        },
       ],
     },
   ],
