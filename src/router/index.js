@@ -25,7 +25,7 @@ const router = createRouter({
       path: "/login",
       name: "login",
       redirect: { name: "welcome" },
-      component: defineAsyncComponent(() =>
+      components: defineAsyncComponent(() =>
         import("../components/Pages/Login/LoginMain.vue")
       ),
       children: [
@@ -67,7 +67,12 @@ const router = createRouter({
         {
           path: "/dashboard",
           name: "dashboard",
-          component: Dashboard,
+          components: {
+            default: Dashboard,
+            sidebar: () =>
+              import("../components/Layout/Common/AppointmentSidebar.vue"),
+          },
+          props: { sidebar: true },
         },
         {
           path: "/anfragen",
