@@ -7,9 +7,12 @@ module.exports = {
         "light-blue": "#666AC5",
         "site-grey": "#C5C6E5",
         "light-grey": "#82837E",
+        "off-light-grey": "#82837E80",
       },
       fontFamily: {
-        oxygen: ["Oxygen-Regular", "sans-serif"],
+        oxygen: ["Oxygen", "sans-serif"],
+        oxygenBold: ["Oxygen-Bold", "sans-serif"],
+        oxygenLight: ["Oxygen-Light", "sans-serif"],
       },
     },
     screens: {

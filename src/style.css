@@ -1,8 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
   /* Hide scrollbar for Chrome, Safari and Opera */
+  @font-face {
+    font-family: "Oxygen";
+    src: url("./assets/fonts/Oxygen/Oxygen-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Oxygen-Light";
+    src: url("./assets/fonts/Oxygen/Oxygen-Light.ttf");
+  }
+  @font-face {
+    font-family: "Oxygen-Bold";
+    src: url("./assets/fonts/Oxygen/Oxygen-Bold.ttf");
+  }
   ::-webkit-scrollbar {
     width: 8px;
     background-color: #c5c6e5;

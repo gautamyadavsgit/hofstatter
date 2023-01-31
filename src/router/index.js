@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { defineAsyncComponent } from "vue";
 
-import Dashboard from "../components/Pages/DashBoard/Childrens/DashBoard.vue";
+import Dashboard from "../components/Pages/DashBoard/Home/DashBoard.vue";
 // const Dashboard = defineAsyncComponent(() =>
 //   import("../components/Pages/DashBoard/DashBoard.vue")
 // );
-import Anfragen from "../components/Pages/DashBoard/Childrens/AnfRagen.vue";
+import Anfragen from "../components/Pages/DashBoard/Anfragen/AnfRagen.vue";
 // const Anfragen = defineAsyncComponent(() =>
 //   import("../components/Pages/DashBoard/AnfRagen.vue")
 // );
-import PatientHealth from "../components/Pages/DashBoard/Childrens/PatientHealth.vue";
-import PatientDiagnosticCenter from "../components/Pages/DashBoard/Childrens/PatientDiagnosticCenter.vue";
-import PatientVaccination from "../components/Pages/DashBoard/Childrens/PatientVaccination.vue";
+import PatientHealth from "../components/Pages/DashBoard/PatientHealth/PatientHealth.vue";
+import PatientDiagnosticCenter from "../components/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue";
+import PatientVaccination from "../components/Pages/DashBoard/PatientVaccination/PatientVaccination.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -25,7 +25,7 @@ const router = createRouter({
       path: "/login",
       name: "login",
       redirect: { name: "welcome" },
-      components: defineAsyncComponent(() =>
+      component: defineAsyncComponent(() =>
         import("../components/Pages/Login/LoginMain.vue")
       ),
       children: [
@@ -61,7 +61,7 @@ const router = createRouter({
       path: "/dashboard",
       name: "dashboard",
       component: defineAsyncComponent(() =>
-        import("../components/Pages/DashBoard/DashboardMain.vue")
+        import("../components/Pages/DashBoard/IndexMain.vue")
       ),
       children: [
         {
@@ -98,8 +98,12 @@ const router = createRouter({
           path: "/chat",
           name: "PatientChat",
           component: defineAsyncComponent(() =>
-            import("../components/Pages/DashBoard/Childrens/PatientChat.vue")
+            import("../components/Pages/DashBoard/PatientChat/PatientChat.vue")
           ),
+          // children: {
+          //   path: "/chat?filter=:filter",
+          //   name:"/chat"
+          // },
         },
       ],
     },
