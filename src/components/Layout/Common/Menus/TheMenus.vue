@@ -7,7 +7,7 @@
   ></nav-bar-link>
   <nav-bar-link
     :class="cStyle"
-    link="/"
+    link="/appointments"
     icon="healthicons:i-schedule-school-date-time"
   ></nav-bar-link>
   <nav-bar-link

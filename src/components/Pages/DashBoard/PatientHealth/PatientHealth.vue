@@ -18,16 +18,16 @@
               <humanbody-img />
             </div>
             <div class="col-span-4">
-              <organ-area organName="Herz" organHealth="54">
+              <organ-area organName="Herz" :organHealth="54">
                 <HeartIcon
               /></organ-area>
-              <organ-area organName="Lunge" organHealth="73">
+              <organ-area organName="Lunge" :organHealth="73">
                 <LungsIcon
               /></organ-area>
-              <organ-area organName="Leber" organHealth="26">
+              <organ-area organName="Leber" :organHealth="26">
                 <LiverIcon
               /></organ-area>
-              <organ-area organName="Niere" organHealth="11">
+              <organ-area organName="Niere" :organHealth="11">
                 <KidneysIcon
               /></organ-area>
             </div>

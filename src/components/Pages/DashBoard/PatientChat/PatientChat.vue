@@ -6,16 +6,14 @@
       <div class="h-[77vh]">
         <div class="md:flex rounded h-full">
           <div
-            class="md:w-40% lg:w-[30%] w-full flex flex-col chat-shadow z-50"
+            class="md:w-40% lg:w-[30%] w-full flex flex-col chat-shadow z-20"
           >
             <PatientChatFilter />
             <!-- Left -->
-            <!-- <router-view /> -->
             <PatientChatContact />
           </div>
           <!-- Right -->
-          <!-- <router-view name="messages" /> -->
-          <PatientChatMessages />
+          <router-view />
         </div>
       </div>
     </div>
@@ -25,13 +23,10 @@
 <script>
 import PatientChatFilter from "./Children/PatientChatFilter.vue";
 import PatientChatContact from "./Children/PatientChatContact.vue";
-import PatientChatMessages from "./Children/PatientChatmessages.vue";
-
 export default {
   components: {
     PatientChatFilter,
     PatientChatContact,
-    PatientChatMessages,
   },
 };
 </script>

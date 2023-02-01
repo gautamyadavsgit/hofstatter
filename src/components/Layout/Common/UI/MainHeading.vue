@@ -1,6 +1,9 @@
 <!-- base componnt for headings -->
 <template>
-  <h2 class="font-oxygenBold font-bold whitespace-nowrap" :class="customStyle">
+  <h2
+    class="font-oxygenBold font-bold whitespace-nowrap text-black"
+    :class="customStyle"
+  >
     <slot> </slot>
   </h2>
 </template>

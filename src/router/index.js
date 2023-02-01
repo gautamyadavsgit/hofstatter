@@ -60,15 +60,27 @@ const router = createRouter({
       // router group for all the dashboard views
       path: "/dashboard",
       name: "dashboard",
-      component: defineAsyncComponent(() =>
-        import("../components/Pages/DashBoard/IndexMain.vue")
-      ),
+      component: () => import("../components/Pages/DashBoard/IndexMain.vue"),
       children: [
         {
           path: "/dashboard",
           name: "dashboard",
           components: {
             default: Dashboard,
+            sidebar: () =>
+              import("../components/Layout/Common/AppointmentSidebar.vue"),
+          },
+          props: { sidebar: true },
+        },
+        {
+          path: "/appointments",
+          name: "PatientAppoinetments",
+
+          components: {
+            default: () =>
+              import(
+                "../components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
+              ),
             sidebar: () =>
               import("../components/Layout/Common/AppointmentSidebar.vue"),
           },
@@ -100,10 +112,18 @@ const router = createRouter({
           component: defineAsyncComponent(() =>
             import("../components/Pages/DashBoard/PatientChat/PatientChat.vue")
           ),
-          // children: {
-          //   path: "/chat?filter=:filter",
-          //   name:"/chat"
-          // },
+          // children group for chat page
+          children: [
+            {
+              path: "/chat/:name",
+              name: "chatMessages",
+              component: defineAsyncComponent(() =>
+                import(
+                  "../components/Pages/DashBoard/PatientChat/Children/PatientChatmessages.vue"
+                )
+              ),
+            },
+          ],
         },
       ],
     },
