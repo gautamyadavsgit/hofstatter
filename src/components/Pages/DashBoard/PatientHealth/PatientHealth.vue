@@ -52,7 +52,7 @@
             healthParameterValue="97"
             healthParameterUnit="%"
             label="Sauerstoffk"
-            updatedTime="16 min ago"
+            updatedTime="1 hour ago"
             icoStyle="text-[#009FF9]"
           />
           <health-parameter
@@ -69,7 +69,7 @@
             icon="ri:heart-pulse-fill"
             healthParameterValue="84"
             healthParameterUnit="bpm"
-            label="Blutdruck"
+            label="Herzfrequenz"
             updatedTime="16 min ago"
             icoStyle="text-[#FD5957]"
           />
@@ -101,7 +101,7 @@
               <div class="grid grid-cols-6">
                 <div class="col-span-4">
                   <main-heading
-                    customStyle="text-white text-2xl !whitespace-normal"
+                    customStyle="!text-white text-2xl !whitespace-normal"
                     >Deinen Impftermin buchen</main-heading
                   >
                 </div>

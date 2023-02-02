@@ -38,8 +38,8 @@
                 Weiter
               </main-button>
             </div>
-            <div class="w-3/12 flex">
-              <unsubscribe-icon class="inline-block m-auto"></unsubscribe-icon>
+            <div class="w-3/12 flex items-center">
+              <UnsuscribeIcon class="m-auto" />
             </div>
           </div>
         </main-card>
@@ -61,6 +61,12 @@
 
 <script>
 import UnsuscribeIcon from "../../../icons/Anfragen/UnsubscribeIcon.vue";
+// import TransfersIcon from "@/components/icons/Anfragen/TransfersIcon.vue";
+// import XRayImg from "@/components/icons/PatientDiagnosticCenter/XRayImg.vue";
+// import AttesteIcon from "@/components/icons/Anfragen/AttesteIcon.vue";
+// import PflegefreistellungIcon from "@/components/icons/Anfragen/PflegefreistellungIcon.vue";
+// import NurseIcon from "@/components/icons/Anfragen/NurseIcon.vue";
+
 // imorting pagination Library
 import Paginate from "vuejs-paginate-next";
 
@@ -76,35 +82,40 @@ export default {
         },
         {
           id: 2,
-          heading: "Abmelden vom Krankenstand",
+          heading: "Überweisungen, Verordnungen",
           para: "Mit der folgenden Option können Sie sich einem bestehenden Krankenstand abmelden",
         },
         {
           id: 3,
-          heading: "Abmelden vom Krankenstand",
+          heading: "Rehaantrag stellen",
           para: "Mit der folgenden Option können Sie sich einem bestehenden Krankenstand abmelden",
         },
         {
           id: 4,
-          heading: "Abmelden vom Krankenstand",
+          heading: "Atteste",
           para: "Mit der folgenden Option können Sie sich einem bestehenden Krankenstand abmelden",
         },
         {
           id: 5,
-          heading: "Abmelden vom Krankenstand",
+          heading: "Pflegefreistellung",
           para: "Mit der folgenden Option können Sie sich einem bestehenden Krankenstand abmelden",
         },
         {
           id: 6,
-          heading: "Abmelden vom Krankenstand",
+          heading: "Pflegeheimantrag",
           para: "Mit der folgenden Option können Sie sich einem bestehenden Krankenstand abmelden",
         },
       ],
     };
   },
   components: {
-    "unsubscribe-icon": UnsuscribeIcon,
+    UnsuscribeIcon,
     "paginate-pagination": Paginate,
+    // XRayImg,
+    // TransfersIcon,
+    // AttesteIcon,
+    // PflegefreistellungIcon,
+    // NurseIcon,
   },
   methods: {
     handlerPaginate(page) {

@@ -12,6 +12,9 @@ import Anfragen from "../components/Pages/DashBoard/Anfragen/AnfRagen.vue";
 import PatientHealth from "../components/Pages/DashBoard/PatientHealth/PatientHealth.vue";
 import PatientDiagnosticCenter from "../components/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue";
 import PatientVaccination from "../components/Pages/DashBoard/PatientVaccination/PatientVaccination.vue";
+const Sidebar = defineAsyncComponent(() =>
+  import("../components/Layout/Common/AppointmentSidebar.vue")
+);
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -58,7 +61,7 @@ const router = createRouter({
 
     {
       // router group for all the dashboard views
-      path: "/dashboard",
+      path: "/dashboardmain",
       name: "dashboard",
       component: () => import("../components/Pages/DashBoard/IndexMain.vue"),
       children: [
@@ -67,24 +70,49 @@ const router = createRouter({
           name: "dashboard",
           components: {
             default: Dashboard,
-            sidebar: () =>
-              import("../components/Layout/Common/AppointmentSidebar.vue"),
+            sidebar: Sidebar,
           },
           props: { sidebar: true },
         },
+        // router for appointments
         {
           path: "/appointments",
           name: "PatientAppoinetments",
-
+          redirect: { name: "PatientAppointmentsData" },
           components: {
             default: () =>
               import(
                 "../components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
               ),
-            sidebar: () =>
-              import("../components/Layout/Common/AppointmentSidebar.vue"),
+            sidebar: Sidebar,
           },
           props: { sidebar: true },
+          children: [
+            {
+              path: "/appointments",
+              name: "PatientAppointmentsData",
+              component: () =>
+                import(
+                  "../components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentSearchResult.vue"
+                ),
+            },
+            {
+              path: "/appointments/choose-date",
+              name: "PatientAppointmentsChooseDate",
+              component: () =>
+                import(
+                  "../components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentChooseDate.vue"
+                ),
+            },
+            {
+              path: "/appointments/choose-time",
+              name: "PatientAppointmentChooseTime",
+              component: () =>
+                import(
+                  "../components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentChooseTime.vue"
+                ),
+            },
+          ],
         },
         {
           path: "/anfragen",

@@ -12,7 +12,7 @@
                 <main-heading
                   customStyle="md:text-[24px] md:leading-[30px] text-lg pb-2"
                 >
-                  Hallo, Gautam Yadav
+                  Hallo, John Doe
                 </main-heading>
                 <p class="font-oxygen text-[#82837E] text-base">
                   “Du hast 2 Anfragen in deinem Board”
@@ -166,12 +166,12 @@
             <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
               <div class="flex justify-center">
                 <div class="inline-block">
-                  <p class="pb-2 text-lg">Art</p>
+                  <p class="pb-2 text-lg">Datum</p>
                   <ul class="list-none">
-                    <li class="">Notfalldatenblatt</li>
-                    <li class="">Letztes EKG</li>
-                    <li class="">Anästhesiepass</li>
-                    <li class="">Patientenverfügung</li>
+                    <li class="">10 Nov 2022</li>
+                    <li class="">25 Nov 2022</li>
+                    <li class="">10 Dec 2022</li>
+                    <li class="">05 Dec 2022</li>
                     <!-- ... -->
                   </ul>
                 </div>
@@ -179,12 +179,12 @@
             </div>
             <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
               <div class="m-auto inline-block md:float-right">
-                <p class="pb-2 text-lg">Art</p>
+                <p class="pb-2 text-lg">Dauer</p>
                 <ul class="list-none">
-                  <li class="">Notfalldatenblatt</li>
-                  <li class="">Letztes EKG</li>
-                  <li class="">Anästhesiepass</li>
-                  <li class="">Patientenverfügung</li>
+                  <li class="">02 Monate</li>
+                  <li class="">04 Monate</li>
+                  <li class="">01 Jahr</li>
+                  <li class="">03 Jahre</li>
                   <!-- ... -->
                 </ul>
               </div>

@@ -50,7 +50,7 @@
           <div class="hidden md:block">
             <span
               class="font-oxygen font-bold text-[18px] block whitespace-nowrap"
-              >Gautam Yadav</span
+              >John Doe</span
             >
             <span
               class="font-oxygen font-normal text-[16px] inline-block float-right"
