@@ -1,17 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { defineAsyncComponent } from "vue";
 
-import Dashboard from "../components/Pages/DashBoard/Home/DashBoard.vue";
-// const Dashboard = defineAsyncComponent(() =>
-//   import("../components/Pages/DashBoard/DashBoard.vue")
-// );
-import Anfragen from "../components/Pages/DashBoard/Anfragen/AnfRagen.vue";
-// const Anfragen = defineAsyncComponent(() =>
-//   import("../components/Pages/DashBoard/AnfRagen.vue")
-// );
-import PatientHealth from "../components/Pages/DashBoard/PatientHealth/PatientHealth.vue";
-import PatientDiagnosticCenter from "../components/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue";
-import PatientVaccination from "../components/Pages/DashBoard/PatientVaccination/PatientVaccination.vue";
 const Sidebar = defineAsyncComponent(() =>
   import("../components/Layout/Common/AppointmentSidebar.vue")
 );
@@ -69,7 +58,8 @@ const router = createRouter({
           path: "/dashboard",
           name: "dashboard",
           components: {
-            default: Dashboard,
+            default: () =>
+              import("../components/Pages/DashBoard/Home/DashBoard.vue"),
             sidebar: Sidebar,
           },
           props: { sidebar: true },
@@ -126,22 +116,32 @@ const router = createRouter({
         {
           path: "/anfragen",
           name: "Anfragen",
-          component: Anfragen,
+          component: () =>
+            import("../components/Pages/DashBoard/Anfragen/AnfRagen.vue"),
         },
         {
           path: "/health-status",
           name: "HealthStatus",
-          component: PatientHealth,
+          component: () =>
+            import(
+              "../components/Pages/DashBoard/PatientHealth/PatientHealth.vue"
+            ),
         },
         {
           path: "/diagnostic-center",
           name: "PatientDiagnosticCenter",
-          component: PatientDiagnosticCenter,
+          component: () =>
+            import(
+              "../components/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue"
+            ),
         },
         {
           path: "/vaccination",
           name: "PatientVaccination",
-          component: PatientVaccination,
+          component: () =>
+            import(
+              "../components/Pages/DashBoard/PatientVaccination/PatientVaccination.vue"
+            ),
         },
         {
           path: "/chat",
