@@ -4,7 +4,7 @@
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">
           <main-heading>Doctor Details</main-heading>
-          <a @click="$route.go.back()" class="font-bold text-sm text-blue"
+          <a @click="$router.go(-1)" class="font-bold text-sm text-blue"
             ><iconify-icon icon="ion:chevron-back" class="inline-block" />
             Rücken</a
           >

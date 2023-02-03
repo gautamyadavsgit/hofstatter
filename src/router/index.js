@@ -87,6 +87,7 @@ const router = createRouter({
             sidebar: Sidebar,
           },
           props: { sidebar: true },
+          // children group for appointments components
           children: [
             {
               path: "/appointments",
@@ -110,6 +111,14 @@ const router = createRouter({
               component: () =>
                 import(
                   "../components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentChooseTime.vue"
+                ),
+            },
+            {
+              path: "/appointments/successfull",
+              name: "PatientAppointmentDone",
+              component: () =>
+                import(
+                  "../components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentSuccessfull.vue"
                 ),
             },
           ],
@@ -156,6 +165,13 @@ const router = createRouter({
       ],
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
 });
 
 export default router;
