@@ -1,11 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { defineAsyncComponent } from "vue";
 
-const Sidebar = defineAsyncComponent(() =>
-  import("../components/Layout/Common/AppointmentSidebar.vue")
-);
+const Sidebar = () =>
+  import("../components/Layout/Common/AppointmentSidebar.vue");
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior() {},
   routes: [
     {
       path: "/",
@@ -17,9 +16,7 @@ const router = createRouter({
       path: "/login",
       name: "login",
       redirect: { name: "welcome" },
-      component: defineAsyncComponent(() =>
-        import("../components/Pages/Login/LoginMain.vue")
-      ),
+      component: () => import("../components/Pages/Login/LoginMain.vue"),
       children: [
         {
           path: "/welcome",
@@ -114,6 +111,23 @@ const router = createRouter({
           ],
         },
         {
+          path: "/requests",
+          name: "Requests",
+          component: () =>
+            import(
+              "../components/Pages/DashBoard/PatientRequests/PatientRequest.vue"
+            ),
+        },
+        {
+          path: "/medications",
+          name: "Medications",
+          component: () =>
+            import(
+              "../components/Pages/DashBoard/PatientMedication/PatientMedication.vue"
+            ),
+        },
+
+        {
           path: "/anfragen",
           name: "Anfragen",
           component: () =>
@@ -146,32 +160,23 @@ const router = createRouter({
         {
           path: "/chat",
           name: "PatientChat",
-          component: defineAsyncComponent(() =>
-            import("../components/Pages/DashBoard/PatientChat/PatientChat.vue")
-          ),
+          component: () =>
+            import("../components/Pages/DashBoard/PatientChat/PatientChat.vue"),
           // children group for chat page
           children: [
             {
               path: "/chat/:name",
               name: "chatMessages",
-              component: defineAsyncComponent(() =>
+              component: () =>
                 import(
                   "../components/Pages/DashBoard/PatientChat/Children/PatientChatmessages.vue"
-                )
-              ),
+                ),
             },
           ],
         },
       ],
     },
   ],
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    } else {
-      return { top: 0 };
-    }
-  },
 });
 
 export default router;

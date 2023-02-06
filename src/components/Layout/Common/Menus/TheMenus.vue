@@ -11,7 +11,7 @@
     icon="healthicons:i-schedule-school-date-time"
   ></nav-bar-link>
   <nav-bar-link
-    link="/"
+    link="/requests"
     icon="carbon:request-quote"
     :class="cStyle"
   ></nav-bar-link>
@@ -21,7 +21,7 @@
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/"
+    link="/medications"
     icon="healthicons:medicines"
     :class="cStyle"
   ></nav-bar-link>

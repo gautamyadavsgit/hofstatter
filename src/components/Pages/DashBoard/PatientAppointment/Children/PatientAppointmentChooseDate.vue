@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="cols-span-1 mt-6">
+        <div class="md:w-5/12 col-span-2 mt-6">
           <main-heading>Choose Slot Date</main-heading>
 
           <v-calendar
@@ -41,6 +41,8 @@
               weekdays: 'WWW',
             }"
             @dayclick="onDayClick"
+            v-model="date"
+            is-expanded
           />
         </div>
       </div>
@@ -52,16 +54,24 @@
 export default {
   data() {
     return {
-      date: "",
+      date: {},
+      attributes: [
+        {
+          key: this.date,
+          highlight: true,
+          dates: this.date,
+        },
+      ],
     };
   },
 
   methods: {
     onDayClick(day) {
       this.date = day.date;
+      console.log(this.date);
     },
     dateSubmit() {
-      if (this.date == "") {
+      if (this.date == null) {
         this.$swal("Please select atleat one date");
         return;
       }

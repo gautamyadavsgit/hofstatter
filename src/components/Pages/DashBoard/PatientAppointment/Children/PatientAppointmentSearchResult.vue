@@ -1,5 +1,5 @@
 <template>
-  <PatientAppointmentSearchForm />
+  <PatientAppointmentSearchForm @filter-data="FilterData" />
   <div class="col-span-12">
     <div>
       <ul class="list-none mt-2">
@@ -67,7 +67,7 @@ export default {
         {
           id: "2",
           name: "Impftermin, Influenza",
-          img: "https://pixabay.com/get/g37fbabb847010c076723256f8ca10184088f47a252ff632fee3743196f4a52f2c548ed7ef9853f460968d1b985230f66abee5ff284c11710c1c202a1b12ae988_640.png",
+          img: "https://randomuser.me/api/portraits/women/3.jpg",
           color: "bg-[#FFDFDF80]",
           type: "vc",
         },
@@ -80,11 +80,16 @@ export default {
         {
           id: "4",
           name: "Röntgen, Ärztezentrum Wienerwald",
-          img: "https://pixabay.com/get/gc4af676345c69a58fdecf6edd69cfe6e6a1cff05599cadf252974e8ddefaae7db36ba4240b8fa99ddc652254cc845f39ce2afe1dd0dd490bfa56f83cf3794645_640.jpg",
+          img: "https://randomuser.me/api/portraits/women/3.jpg",
           type: "rp",
         },
       ],
     };
+  },
+  methods: {
+    FilterData(data) {
+      console.log(data);
+    },
   },
 };
 </script>

@@ -85,10 +85,10 @@ const randomDate = (start, end) => {
 };
 
 // dates for which dates to be highlighted
-const a = randomDate(new Date(2022, 12, 1), new Date());
-const b = randomDate(new Date(2022, 12, 1), new Date());
-const c = randomDate(new Date(2022, 12, 1), new Date());
-const d = randomDate(new Date(2022, 12, 1), new Date());
+const a = randomDate(new Date(2023, 2, 1), new Date());
+const b = randomDate(new Date(2023, 2, 1), new Date());
+const c = randomDate(new Date(2023, 2, 1), new Date());
+const d = randomDate(new Date(2023, 2, 1), new Date());
 
 export default {
   data() {

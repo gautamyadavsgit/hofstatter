@@ -21,8 +21,8 @@
             </div>
           </div>
         </div>
-        <div class="cols-span-1 mt-6">
-          <main-heading
+        <div class="col-span-2 mt-6">
+          <main-heading class="!whitespace-normal"
             >Hey John Doe, your appointment request for {{ value + " " }}
             {{ type }} is accepted.</main-heading
           >
