@@ -16,3 +16,13 @@ export default {
   },
 };
 </script>
+<style>
+.main-card {
+  box-shadow: 4px -4px 10px rgba(46, 49, 146, 0.1),
+    -4px 4px 10px rgba(46, 49, 146, 0.1);
+}
+.main-card:hover {
+  box-shadow: 4px -4px 10px rgba(46, 49, 146, 0.1),
+    -4px 4px 10px rgba(46, 49, 146, 0.6);
+}
+</style>

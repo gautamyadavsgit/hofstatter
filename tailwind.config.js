@@ -1,5 +1,9 @@
 module.exports = {
-  content: ["./public/index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  content: [
+    "./public/index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js", // importing content of flowbite
+  ],
   theme: {
     extend: {
       colors: {
@@ -8,14 +12,15 @@ module.exports = {
         "site-grey": "#C5C6E5",
         "light-grey": "#82837E",
         "off-light-grey": "#82837E80",
-        "cyan":"#00958f",
-        "light-cyan":"a9e1dc",
-        "yellow":"#fdb500",
-        "light-yellow":"#fbe3a9",
-        "red":"#fd5a56",
-        "light-red":"#f8cbc9",
-        "skyblue":"#009FF9",
-        "light-skyblue":"#009FF929"
+        cyan: "#00958f",
+        "light-cyan": "a9e1dc",
+        yellow: "#fdb500",
+        "light-yellow": "#fbe3a9",
+        red: "#fd5a56",
+        "light-red": "#f8cbc9",
+        skyblue: "#009FF9",
+        "light-skyblue": "#009FF929",
+        orange: "#D67E2D",
       },
       fontFamily: {
         oxygen: ["Oxygen", "sans-serif"],
@@ -40,5 +45,5 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],
 };

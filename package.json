@@ -9,6 +9,7 @@
   "dependencies": {
     "chart.js": "^4.2.0",
     "core-js": "^3.8.3",
+    "flowbite": "^1.6.3",
     "v-calendar": "^3.0.0-alpha.8",
     "vue": "^3.2.13",
     "vue-chartjs": "^5.2.0",
