@@ -129,3 +129,4 @@ out
 old
 .htaccess
 *.zip
+.vscode

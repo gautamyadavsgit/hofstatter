@@ -41,6 +41,9 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+body{
+  @apply font-oxygen
+}
 .main-button {
   @apply text-center transition  text-white border-2 border-blue hover:bg-white hover:text-blue bg-blue inline-block text-[14px] leading-[23px] font-oxygen py-3  rounded-full font-bold w-full;
 }
@@ -67,5 +70,5 @@
   @apply flex justify-center  [&>.active]:text-white [&>.active]:rounded-full [&>.disabled]:text-site-grey [&>.active]:bg-blue  [&>.disabled]:cursor-not-allowed  [&>*]:cursor-pointer  md:[&>*]:px-2 md:py-1 md:[&>*]:mx-1 [&>*]:px-1 [&>*]:mx-[1px] font-oxygen font-bold;
 }
 .main-card {
-  @apply h-auto w-auto bg-white shadow-[0px_0px_6px_6px_#E7EEF6] hover:shadow-[4px_4px_10px_#2e319299] transition delay-100 ease-in-out relative my-2 mx-1 font-oxygen rounded-[10px] px-2 py-2 md:px-4 md:py-4;
+  @apply h-auto w-auto bg-white transition delay-100 ease-in-out relative my-2 mx-1 font-oxygen rounded-[10px] px-2 py-2 md:px-4 md:py-4;
 }

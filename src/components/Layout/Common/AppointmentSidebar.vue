@@ -1,6 +1,6 @@
 <template>
   <div class="py-4 pl-2">
-    <main-card class="">
+    <main-card>
       <div class="pb-2">
         <div>
           <div class="flex justify-between py-2">

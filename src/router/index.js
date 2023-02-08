@@ -160,6 +160,7 @@ const router = createRouter({
         {
           path: "/chat",
           name: "PatientChat",
+          redirect: { path: "/chat/gautam" },
           component: () =>
             import("../components/Pages/DashBoard/PatientChat/PatientChat.vue"),
           // children group for chat page

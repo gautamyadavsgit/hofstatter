@@ -3,7 +3,7 @@ import App from "./App.vue";
 
 import router from "./router"; // importing router
 // importing login component
-
+import vuex from "./store/store.js";
 import BackButton from "./components/Layout/Login/BackButton.vue";
 import PageWrapper from "./components/Layout/Common/PageWrapper.vue";
 import MainCard from "./components/Layout/Common/UI/MainCard.vue";
@@ -25,6 +25,7 @@ import "sweetalert2/dist/sweetalert2.min.css";
 const app = createApp(App);
 
 app.use(router);
+app.use(vuex);
 app.use(VCalendar);
 app.use(VueSweetalert2);
 // registering layout components
