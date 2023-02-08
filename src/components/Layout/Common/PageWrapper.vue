@@ -12,6 +12,7 @@
       <slot></slot>
     </div>
     <!-- if condition for checking if page has sidebar -->
+
     <div v-if="sidebar" class="md:w-[30%]">
       <div class="top-[0] sticky">
         <slot name="sidebar"></slot>
@@ -38,6 +39,9 @@ export default {
     "top-nav": TopNavVue,
     // eslint-disable-next-line vue/no-unused-components
     "mobile-menu": MobileMenu,
+  },
+  created() {
+    console.log(this.$route.matched[1].props);
   },
 };
 </script>
