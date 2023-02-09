@@ -1,23 +1,19 @@
 <template>
-  <page-wrapper class="p-0">
-    <!-- component -->
+  <!-- component -->
 
-    <div class="container mx-auto mt-6 chat-shadow-double">
-      <div class="h-[77vh]">
-        <div class="md:flex rounded h-full">
-          <div
-            class="md:w-40% lg:w-[30%] w-full flex flex-col chat-shadow z-20"
-          >
-            <PatientChatFilter />
-            <!-- Left -->
-            <PatientChatContact />
-          </div>
-          <!-- Right -->
-          <router-view />
+  <div class="container mx-auto mt-6 chat-shadow-double">
+    <div class="h-[77vh]">
+      <div class="md:flex rounded h-full">
+        <div class="md:w-40% lg:w-[30%] w-full flex flex-col chat-shadow z-20">
+          <PatientChatFilter />
+          <!-- Left -->
+          <PatientChatContact />
         </div>
+        <!-- Right -->
+        <router-view />
       </div>
     </div>
-  </page-wrapper>
+  </div>
 </template>
 
 <script>

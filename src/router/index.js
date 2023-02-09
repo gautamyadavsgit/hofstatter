@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const Sidebar = () =>
-  import("../components/Layout/Common/AppointmentSidebar.vue");
 const router = createRouter({
   history: createWebHistory(),
   scrollBehavior() {},
@@ -54,11 +52,8 @@ const router = createRouter({
         {
           path: "/dashboard",
           name: "dashboard",
-          components: {
-            default: () =>
-              import("../components/Pages/DashBoard/Home/DashBoard.vue"),
-            sidebar: Sidebar,
-          },
+          component: () =>
+            import("../components/Pages/DashBoard/Home/DashBoard.vue"),
           props: { sidebar: true },
         },
         // router for appointments
@@ -66,13 +61,10 @@ const router = createRouter({
           path: "/appointments",
           name: "PatientAppoinetments",
           redirect: { name: "PatientAppointmentsData" },
-          components: {
-            default: () =>
-              import(
-                "../components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
-              ),
-            sidebar: Sidebar,
-          },
+          component: () =>
+            import(
+              "../components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
+            ),
           props: { sidebar: true },
           // children group for appointments components
           children: [
@@ -128,11 +120,14 @@ const router = createRouter({
         },
 
         {
-          path: "/anfragen",
-          name: "Anfragen",
+          path: "/questions",
+          name: "Questions",
           component: () =>
-            import("../components/Pages/DashBoard/Anfragen/AnfRagen.vue"),
+            import(
+              "../components/Pages/DashBoard/PatientQuestionaries/PatientQuestionaries.vue"
+            ),
         },
+
         {
           path: "/health-status",
           name: "HealthStatus",

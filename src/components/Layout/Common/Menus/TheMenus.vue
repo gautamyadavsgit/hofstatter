@@ -31,7 +31,7 @@
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/anfragen"
+    link="/questions"
     icon="mdi:question-mark-circle"
     :class="cStyle"
   ></nav-bar-link>
