@@ -41,8 +41,8 @@
     scrollbar-width: none; /* Firefox */
   }
 }
-body{
-  @apply font-oxygen
+body {
+  @apply font-oxygen;
 }
 .main-button {
   @apply text-center transition  text-white border-2 border-blue hover:bg-white hover:text-blue bg-blue inline-block text-[14px] leading-[23px] font-oxygen py-3  rounded-full font-bold w-full;
@@ -71,4 +71,10 @@ body{
 }
 .main-card {
   @apply h-auto w-auto bg-white transition delay-100 ease-in-out relative my-2 mx-1 font-oxygen rounded-[10px] px-2 py-2 md:px-4 md:py-4;
+}
+.account-setting input {
+  @apply form-input w-72 h-9 placeholder-light-grey rounded-md border-[#82837e26];
+}
+.account-setting label {
+  @apply block text-black py-3;
 }

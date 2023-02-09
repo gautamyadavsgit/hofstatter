@@ -72,6 +72,11 @@ export default {
     $route() {
       // calling the setSidebar function every time when routhe changes
       this.setSideBar();
+      window.scrollTo({
+        x: 0,
+        y: 0,
+        behavior: "smooth",
+      });
     },
   },
   methods: {

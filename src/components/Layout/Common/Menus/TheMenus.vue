@@ -41,10 +41,10 @@
     icon="fa-regular:hospital"
     :class="cStyle"
   ></nav-bar-link>
+  <!-- checing sidenav prop for give space only in the desktop -->
   <div v-if="sideNav" class="mt-10 inline-block"></div>
-
   <nav-bar-link
-    link="/"
+    link="/account-setting"
     icon="ant-design:setting-filled"
     :class="cStyle"
   ></nav-bar-link>

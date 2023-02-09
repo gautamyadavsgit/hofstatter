@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(),
-  scrollBehavior() {},
   routes: [
     {
       path: "/",
@@ -153,6 +152,14 @@ const router = createRouter({
             ),
         },
         {
+          path: "/account-setting",
+          name: "AccountSetting",
+          component: () =>
+            import(
+              "../components/Pages/DashBoard/AccountSetting/AccountSetting.vue"
+            ),
+        },
+        {
           path: "/chat",
           name: "PatientChat",
           redirect: { path: "/chat/gautam" },
@@ -173,6 +180,13 @@ const router = createRouter({
       ],
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { left: 0, top: 0 };
+    }
+  },
 });
 
 export default router;
