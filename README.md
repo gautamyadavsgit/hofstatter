@@ -1,5 +1,6 @@
 # alex
-
+npm install -g @vue/cli
+vue create
 ## Project setup
 ```
 npm install

@@ -1,0 +1,45 @@
+<template>
+  <div class="flex justify-between mt-4 border-b py-2">
+    <div class="md:flex justify-between items-center">
+      <div class="md:mr-5">
+        <span
+          ><img
+            src="https://randomuser.me/api/portraits/women/56.jpg"
+            class="w-20 h-20 rounded-full border-2 border-solid border-black"
+        /></span>
+      </div>
+      <div class="">
+        <span
+          class="font-oxygenBold text-2xl block whitespace-nowrap text-black"
+          >John Doe</span
+        ><span
+          class="font-oxygenLight inline-block float-right text-light-grey text-xl"
+          >johndoe@gmail.com
+          <iconify-icon
+            icon="mdi:tick-decagram"
+            color="#10c98d"
+            class="inline-block text-2xl"
+        /></span>
+      </div>
+    </div>
+    <div>
+      <main-button
+        :to="{ name: 'ProfileSetting' }"
+        class="m-auto inline-block !px-1 md:!px-5"
+        v-if="this.$route.name === 'AccountSetting'"
+        ><iconify-icon
+          icon="material-symbols:edit-square-outline"
+          class="inline-block text-lg md:text-2xl mt-[-8px]"
+        />
+        Profil Bearbeiten</main-button
+      >
+      <router-link
+        v-if="this.$route.name === 'ProfileSetting'"
+        class="font-bold text-sm text-blue"
+        :to="{ name: 'AccountSetting' }"
+        ><iconify-icon icon="ion:chevron-back" class="inline-block" />
+        Rücken</router-link
+      >
+    </div>
+  </div>
+</template>

@@ -44,7 +44,7 @@
   <!-- checing sidenav prop for give space only in the desktop -->
   <div v-if="sideNav" class="mt-10 inline-block"></div>
   <nav-bar-link
-    link="/account-setting"
+    link="/setting"
     icon="ant-design:setting-filled"
     :class="cStyle"
   ></nav-bar-link>

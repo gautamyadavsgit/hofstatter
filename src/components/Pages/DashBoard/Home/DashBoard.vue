@@ -33,7 +33,7 @@
           </div>
           <div class="col-span-5 relative hidden md:block">
             <div class="absolute top-[-40%]">
-              <doctors-img></doctors-img>
+              <img :src="DoctorsImg" />
             </div>
           </div>
         </div>
@@ -195,15 +195,13 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue";
-// importing heavy images as vue componenets
-const DoctorsImg = defineAsyncComponent(() =>
-  import("../../../icons/DoctorsImg.vue")
-);
+import DoctorsImg from "@/assets/images/doctorsImage.png";
 
 export default {
-  components: {
-    "doctors-img": DoctorsImg,
+  data() {
+    return {
+      DoctorsImg: DoctorsImg,
+    };
   },
 };
 </script>

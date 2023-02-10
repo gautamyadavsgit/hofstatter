@@ -33,7 +33,6 @@ export default {
     },
     // to prop for adding link if element is anchor
     to: {
-      type: String,
       required: false,
       default: "/",
     },
