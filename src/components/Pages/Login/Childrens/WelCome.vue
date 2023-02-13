@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import WelComeImg from "../../../../assets/images/welcome.svg";
+import WelComeImg from "@/assets/images/welcome.png";
 import KeyBlueImg from "../../../../assets/images/keyblue.svg";
 import KeyWhiteImg from "../../../../assets/images/keywhite.svg";
 export default {

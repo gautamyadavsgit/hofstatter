@@ -11,7 +11,7 @@
               <main-heading
                 customStyle="md:text-[24px] md:leading-[30px] text-lg pb-2"
               >
-                Hallo, John Doe
+                {{ $t("Hello") }}, John Doe
               </main-heading>
               <p class="font-oxygen text-[#82837E] text-base">
                 “Du hast 2 Anfragen in deinem Board”

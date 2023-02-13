@@ -23,11 +23,13 @@
               <mobile-menu class="md:hidden"></mobile-menu>
 
               <!-- main page content -->
-              <router-view />
+              <div id="main-page">
+                <router-view />
+              </div>
             </div>
             <!-- if condition for checking if page has sidebar -->
 
-            <div v-if="sidebar" class="md:w-[30%]">
+            <div v-if="sidebar" class="md:w-[30%]" id="sidebar">
               <div class="top-[0] sticky">
                 <AppointmentSidebar />
               </div>

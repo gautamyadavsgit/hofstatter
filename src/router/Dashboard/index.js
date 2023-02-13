@@ -105,6 +105,19 @@ const DashboardRoutes = [
           },
         ],
       },
+      {
+        path: "/access-log",
+        name: "AccessLog",
+        component: () =>
+          import("@/components/Pages/DashBoard/AccessLog/AccessLog.vue"),
+      },
+      {
+        path: "/my-profile",
+        name: "MyProfile",
+        component: () =>
+          import("@/components/Pages/DashBoard/MyProfile/MyProfile.vue"),
+        props: { sidebar: true },
+      },
     ],
   },
 ];
