@@ -10,6 +10,7 @@ import MainHeading from "./components/Layout/Common/UI/MainHeading.vue";
 import MainButton from "./components/Layout/Common/UI/MainButton.vue";
 import MainIcon from "./components/Layout/Common/UI/MainIcon.vue";
 import SmallText from "./components/Layout/Common/UI/SmallText.vue";
+import { ContentLoader } from "vue-content-loader";
 // importing iconnify icons
 import { Icon } from "@iconify/vue";
 // adding v-calndar
@@ -37,5 +38,5 @@ app.component("small-text", SmallText);
 app.component("back-button", BackButton); // back component for adding backbutton
 
 app.component("iconify-icon", Icon); // component for iconify icons
-
+app.component(ContentLoader);
 app.mount("#app");
