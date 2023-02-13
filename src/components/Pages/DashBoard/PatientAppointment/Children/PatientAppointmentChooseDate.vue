@@ -41,7 +41,6 @@
               weekdays: 'WWW',
             }"
             @dayclick="onDayClick"
-            v-model="date"
             is-expanded
           />
         </div>
@@ -54,7 +53,7 @@
 export default {
   data() {
     return {
-      date: {},
+      chooseDate: "",
       attributes: [
         {
           key: this.date,
@@ -67,16 +66,17 @@ export default {
 
   methods: {
     onDayClick(day) {
-      this.date = day.date;
-      console.log(this.date);
+      this.chooseDate = day.date;
+      console.log(this.chooseDate);
     },
     dateSubmit() {
-      if (this.date == null) {
+      if (this.chooseDate == "") {
         this.$swal("Please select atleat one date");
         return;
       }
+      console.log(this.chooseDate);
       //setting the data into the local storage of type value and date
-      localStorage.setItem("date", this.date);
+      localStorage.setItem("date", this.chooseDate);
       localStorage.setItem("type", this.$route.query.type);
       localStorage.setItem("value", this.$route.query.value);
       this.$router.push({ name: "PatientAppointmentChooseTime" });
