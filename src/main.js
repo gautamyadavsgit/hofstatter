@@ -19,9 +19,10 @@ import "v-calendar/dist/style.css";
 // importing sweetalert
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import i18n from "./plugins/i18n";
 
 const app = createApp(App);
-
+app.use(i18n);
 app.use(router);
 app.use(vuex);
 app.use(VCalendar);

@@ -20,16 +20,40 @@
             >
               <div class="bg-white z-40 before:absolute before:bg-blue">
                 <ul class="flex justify-center items-center">
-                  <li
-                    class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2 border-blue"
-                  >
-                    English
-                  </li>
-                  <li
-                    class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2"
-                  >
-                    German
-                  </li>
+                  <label for="english">
+                    <li
+                      class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2"
+                      :class="this.$i18n.locale == 'en' ? 'border-blue' : ''"
+                    >
+                      English
+                    </li>
+                  </label>
+                  <input
+                    type="radio"
+                    name="language"
+                    key="en"
+                    value="en"
+                    id="english"
+                    class="hidden"
+                    v-model="$i18n.locale"
+                  />
+                  <label for="german">
+                    <li
+                      class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2"
+                      :class="this.$i18n.locale == 'gr' ? 'border-blue' : ''"
+                    >
+                      German
+                    </li>
+                  </label>
+                  <input
+                    type="radio"
+                    name="language"
+                    key="gr"
+                    value="gr"
+                    id="german"
+                    class="hidden"
+                    v-model="$i18n.locale"
+                  />
                 </ul>
               </div>
             </div>
