@@ -13,23 +13,25 @@
       <div class="flex justify-between">
         <!-- translation -->
         <div class="flex md:w-48 m-auto">
-          <div class="relative group">
+          <div class="relative group cursor-pointer">
             <translate-icon> </translate-icon>
             <div
-              class="absolute top-12 left-[-50px] hidden group-hover:block bg-white z-40 before:absolute before:bg-blue"
+              class="absolute top-5 left-[-50px] hidden group-hover:block pt-6"
             >
-              <ul class="flex justify-center items-center">
-                <li
-                  class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2 border-blue"
-                >
-                  English
-                </li>
-                <li
-                  class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2"
-                >
-                  German
-                </li>
-              </ul>
+              <div class="bg-white z-40 before:absolute before:bg-blue">
+                <ul class="flex justify-center items-center">
+                  <li
+                    class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2 border-blue"
+                  >
+                    English
+                  </li>
+                  <li
+                    class="font-oxygen text-[12px] cursor-pointer py-2 px-4 text-gray-500 border-b-2"
+                  >
+                    German
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- notification -->

@@ -2,11 +2,34 @@
   <div class="flex justify-between mt-4 border-b py-2">
     <div class="md:flex justify-between items-center">
       <div class="md:mr-5">
-        <span
+        <span v-if="this.$route.name === 'AccountSetting'"
           ><img
             src="https://randomuser.me/api/portraits/women/56.jpg"
             class="w-20 h-20 rounded-full border-2 border-solid border-black"
         /></span>
+        <input
+          type="file"
+          accept="image/png,image/jpg,image/jpeg"
+          class="hidden"
+          id="profileImg"
+          @change="imgChange"
+        />
+        <label for="profileImg">
+          <span v-if="this.$route.name === 'ProfileSetting'" class="relative"
+            ><img
+              :src="imgPath"
+              class="w-20 h-20 rounded-full border-2 border-solid border-black"
+            />
+            <div
+              class="h-8 w-8 edit-btn absolute top-[55%] left-[70%] rounded-full bg-white"
+            >
+              <iconify-icon
+                icon="material-symbols:edit"
+                class="box-border text-3xl block text-blue m-auto p-1"
+              />
+            </div>
+          </span>
+        </label>
       </div>
       <div class="">
         <span
@@ -43,3 +66,23 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      imgPath: "https://randomuser.me/api/portraits/women/56.jpg",
+    };
+  },
+  methods: {
+    imgChange(event) {
+      console.log(event.target.value);
+      this.imgPath = "https://randomuser.me/api/portraits/women/57.jpg";
+    },
+  },
+};
+</script>
+<style scoped>
+.edit-btn {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+</style>

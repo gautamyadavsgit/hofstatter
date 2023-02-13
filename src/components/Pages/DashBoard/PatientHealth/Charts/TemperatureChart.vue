@@ -1,5 +1,5 @@
 <template>
-  <Line :data="chartData" :options="options" />
+  <ChartLine :data="chartData" :options="options" />
 </template>
 
 <script>
@@ -14,7 +14,7 @@ import {
   Legend,
   Filler,
 } from "chart.js";
-import { Line } from "vue-chartjs";
+import { Line as ChartLine } from "vue-chartjs";
 
 ChartJS.register(
   CategoryScale,
@@ -29,7 +29,7 @@ ChartJS.register(
 
 export default {
   components: {
-    Line,
+    ChartLine,
   },
   data() {
     return {
