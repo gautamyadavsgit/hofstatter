@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 // importing Dashboard routes
 import DashboardRoutes from "./Dashboard/index.js";
+import store from "@/store/store.js";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,6 +17,14 @@ const router = createRouter({
       name: "login",
       redirect: { name: "welcome" },
       component: () => import("../components/Pages/Login/LoginMain.vue"),
+      //checking the condition if user is logged in or not and redirecting
+      beforeEnter: (_, _2, next) => {
+        if (store.state.login.isLoggedIn) {
+          next("/dashboard");
+        } else {
+          next();
+        }
+      },
       children: [
         {
           path: "/welcome",
@@ -40,6 +49,14 @@ const router = createRouter({
           name: "enter-tpn",
           component: () =>
             import("../components/Pages/Login/Childrens/EnterTpn.vue"),
+            //chcking the condition of phone and social security token is entered
+          beforeEnter: (_, _2, next) => {
+            if (!store.state.login.phoneVerified) {
+              next("/sms-login");
+            } else {
+              next();
+            }
+          },
         },
       ],
     },

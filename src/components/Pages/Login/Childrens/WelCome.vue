@@ -2,9 +2,9 @@
   <div class="content-area">
     <div class="m-auto w-full">
       <h2
-        class="text-center font-bold text-[30px] leading-[38px] text-[#2E3192] font-oxygen"
+        class="text-center font-bold text-[30px] leading-[38px] text-[#2E3192] font-oxygen uppercase"
       >
-        WELCOME
+        {{ $t("welcome") }}
       </h2>
     </div>
     <div class="m-auto w-full items-center">
@@ -14,14 +14,14 @@
       <h3
         class="text-center font-normal text-[18px] leading-[23px] font-oxygen"
       >
-        Please choose your preferred login method
+        {{ $t("welcomeLine") }}
       </h3>
     </div>
   </div>
   <div class="btn-area">
     <div class="m-auto w-[300px]">
       <router-link to="/sms-login" class="main-button">
-        Social Security Number / SMS TAN
+        {{ $t("ssn") }}
       </router-link>
     </div>
     <div class="m-auto mt-6 w-[300px]">
@@ -30,7 +30,7 @@
           <img :src="KeyBlueImg" class="hidden group-hover:inline-block" />
           <img :src="KeyWhiteImg" class="inline-block group-hover:hidden" />
         </span>
-        ID Austria
+        {{ $t('id_austria') }}
       </router-link>
     </div>
   </div>
@@ -50,3 +50,20 @@ export default {
   },
 };
 </script>
+
+<i18n>
+  {
+    "en":{
+      "welcome":"welcome",
+      "welcomeLine":"Please choose your preferred login method",
+      "ssn":"Social Security Number / SMS TAN",
+      "id_austria":"ID Austria"
+    },
+    "gr":{
+      "welcome":"Willkommen",
+      "welcomeLine":"Bitte wählen Sie Ihre bevorzugte Anmeldemethode",
+      "ssn":"Sozialversicherungsnummer / SMS-TAN",
+      "id_austria": "ID österreich"
+    }
+  }
+</i18n>
