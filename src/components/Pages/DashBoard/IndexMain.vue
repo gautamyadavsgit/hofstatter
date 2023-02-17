@@ -25,7 +25,7 @@
               <!-- main page content -->
               <div id="main-page">
                 <router-view v-slot="{ Component }">
-                  <transition name="fade">
+                  <transition name="slide-down">
                     <component :is="Component" />
                   </transition>
                 </router-view>
