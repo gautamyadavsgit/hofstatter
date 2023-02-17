@@ -24,7 +24,11 @@
 
               <!-- main page content -->
               <div id="main-page">
-                <router-view />
+                <router-view v-slot="{ Component }">
+                  <transition name="fade">
+                    <component :is="Component" />
+                  </transition>
+                </router-view>
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->

@@ -14,7 +14,7 @@
             id="tpn"
             placeholder="0664555"
             class="input-login"
-            v-model="tpn"
+            v-model.trim="tpn"
           />
         </div>
       </div>

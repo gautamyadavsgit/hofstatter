@@ -14,7 +14,7 @@
             id="phone"
             placeholder="0664 555 1333 323"
             class="input-login"
-            v-model="input.phone"
+            v-model.trim="input.phone"
           />
         </div>
         <div class="mb-5">
@@ -29,7 +29,7 @@
             id="ssn"
             placeholder="4332 010197"
             class="input-login"
-            v-model="input.ssn"
+            v-model.trim="input.ssn"
           />
         </div>
       </div>

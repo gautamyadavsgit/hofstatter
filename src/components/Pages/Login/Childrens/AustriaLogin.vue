@@ -25,7 +25,7 @@
             id="username"
             placeholder="Username/Phone"
             class="input-login"
-            v-model="username"
+            v-model.trim="username"
           />
         </div>
         <div class="mb-5">
@@ -40,7 +40,7 @@
             id="password"
             placeholder="4332 010197"
             class="input-login"
-            v-model="password"
+            v-model.trim="password"
           />
         </div>
       </div>
@@ -68,6 +68,25 @@ export default {
   },
   methods: {
     ausLoginSubmit() {
+      if (this.username === "" || this.password === "") {
+        this.$swal({
+          title: this.$t("error"),
+          text: this.$t("error-text"),
+          icon: "warning",
+        });
+        return;
+      }
+      if (
+        this.username !== this.$store.state.login.dummyLoginData.username &&
+        this.password !== this.$store.state.login.dummyLoginData.password
+      ) {
+        this.$swal({
+          title: this.$t("error"),
+          text: this.$t("global-error"),
+          icon: "error",
+        });
+        return;
+      }
       this.$store.commit("login/setLogin");
       this.$router.push("/dashboard");
     },
@@ -80,13 +99,19 @@ export default {
       "authenticate-with-id-austria":"Authenticate with ID Austria",
       "Username-Phone":"Username/Phone",
       "Signature-Password":"Signature Password",
-      "Identity":"Identity"
+      "Identity":"Identity",
+      "error": "Error",
+      "error-text": "Field cannot be empty",
+      "global-error": "Username and password didn't match"
     },
     "gr":{
       "authenticate-with-id-austria":"Authentifizieren Sie sich mit ID Austria",
       "Username-Phone":"Benutzername/Telefon",
       "Signature-Password":"Signatur-Passwort",
-      "Identity":"Identität"
+      "Identity":"Identität",
+      "error": "Fehler",
+      "error-text": "Feld darf nicht leer sein",
+      "global-error": "Benutzername und Passwort stimmen nicht überein"
     }
   }
 </i18n>

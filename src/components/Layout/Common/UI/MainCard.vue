@@ -1,8 +1,10 @@
 <!-- base component for buttons -->
 <template>
+  <Transition name="fade" >
   <div class="main-card" :class="customStyle">
     <slot></slot>
   </div>
+</Transition>
 </template>
 
 <script>

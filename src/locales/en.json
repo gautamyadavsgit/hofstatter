@@ -1,4 +1,7 @@
 {
   "Hello": "Hello",
-  "Appointments": "Appointments"
+  "Appointments": "Appointments",
+  "error": "Error",
+  "error-text": "Field cannot be empty",
+  "global-error": "Invalid TPN"
 }
