@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-12">
+  <div class="col-span-12" id="dateSection">
     <main-card>
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">
@@ -65,6 +65,12 @@ export default {
   },
 
   methods: {
+    scroll() {
+      setTimeout(() => {
+        const element = document.getElementById("dateSection");
+        element.scrollIntoView();
+      }, 100);
+    },
     onDayClick(day) {
       this.chooseDate = day.date;
       console.log(this.chooseDate);
@@ -81,6 +87,12 @@ export default {
       localStorage.setItem("value", this.$route.query.value);
       this.$router.push({ name: "PatientAppointmentChooseTime" });
     },
+  },
+  created() {
+    this.scroll();
+  },
+  updated() {
+    this.scroll();
   },
 };
 </script>

@@ -16,9 +16,9 @@
           <div class="relative group cursor-pointer">
             <translate-icon> </translate-icon>
             <div
-              class="absolute top-5 left-[-50px] hidden group-hover:block pt-6"
+              class="absolute top-5 z-50 left-[-50px] hidden group-hover:block pt-6"
             >
-              <div class="bg-white z-40 before:absolute before:bg-blue">
+              <div class="bg-white z-50 before:absolute before:bg-blue">
                 <ul class="flex justify-center items-center">
                   <label for="english">
                     <li
@@ -76,17 +76,17 @@
           <div class="hidden md:block">
             <span
               class="font-oxygen font-bold text-[18px] block whitespace-nowrap"
-              >John Doe</span
+              >{{ this.$store.getters["user/fullName"] }}</span
             >
             <span
               class="font-oxygen font-normal text-[16px] inline-block float-right"
-              >Patient</span
+              >{{ this.$store.state.user.userData.userType }}</span
             >
           </div>
           <div class="ml-[20px]">
             <span>
               <img
-                src="https://randomuser.me/api/portraits/women/56.jpg"
+                :src="this.$store.state.user.userData.profilePic"
                 class="w-[50px] h-[50px] rounded-full border-2 border-solid border-black"
               />
             </span>

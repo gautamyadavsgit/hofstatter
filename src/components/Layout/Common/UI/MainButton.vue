@@ -11,9 +11,9 @@
     v-else
     :to="to"
     :class="mode"
-    class="bg-blue border-2 transition ease-in-out delay-150 border-blue md:px-5 md:py-3 px-3 py-2 rounded-full text-white font-oxygen font-bold text-sm text-center hover:bg-white hover:text-blue max-w-fit max-h-fit"
+    class="bg-blue border-2 transition flex ease-in-out delay-150 border-blue md:px-5 md:py-3 px-3 py-2 rounded-full text-white font-oxygen font-bold text-sm text-center hover:bg-white hover:text-blue max-w-fit max-h-fit"
   >
-    <slot></slot>
+    <span class="m-auto"><slot></slot></span>
   </router-link>
 </template>
 <script>

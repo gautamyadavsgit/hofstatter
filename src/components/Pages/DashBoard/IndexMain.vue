@@ -3,7 +3,7 @@
     <div class="flex flex-row bg-white">
       <!-- sidenav -->
 
-      <div class="bg-white w-20 fixed hidden md:static md:block z-50">
+      <div class="bg-white w-20 fixed hidden lg:static lg:block z-50">
         <div class="fixed z-50">
           <side-nav />
         </div>
@@ -11,29 +11,25 @@
 
       <div class="w-full">
         <div
-          class="md:px-4 md:pb-4 text-gray-700 bg-[#E7EEF680] w-full md:h-screen md:overflow-y-scroll md:rounded-l-[30px] hofstatter-dashboard-main"
+          class="lg:px-4 lg:pb-4 text-gray-700 bg-[#E7EEF680] w-full lg:h-screen lg:overflow-y-scroll lg:rounded-l-[30px] hofstatter-dashboard-main"
           :class="conditionalClasses"
         >
-          <div class="w-full" :class="sidebar ? 'md:flex' : ''">
+          <div class="w-full" :class="sidebar ? 'lg:flex' : ''">
             <!-- set the div width of 70% if page has sidebar -->
-            <div :class="sidebar ? 'md:w-[70%]' : 'col-span-12'">
+            <div :class="sidebar ? 'lg:w-[70%]' : 'col-span-12'">
               <!-- adding top navigation bar -->
               <top-nav></top-nav>
               <!-- mobile menu -->
-              <mobile-menu class="md:hidden"></mobile-menu>
+              <mobile-menu class="lg:hidden"></mobile-menu>
 
               <!-- main page content -->
               <div id="main-page">
-                <router-view v-slot="{ Component }">
-                  <transition name="slide-down">
-                    <component :is="Component" />
-                  </transition>
-                </router-view>
+                <router-view> </router-view>
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->
 
-            <div v-if="sidebar" class="md:w-[30%]" id="sidebar">
+            <div v-if="sidebar" class="md:w-[50%] lg:w-[30%]" id="sidebar">
               <div class="top-[0] sticky">
                 <AppointmentSidebar />
               </div>
@@ -111,3 +107,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.fade-enter-active {
+  filter: blur(5px);
+}
+</style>

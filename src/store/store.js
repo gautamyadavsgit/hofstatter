@@ -1,11 +1,13 @@
 // setting up store for managing global state with vuex
 import { createStore } from "vuex";
 // importing login module
-import Login from "./Login";
+import login from "./Login";
+import user from "./User";
 
 const store = createStore({
   modules: {
-    login: Login,
+    login,
+    user,
   },
   state() {
     return {

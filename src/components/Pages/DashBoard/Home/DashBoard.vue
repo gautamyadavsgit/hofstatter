@@ -11,18 +11,20 @@
               <main-heading
                 customStyle="md:text-[24px] md:leading-[30px] text-lg pb-2"
               >
-                {{ $t("Hello") }}, John Doe
+                {{ $t("Hello") }}, {{ this.$store.getters["user/fullName"] }}
               </main-heading>
               <p class="font-oxygen text-[#82837E] text-base">
-                “Du hast 2 Anfragen in deinem Board”
+                “ {{ $t("You have 2 requests in your board") }} ”
               </p>
             </div>
             <div class="pt-6 flex md:grid md:grid-cols-3 md:gap-2 m-auto">
-              <main-button>Impffragebogen</main-button>
-              <main-button class="ml-10 md:ml-0">Lungentest</main-button>
+              <main-button>{{ $t("vaccination questionnaire") }}</main-button>
+              <main-button class="ml-10 md:ml-0"
+                ><span>{{ $t("lung-test") }}</span></main-button
+              >
               <div class="m-auto ml-0 hidden md:block">
                 <router-link to="/" class="text-blue font-bold"
-                  >Alle anzeigen
+                  >{{ $t("Show-all") }}
                   <iconify-icon
                     class="inline m-auto"
                     icon="material-symbols:chevron-right-rounded"
@@ -44,7 +46,7 @@
       <main-card>
         <div class="flex">
           <div>
-            <main-heading>Kontaktiere uns</main-heading>
+            <main-heading>{{ $t("Contact us") }}</main-heading>
           </div>
           <div class="w-full">
             <div class="w-[60%] flex float-right">
@@ -52,17 +54,17 @@
               <main-icon
                 icon="mdi:map-marker"
                 bgStyle="bg-[#E7EEF6] px-1 py-1"
-                icoStyle="text-blue "
+                icoStyle="text-blue md:!text-lg "
               ></main-icon>
               <main-icon
                 icon="clarity:phone-handset-solid"
                 bgStyle="bg-[#A9E2DC] px-1 py-1"
-                icoStyle="text-[#00958F]"
+                icoStyle="text-[#00958F] md:!text-lg"
               ></main-icon>
               <main-icon
                 icon="clarity:chat-bubble-outline-badged"
                 bgStyle="bg-[#D6F0FE] px-1 py-1"
-                icoStyle="text-[#009FF9]"
+                icoStyle="text-[#009FF9] md:!text-lg"
               ></main-icon>
             </div>
           </div>
@@ -75,10 +77,12 @@
     </div>
     <div class="md:col-span-6 col-span-12">
       <main-card>
-        <main-heading>Dauermedikament bestellen</main-heading>
+        <main-heading> {{ $t("Order long-term medication") }}</main-heading>
         <div class="flex">
           <div>
-            <p class="mt-5">E-Rezept für deine Dauermedikamente bestellen.</p>
+            <p class="mt-5">
+              {{ $t("Order e-prescription for your long-term medication") }}
+            </p>
           </div>
           <div>
             <main-icon
@@ -94,7 +98,7 @@
     <!-- third box started -->
     <div class="col-span-12">
       <main-card>
-        <main-heading>Befunde</main-heading>
+        <main-heading>{{ $t("findings") }}</main-heading>
         <div class="grid grid-cols-12 mt-5 text-center md:text-left">
           <div class="col-span-4">
             <div class="grid grid-cols-12">
@@ -150,7 +154,7 @@
     <!-- fourth box started -->
     <div class="col-span-12 font-oxygen">
       <main-card>
-        <main-heading>Notfalldatenblatt</main-heading>
+        <main-heading>{{ $t('Emergency Data Sheet') }}</main-heading>
         <div class="grid grid-cols-12 mt-5">
           <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
             <p class="pb-2 text-lg">Art</p>

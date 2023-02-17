@@ -7,7 +7,7 @@
       <!-- custom style prop for adding custom classes in maincard -->
       <main-card customStyle="md:mt-[3.5rem]">
         <div class="mb-3">
-          <main-heading>Termin Buchen</main-heading>
+          <main-heading>{{ $t("Book an appointment") }}</main-heading>
           <!-- filter form for selecting the type of Appointment -->
           <PatientAppointmentTypeForm />
         </div>

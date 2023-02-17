@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-12">
+  <div class="col-span-12" id="time-section">
     <main-card>
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">

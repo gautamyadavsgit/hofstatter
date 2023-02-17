@@ -5,7 +5,7 @@
   >
     <div>
       <div>
-        <label class="font-bold text-sm text-black">Vaccination</label>
+        <label class="font-bold text-sm text-black">{{ $t('Vaccination') }}</label>
       </div>
       <div class="mt-3">
         <select
@@ -26,7 +26,7 @@
     </div>
     <div>
       <div>
-        <label class="font-bold text-sm text-black">Sleep Screening</label>
+        <label class="font-bold text-sm text-black">{{ $t('Sleep Screening') }}</label>
       </div>
       <div class="mt-3">
         <select
@@ -47,7 +47,7 @@
     </div>
     <div>
       <div>
-        <label class="font-bold text-sm text-black">Lung Function</label>
+        <label class="font-bold text-sm text-black">{{ $t('Lung Function') }}</label>
       </div>
       <div class="mt-3">
         <select
@@ -68,7 +68,7 @@
     </div>
     <div>
       <div>
-        <label class="font-bold text-sm text-black">Blood Draw</label>
+        <label class="font-bold text-sm text-black">{{ $t('Blood Draw') }}</label>
       </div>
       <div class="mt-3">
         <select
@@ -90,7 +90,7 @@
 
     <div>
       <div class="mt-8 flex">
-        <main-button :link="false" mode="md:!py-2 m-auto">Apply</main-button>
+        <main-button :link="false" mode="md:!py-2 m-auto">{{ $t('Apply') }}</main-button>
       </div>
     </div>
   </form>

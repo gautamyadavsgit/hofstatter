@@ -1,10 +1,10 @@
 <!-- base component for buttons -->
 <template>
-  <Transition name="fade" >
+  <transition>
   <div class="main-card" :class="customStyle">
     <slot></slot>
   </div>
-</Transition>
+</transition>
 </template>
 
 <script>
@@ -27,4 +27,5 @@ export default {
   box-shadow: 4px -4px 10px rgba(46, 49, 146, 0.1),
     -4px 4px 10px rgba(46, 49, 146, 0.6);
 }
+
 </style>

@@ -25,7 +25,7 @@
                   bgStyle="bg-[#009FF929]"
                   icoStyle="!text-2xl text-[#009FF9]"
                 ></main-icon>
-                <main-button v-if="user.type == 'vc'">
+                <main-button class="hidden md:inline-block" v-if="user.type == 'vc'">
                   Impffragebogen
                 </main-button>
 
