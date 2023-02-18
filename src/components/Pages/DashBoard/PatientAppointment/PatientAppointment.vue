@@ -14,7 +14,11 @@
       </main-card>
     </div>
     <!-- Appointment search form and search result area -->
-    <router-view />
+    <router-view v-slot="slotProps">
+      <Transition name="fade">
+        <component :is="slotProps.Component"></component>
+      </Transition>
+    </router-view>
   </div>
 </template>
 <script>
@@ -27,3 +31,15 @@ export default {
   },
 };
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

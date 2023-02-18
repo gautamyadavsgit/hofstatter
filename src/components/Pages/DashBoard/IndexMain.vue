@@ -24,7 +24,11 @@
 
               <!-- main page content -->
               <div id="main-page">
-                <router-view> </router-view>
+                <RouterView v-slot="slotProps">
+                  <Transition name="route" mode="out-in">
+                    <component :is="slotProps.Component" />
+                  </Transition>
+                </RouterView>
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->
@@ -98,18 +102,26 @@ export default {
   updated() {
     // call the addchat classes when component is updated
     this.addChatClasses();
+    console.log(this.$route);
   },
   mounted() {
     // call the addchat classes when component is created or mounted
     this.addChatClasses();
     // calling the this.setSideBar function when the reload or component created
     this.setSideBar();
+    console.log(this.$route);
   },
 };
 </script>
 
 <style>
-.fade-enter-active {
+.route-enter-from {
   filter: blur(5px);
+}
+.route-enter-active {
+  filter: blur(10px);
+}
+.route-enter-to {
+  filter: blur(0px);
 }
 </style>

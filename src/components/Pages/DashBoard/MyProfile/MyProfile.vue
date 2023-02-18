@@ -1,4 +1,5 @@
 <template>
+ <div>
   <main-card>
     <div class="grid grid-cols-12">
       <div class="md:col-span-4 col-span-12 border-r-2 border-gray-100">
@@ -251,6 +252,7 @@
       </main-card>
     </div>
   </div>
+ </div>
 </template>
 
 <script></script>

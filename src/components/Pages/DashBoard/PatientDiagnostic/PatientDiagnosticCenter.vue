@@ -1,5 +1,6 @@
 <template>
-  <div class="grid grid-cols-2 md:grid-cols-6 mt-6 md:mt-12 p-4">
+  <div>
+    <div class="grid grid-cols-2 md:grid-cols-6 mt-6 md:mt-12 p-4">
     <main-card class="!p-5">
       <h4 class="text-blue font-bold text-lg">Röntgen</h4>
       <XRayImg class="m-auto mt-2" />
@@ -137,6 +138,7 @@
         </table>
       </main-card>
     </div>
+  </div>
   </div>
 </template>
 <script>

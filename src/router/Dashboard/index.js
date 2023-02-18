@@ -4,8 +4,8 @@ import store from "@/store/store";
 const DashboardRoutes = [
   {
     // router group for all the dashboard views
-    path: "/dashboardmain",
-    name: "dashboard",
+    path: "/dashboardMain",
+    name: "dashboardMain",
     component: () => import("../../components/Pages/DashBoard/IndexMain.vue"),
     beforeEnter: (_, _2, next) => {
       if (store.state.login.isLoggedIn) {

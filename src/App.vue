@@ -9,5 +9,9 @@ if (localStorage.getItem("login")) {
 </script>
 
 <template>
-  <RouterView />
+  <RouterView v-slot="slotProps" >
+  <Transition name="fade" mode="out-in" >
+    <component :is="slotProps.Component"></component>
+  </Transition>
+  </RouterView>
 </template>

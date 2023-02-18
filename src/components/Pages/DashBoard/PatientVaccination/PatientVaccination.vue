@@ -1,4 +1,5 @@
 <template>
+ <div>
   <div class="grid grid-cols-12 mt-12">
     <div class="col-span-11 px-2 md:px-0 md:flex justify-between mb-5">
       <div>
@@ -91,6 +92,7 @@
       </div>
     </div>
   </div>
+ </div>
 </template>
 
 <script>

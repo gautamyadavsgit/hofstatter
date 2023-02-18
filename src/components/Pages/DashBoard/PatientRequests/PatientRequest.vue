@@ -1,5 +1,6 @@
 <template>
-  <div class="w-full overflow-scroll no-scrollbar mt-8">
+  <div>
+    <div class="w-full overflow-scroll no-scrollbar mt-8">
     <div class="w-full md:my-4">
       <div class="md:flex md:justify-between p-4 md:p-0">
         <main-heading>Persönliche Fragebögen</main-heading>
@@ -128,6 +129,7 @@
         </table>
       </main-card>
     </div>
+  </div>
   </div>
 </template>
 <script>
