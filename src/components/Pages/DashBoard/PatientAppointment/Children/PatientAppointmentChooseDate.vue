@@ -3,10 +3,10 @@
     <main-card>
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">
-          <main-heading>Doctor Details</main-heading>
+          <main-heading>{{ $t("Doctor Details") }}</main-heading>
           <a @click="$router.go(-1)" class="font-bold text-sm text-blue"
             ><iconify-icon icon="ion:chevron-back" class="inline-block" />
-            Rücken</a
+            {{ $t("Back") }}</a
           >
         </div>
         <div class="col-span-2 border-b py-4">
@@ -24,14 +24,14 @@
               </div>
             </div>
             <div>
-              <main-button :link="false" @click="dateSubmit"
-                >Continue</main-button
-              >
+              <main-button :link="false" @click="dateSubmit">{{
+                $t("Continue")
+              }}</main-button>
             </div>
           </div>
         </div>
         <div class="md:w-5/12 col-span-2 mt-6">
-          <main-heading>Choose Slot Date</main-heading>
+          <main-heading>{{ $t("Choose Slot Date") }}</main-heading>
 
           <v-calendar
             :attributes="attributes"
@@ -77,7 +77,10 @@ export default {
     },
     dateSubmit() {
       if (this.chooseDate == "") {
-        this.$swal("Please select atleat one date");
+        this.$swal({
+          title: this.$t("Please Select atleast one date"),
+          icon: "error",
+        });
         return;
       }
       console.log(this.chooseDate);

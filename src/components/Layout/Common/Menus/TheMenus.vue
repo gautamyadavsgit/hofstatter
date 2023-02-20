@@ -1,60 +1,66 @@
 <template>
   <!-- themenus component for adding menus in both desktop and mobile  -->
+
   <nav-bar-link
-    link="/dashboard"
+    :link="{ name: 'dashboard' }"
     icon="ci:home-alt-fill"
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
     :class="cStyle"
-    link="/appointments"
+    :link="{ name: 'PatientAppoinetments' }"
     icon="healthicons:i-schedule-school-date-time"
   ></nav-bar-link>
   <nav-bar-link
-    link="/requests"
+    :link="{ name: 'Requests' }"
     icon="carbon:request-quote"
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/health-status"
+    :link="{ name: 'HealthStatus' }"
     icon="ri:heart-pulse-fill"
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/medications"
+    :link="{ name: 'Medications' }"
     icon="healthicons:medicines"
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/vaccination"
+    :link="{ name: 'PatientVaccination' }"
     icon="bxs:injection"
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/questions"
+    :link="{ name: 'Questions' }"
     icon="mdi:question-mark-circle"
     :class="cStyle"
   ></nav-bar-link>
-  <nav-bar-link link="/chat" icon="entypo:chat" :class="cStyle"></nav-bar-link>
   <nav-bar-link
-    link="/diagnostic-center"
+    :link="{ name: 'PatientChat' }"
+    icon="entypo:chat"
+    :class="cStyle"
+  ></nav-bar-link>
+  <nav-bar-link
+    :link="{ name: 'PatientDiagnosticCenter' }"
     icon="fa-regular:hospital"
     :class="cStyle"
   ></nav-bar-link>
   <!-- checing sidenav prop for give space only in the desktop -->
   <div v-if="sideNav" class="mt-10 inline-block"></div>
   <nav-bar-link
-    link="/setting"
+    :link="{ name: 'Setting' }"
     icon="ant-design:setting-filled"
     :class="cStyle"
   ></nav-bar-link>
   <nav-bar-link
-    link="/access-log"
+    :link="{ name: 'AccessLog' }"
     icon="mdi:folder-user"
     :class="cStyle"
   ></nav-bar-link>
+  <!-- eslint-disable-next-line vue/no-multiple-template-root -->
   <nav-bar-link
-    link="/my-profile"
+    :link="{ name: 'MyProfile' }"
     icon="mdi:user"
     :class="cStyle"
   ></nav-bar-link>

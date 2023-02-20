@@ -24,11 +24,13 @@
 
               <!-- main page content -->
               <div id="main-page">
-                <RouterView v-slot="slotProps">
-                  <Transition name="route" mode="out-in">
+                <!-- <RouterView v-slot="slotProps">
+                  <Transition name="fade" mode="out-in">
                     <component :is="slotProps.Component" />
                   </Transition>
                 </RouterView>
+             -->
+                <RouterView />
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->
@@ -76,13 +78,8 @@ export default {
   },
   watch: {
     $route() {
-      // calling the setSidebar function every time when routhe changes
+      // calling the setSidebar function every time when route changes
       this.setSideBar();
-      window.scrollTo({
-        x: 0,
-        y: 0,
-        behavior: "smooth",
-      });
     },
   },
   methods: {
@@ -96,20 +93,18 @@ export default {
     },
     // function for setting the side bar value true or false according to setup in the route
     setSideBar() {
-      this.sidebar = this.$route.matched[1].props.default;
+      this.sidebar = this.$route.meta.sidebar;
     },
   },
   updated() {
     // call the addchat classes when component is updated
     this.addChatClasses();
-    console.log(this.$route);
   },
   mounted() {
     // call the addchat classes when component is created or mounted
     this.addChatClasses();
     // calling the this.setSideBar function when the reload or component created
     this.setSideBar();
-    console.log(this.$route);
   },
 };
 </script>

@@ -20,7 +20,7 @@ const DashboardRoutes = [
         name: "dashboard",
         component: () =>
           import("../../components/Pages/DashBoard/Home/DashBoard.vue"),
-        props: { sidebar: true },
+        meta: { sidebar: true },
       },
       // router for appointments
       {
@@ -31,7 +31,7 @@ const DashboardRoutes = [
           import(
             "../../components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
           ),
-        props: { sidebar: true },
+        meta: { sidebar: true },
         // children group for appointments components
         children: [...AppointmentRoutes],
       },
@@ -124,7 +124,7 @@ const DashboardRoutes = [
         name: "MyProfile",
         component: () =>
           import("@/components/Pages/DashBoard/MyProfile/MyProfile.vue"),
-        props: { sidebar: true },
+        meta: { sidebar: true },
       },
     ],
   },

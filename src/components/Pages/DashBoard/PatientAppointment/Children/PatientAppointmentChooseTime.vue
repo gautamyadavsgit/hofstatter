@@ -3,10 +3,10 @@
     <main-card>
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">
-          <main-heading>Doctor Details</main-heading>
+          <main-heading>{{ $t("Doctor Details") }}</main-heading>
           <a class="font-bold text-sm text-blue" @click="$router.go(-1)"
             ><iconify-icon icon="ion:chevron-back" class="inline-block" />
-            Rücken</a
+            {{ $t("Back") }}</a
           >
         </div>
         <div class="col-span-2 border-b py-4">
@@ -24,20 +24,21 @@
               </div>
             </div>
             <div>
-              <main-button :link="false" @click="submitHandler"
-                >Continue</main-button
-              >
+              <main-button :link="false" @click="submitHandler">{{
+                $t("Continue")
+              }}</main-button>
             </div>
           </div>
         </div>
         <div class="col-span-2 mt-6">
-          <main-heading>Choose Slot Time</main-heading>
+          <main-heading>{{ $t("Choose Slot Time") }}</main-heading>
           <p class="mt-4 font-oxygenBold text-sm">
-            <span class="text-[#00958F]">25th Dec</span>, availability
+            <span class="text-[#00958F]">25th Dec</span>,
+            {{ $t("availability") }}
           </p>
           <div class="mt-5">
             <form>
-              <p>Morning</p>
+              <p>{{$t("Morning")}}</p>
               <label class="label" for="1m">
                 <p
                   class="whitespace-nowrap disabled my-2 mx-2 text-sm font-oxygenBold border-2 rounded-md border-[#3F3D56] p-1 inline-block"
@@ -206,7 +207,7 @@
                 />
               </label>
 
-              <p>Afternoon</p>
+              <p>{{$t("Afternoon")}}</p>
               <label class="label" for="12e">
                 <p
                   class="whitespace-nowrap my-2 mx-2 text-sm font-oxygenBold border-2 rounded-md border-[#3F3D56] p-1 inline-block cursor-pointer"
@@ -297,7 +298,7 @@
                   @change="clickHandler"
                 />
               </label>
-              <p>Evening</p>
+              <p>{{$t("Evening")}}</p>
               <label class="label" for="6E">
                 <p
                   class="whitespace-nowrap my-2 mx-2 text-sm font-oxygenBold border-2 rounded-md border-[#3F3D56] p-1 inline-block cursor-pointer"

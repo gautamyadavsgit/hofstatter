@@ -14,7 +14,7 @@
       <nav class="w-20 justify-between flex flex-col h-auto">
         <div class="my-10">
           <ul>
-            <!-- themenu component for add menus in the sidenavbad addding a extra prop sideNav = true for adding gap between profile menus and main menus -->
+            <!-- themenu component for add menus in the sidenav addding a extra prop sideNav = true for adding gap between profile menus and main menus -->
             <the-menu cStyle="mb-6" :sideNav="true" />
           </ul>
         </div>

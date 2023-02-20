@@ -22,14 +22,14 @@
           </div>
         </div>
         <div class="flex justify-between items-center">
-          <main-heading>Medikation</main-heading>
+          <main-heading>{{ $t("medication") }}</main-heading>
 
           <button class="px-3">
             <main-icon icon="material-symbols:add"></main-icon>
           </button>
         </div>
         <div class="flex items-center">
-          <main-heading>Organisation</main-heading>
+          <main-heading>{{ $t("organization") }}</main-heading>
         </div>
       </div>
     </div>

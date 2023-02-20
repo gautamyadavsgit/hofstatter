@@ -2,7 +2,7 @@
   <div>
     <div class="main-card md:hidden !py-5">
       <div class="flex justify-between items-center">
-        <main-heading>Medikation</main-heading>
+        <main-heading>{{$t('medication')}}</main-heading>
         <button class="px-3">
           <main-icon icon="material-symbols:add"></main-icon>
         </button>

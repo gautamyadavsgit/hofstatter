@@ -3,7 +3,7 @@
     <main-card>
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">
-          <main-heading>Doctor Details</main-heading>
+          <main-heading>{{ $t("Doctor Details") }}</main-heading>
         </div>
         <div class="col-span-2 border-b py-4">
           <div class="flex rounded-lg w-full justify-between">
@@ -22,13 +22,16 @@
           </div>
         </div>
         <div class="col-span-2 mt-6">
-          <main-heading class="!whitespace-normal"
-            >Hey John Doe, your appointment request for {{ value + " " }}
-            {{ type }} is accepted.</main-heading
-          >
+          <main-heading class="!whitespace-normal">{{
+            $t("Hey your appointment request for is accepted", {
+              value: value,
+              type: type,
+              name: "John Doe",
+            })
+          }}</main-heading>
           <p class="mt-4 font-oxygenBold text-sm">
-            Date : <span class="text-[#00958F]">{{ date }}</span
-            >, Time <span class="text-[#00958F]">{{ slotTime }}</span>
+            {{$t('date')}} : <span class="text-[#00958F]">{{ date }}</span
+            >, {{$t('Time')}} <span class="text-[#00958F]">{{ slotTime }}</span>
           </p>
         </div>
       </div>
