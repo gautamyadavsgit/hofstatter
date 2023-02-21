@@ -36,11 +36,13 @@
             </div>
             <!-- if condition for checking if page has sidebar -->
 
-            <div v-if="sidebar" class="md:w-[50%] lg:w-[30%]" id="sidebar">
-              <div class="top-[0] sticky">
-                <AppointmentSidebar />
+            <transition name="fade">
+              <div v-if="sidebar" class="md:w-[50%] lg:w-[30%]" id="sidebar">
+                <div class="top-[0] sticky">
+                  <AppointmentSidebar />
+                </div>
               </div>
-            </div>
+            </transition>
           </div>
           <div class="clear-both"></div>
         </div>
