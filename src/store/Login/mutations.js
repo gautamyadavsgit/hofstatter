@@ -6,9 +6,11 @@ export default {
   phoneVerified(state, payload) {
     state.phoneVerified = payload.phoneVerified;
   },
-  setLogin(state) {
+  setLogin(state, payload) {
+    state.userId = payload.userId;
     state.isLoggedIn = true;
-    localStorage.setItem("login", true);
+    console.log(payload);
+    localStorage.setItem("userId", state.userId);
   },
   // add auto login when login value is present in localStorage
   autoLogin(state) {

@@ -67,7 +67,7 @@ export default {
     };
   },
   methods: {
-    ausLoginSubmit() {
+    async ausLoginSubmit() {
       if (this.username === "" || this.password === "") {
         this.$swal({
           title: this.$t("error"),
@@ -76,19 +76,34 @@ export default {
         });
         return;
       }
-      if (
-        this.username !== this.$store.state.login.dummyLoginData.username &&
-        this.password !== this.$store.state.login.dummyLoginData.password
-      ) {
+      const loginData = {
+        username: this.username,
+        password: this.password,
+      };
+      let loader = this.$loading.show();
+      try {
+        await this.$store.dispatch("login/login", loginData);
+        this.$router.push("/dashboard");
+      } catch (error) {
         this.$swal({
-          title: this.$t("error"),
-          text: this.$t("global-error"),
+          title: error,
           icon: "error",
         });
-        return;
       }
-      this.$store.commit("login/setLogin");
-      this.$router.push("/dashboard");
+      loader.hide();
+      // if (
+      //   this.username !== this.$store.state.login.dummyLoginData.username &&
+      //   this.password !== this.$store.state.login.dummyLoginData.password
+      // ) {
+      //   this.$swal({
+      //     title: this.$t("error"),
+      //     text: this.$t("global-error"),
+      //     icon: "error",
+      //   });
+      //   return;
+      // }
+      // this.$store.commit("login/setLogin");
+      // this.$router.push("/dashboard");
     },
   },
 };

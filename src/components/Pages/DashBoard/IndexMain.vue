@@ -24,11 +24,12 @@
 
               <!-- main page content -->
               <div id="main-page">
-                <RouterView v-slot="slotProps">
+                <!-- <RouterView v-slot="slotProps">
                   <Transition name="route" mode="out-in">
                     <component :is="slotProps.Component" />
                   </Transition>
-                </RouterView>
+                </RouterView> -->
+                <router-view />
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->

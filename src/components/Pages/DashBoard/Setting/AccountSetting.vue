@@ -1,7 +1,7 @@
 <template>
   <!-- form-area -->
   <div class="py-2 px-4">
-    <form class="account-setting">
+    <form class="account-setting" @submit.prevent="changeAccountSetting">
       <h4 class="text-lg font-oxygenBold text-black">Change Phone Number-</h4>
       <div class="md:flex justify-between w-11/12">
         <div>
@@ -10,51 +10,56 @@
             placeholder="Enter your private phone number"
             id="ppn"
             type="text"
+            name="private-phone-number"
           />
         </div>
         <div>
-          <label for="ppn"> Work Phone Number: </label>
+          <label for="wpn"> Work Phone Number: </label>
           <input
             placeholder="Enter your Work Phone Number"
-            id="ppn"
+            id="wpn"
             type="text"
+            name="work-phone"
           />
         </div>
         <div>
-          <label for="ppn"> Fix Phone Number: </label>
+          <label for="fpn"> Fix Phone Number: </label>
           <input
             placeholder="Enter your Fix Phone Number"
-            id="ppn"
+            id="fpn"
             type="text"
+            name="fix-phone"
           />
         </div>
       </div>
       <div class="md:flex justify-between w-full md:w-11/12 mt-5">
         <div>
           <h4 class="text-lg font-oxygenBold text-black">Change Email-</h4>
-          <label for="ppn"> Private E-mail: </label>
+          <label for="p-email"> Private E-mail: </label>
           <input
             placeholder="Enter your private phone number"
-            id="ppn"
+            id="p-email"
             type="text"
+            name="private-email"
           />
         </div>
         <div>
           <h4 class="hidden md:block text-lg font-oxygenBold text-white">-</h4>
-          <label for="ppn"> Work E-mail: </label>
+          <label for="w-email"> Work E-mail: </label>
           <input
             placeholder="Enter your private phone number"
-            id="ppn"
+            id="w-email"
             type="text"
+            name="work-email"
           />
         </div>
         <div>
           <h4 class="text-lg font-oxygenBold text-black">Change Address-</h4>
-          <label for="ppn" class="flex">
+          <label for="adress" class="flex">
             <span class="flex justify-between"
               >Address Type:<input
                 type="radio"
-                id="home"
+                id="at"
                 name="a-type"
                 class="mt-1"
               />
@@ -64,9 +69,10 @@
             >
           </label>
           <input
-            placeholder="Enter your private phone number"
-            id="ppn"
+            placeholder="Address"
+            id="address"
             type="text"
+            name="address"
           />
         </div>
       </div>
@@ -151,6 +157,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    changeAccountSetting(e) {
+     console.log(e)
+    },
   },
 };
 </script>

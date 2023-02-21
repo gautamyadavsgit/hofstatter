@@ -4,7 +4,9 @@ export default {
   namespaced: true,
   state() {
     return {
+      userId: "",
       isLoggedIn: false,
+      loginToken: "",
       loginData: {
         phone: null,
         ssn: null,
@@ -13,8 +15,8 @@ export default {
         phone: 8435715363,
         ssn: 12345678,
         tpn: 123456,
-        username:'blackfish',
-        password:'blackfish@2022'
+        username: "blackfish",
+        password: "blackfish@2022",
       },
       phoneVerified: false,
     };

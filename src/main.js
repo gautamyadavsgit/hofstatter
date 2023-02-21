@@ -10,6 +10,9 @@ import MainHeading from "./components/Layout/Common/UI/MainHeading.vue";
 import MainButton from "./components/Layout/Common/UI/MainButton.vue";
 import MainIcon from "./components/Layout/Common/UI/MainIcon.vue";
 import SmallText from "./components/Layout/Common/UI/SmallText.vue";
+import { LoadingPlugin } from "vue-loading-overlay";
+import "vue-loading-overlay/dist/css/index.css";
+
 // importing iconnify icons
 import { Icon } from "@iconify/vue";
 // adding v-calndar
@@ -27,6 +30,7 @@ app.use(router);
 app.use(vuex);
 app.use(VCalendar);
 app.use(VueSweetalert2);
+app.use(LoadingPlugin);
 // registering layout components
 app.component("main-card", MainCard);
 app.component("main-heading", MainHeading);
