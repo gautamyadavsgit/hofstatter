@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main-card class="md:hidden !py-5">
+    <main-card class="lg:hidden !py-5">
       <div class="flex justify-between items-center">
         <!-- getStringDate computed propery to show date in string -->
         <main-heading>{{ date }}</main-heading>
@@ -21,22 +21,22 @@
         </div>
       </div>
     </main-card>
-    <h4 class="text-lg text-blue mt-1">Morgen</h4>
+    <h4 class="text-lg text-blue mt-1">{{ $t("Morning") }}</h4>
     <ul>
       <PatientMedicationTimesAreaBox :number="1" title="PROPANOL 20MG TAB" />
       <PatientMedicationTimesAreaBox :number="2" title="SIMVASTATIN 40MG TAB" />
     </ul>
-    <h4 class="text-lg text-blue mt-1">Mittag</h4>
+    <h4 class="text-lg text-blue mt-1">{{ $t("Midday") }}</h4>
     <ul>
       <PatientMedicationTimesAreaBox :number="1" title="CITALOPTAM 20MG TAB" />
     </ul>
-    <h4 class="text-lg text-blue mt-1">Abend</h4>
+    <h4 class="text-lg text-blue mt-1">{{ $t("Evening") }}</h4>
     <ul>
       <PatientMedicationTimesAreaBox :number="1" title="LISINOPRIL 20MG TAB" />
     </ul>
 
     <ul>
-      <h4 class="text-lg text-blue mt-1">Nacht</h4>
+      <h4 class="text-lg text-blue mt-1">{{ $t("Night") }}</h4>
       <PatientMedicationTimesAreaBox :number="1" title="LISINOPRIL 20MG TAB" />
     </ul>
   </div>

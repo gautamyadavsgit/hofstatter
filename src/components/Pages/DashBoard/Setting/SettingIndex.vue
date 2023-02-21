@@ -1,12 +1,18 @@
 <template>
   <div class="grid grid-cols-12 mt-3 md:mt-12">
     <div class="md:col-span-11 col-span-12">
-      <main-card>
+      <!-- main-profile-area -->
+      <div class="main-card">
         <main-heading>{{ Heading }}</main-heading>
-        <!-- main-profile-area -->
+
         <AccountSettingHeader />
-        <RouterView />
-      </main-card>
+        <router-view v-slot="{ Component, route }">
+          <!-- Use any custom transition and  to `fade` -->
+          <transition :name="route.meta.transition || 'fade'">
+            <component :is="Component" />
+          </transition>
+        </router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -22,15 +28,15 @@ export default {
       Heading: "",
     };
   },
-  watch: {
-    $route() {
-      if (this.$route.name === "AccountSetting") {
-        this.Heading = "Account Setting";
-      }
-      if (this.$route.name === "ProfileSetting") {
-        this.Heading = "Profil Bearbeiten";
-      }
-    },
-  },
+  // watch: {
+  //   $route() {
+  //     if (this.$route.name === "AccountSetting") {
+  //       this.Heading = "Account Setting";
+  //     }
+  //     if (this.$route.name === "ProfileSetting") {
+  //       this.Heading = "Profil Bearbeiten";
+  //     }
+  //   },
+  // },
 };
 </script>

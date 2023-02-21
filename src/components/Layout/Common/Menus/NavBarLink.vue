@@ -17,7 +17,6 @@ export default {
   props: {
     // data prop for link
     link: {
-      type: String,
       required: true,
       default: "/",
     },

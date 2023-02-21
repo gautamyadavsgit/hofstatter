@@ -4,7 +4,7 @@
     <div class="col-span-11 px-2 md:px-0 md:flex justify-between mb-5">
       <div>
         <main-heading>
-          Impfungen
+          {{$t('vaccinations')}}
           <span
             class="bg-[#F8CBC8] font-bold ml-2 px-3 py-2 text-center rounded-full text-[#E20603]"
             >3</span
@@ -29,7 +29,7 @@
               <span
                 class="text-[#82837E] font-normal text-lg mt-4 mb-2 inline-block"
               >
-                Anzahl: </span
+                {{ $t('Number') }}: </span
               ><span class="text-[22px] font-bold text-[#00958F] ml-3">{{
                 que.Number
               }}</span>
@@ -38,7 +38,7 @@
               <span
                 class="text-[#82837E] font-normal text-lg my-2 inline-block"
               >
-                Letzte Impfung: </span
+                {{ $t("Last vaccination") }}: </span
               ><span class="text-[22px] font-bold text-[#00958F] ml-3"
                 >Today - G1</span
               >
@@ -52,7 +52,7 @@
   <div class="my-4">
     <div class="col-span-11 px-2 md:px-0 md:flex justify-between mb-5">
       <div>
-        <main-heading> Automatische Analyse</main-heading>
+        <main-heading> {{ $t('Automatic analysis')}}</main-heading>
       </div>
     </div>
     <!-- question divs  -->

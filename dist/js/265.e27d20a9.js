@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunk"]=self["webpackChunk"]||[]).push([[265],{2265:function(n,t,e){e.r(t),e.d(t,{default:function(){return f}});var r=e(3396);const i={width:"50",height:"50",viewBox:"0 0 50 50",fill:"none",xmlns:"http://www.w3.org/2000/svg"},u=(0,r._)("rect",{width:"50",height:"50",rx:"25",fill:"#A9E2DC"},null,-1),h=[u];function l(n,t){return(0,r.wg)(),(0,r.iD)("svg",i,h)}var s=e(89);const w={},c=(0,s.Z)(w,[["render",l]]);var f=c}}]);
+//# sourceMappingURL=265.e27d20a9.js.map

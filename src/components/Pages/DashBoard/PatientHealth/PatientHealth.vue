@@ -3,13 +3,13 @@
     <div class="col-span-12 md:col-span-8 lg:col-span-4">
       <main-card>
         <div class="flex justify-between">
-          <main-heading> Gesundheitsstatus </main-heading>
+          <main-heading> {{ $t("health status") }} </main-heading>
           <small-text
             styles="text-base"
             post
             icon="ph:caret-down"
             icoStyles="text-xl"
-            >Heute</small-text
+            >{{ $t("Today") }}</small-text
           >
         </div>
         <div class="grid grid-cols-12 sticky top-0">
@@ -17,16 +17,16 @@
             <humanbody-img />
           </div>
           <div class="col-span-4">
-            <organ-area organName="Herz" :organHealth="54">
+            <organ-area :organName="$t('Heart')" :organHealth="54">
               <HeartIcon
             /></organ-area>
-            <organ-area organName="Lunge" :organHealth="73">
+            <organ-area :organName="$t('lung')" :organHealth="73">
               <LungsIcon
             /></organ-area>
-            <organ-area organName="Leber" :organHealth="26">
+            <organ-area :organName="$t('liver')" :organHealth="26">
               <LiverIcon
             /></organ-area>
-            <organ-area organName="Niere" :organHealth="11">
+            <organ-area :organName="$t('kidney')" :organHealth="11">
               <KidneysIcon
             /></organ-area>
           </div>
@@ -42,7 +42,7 @@
           icon="noto:drop-of-blood"
           healthParameterValue="135/85"
           healthParameterUnit="mm/Hg"
-          label="Blutdruck"
+          :label="$t('blood pressure')"
           updatedTime="16 min ago"
         />
         <health-parameter
@@ -50,7 +50,7 @@
           icon="bi:lungs-fill"
           healthParameterValue="97"
           healthParameterUnit="%"
-          label="Sauerstoffk"
+          :label="$t('oxygen')"
           updatedTime="1 hour ago"
           icoStyle="text-[#009FF9]"
         />
@@ -59,7 +59,7 @@
           icon="game-icons:dripping-tube"
           healthParameterValue="100"
           healthParameterUnit="mg/dl"
-          label="Blutzucker"
+          :label="$t('blood sugar')"
           updatedTime="16 min ago"
           icoStyle="text-[#FD5957]"
         />
@@ -68,7 +68,7 @@
           icon="ri:heart-pulse-fill"
           healthParameterValue="84"
           healthParameterUnit="bpm"
-          label="Herzfrequenz"
+          :label="$t('heart rate')"
           updatedTime="16 min ago"
           icoStyle="text-[#FD5957]"
         />
@@ -77,7 +77,7 @@
           icon="fluent-emoji-high-contrast:sleeping-face"
           healthParameterValue="7:32"
           healthParameterUnit="hours"
-          label="Schlaf"
+          :label="$t('Sleep')"
           updatedTime="4 hours ago"
           icoStyle="text-[#00958F]"
         />
@@ -85,31 +85,34 @@
           icon="healthicons:thermometer"
           healthParameterValue="36"
           healthParameterUnit="&#8451;"
-          label="Temperatur"
+          :label="$t('temperature')"
           updatedTime="16 min ago"
         />
 
         <div class="col-span-2">
-          <main-card customStyle="!bg-[#6068A9]">
-            <div class="flex justify-end">
-              <iconify-icon
-                icon="ph:caret-right-bold"
-                class="text-white font-extrabold text-2xl"
-              ></iconify-icon>
-            </div>
-            <div class="grid grid-cols-6">
-              <div class="col-span-4">
-                <main-heading
-                  customStyle="!text-white text-2xl !whitespace-normal"
-                  >Deinen Impftermin buchen</main-heading
-                >
+          <router-link :to="{ name: 'PatientAppoinetments' }">
+            <main-card customStyle="!bg-[#6068A9]">
+              <div class="flex justify-end">
+                <iconify-icon
+                  icon="ph:caret-right-bold"
+                  class="text-white font-extrabold text-2xl"
+                ></iconify-icon>
               </div>
-              <div class="col-span-2">
-                <CoronaImg />
+              <div class="grid grid-cols-6">
+                <div class="col-span-4">
+                  <main-heading
+                    customStyle="!text-white text-2xl !whitespace-normal"
+                    >{{ $t("Book your vaccination appointment") }}</main-heading
+                  >
+                </div>
+                <div class="col-span-2">
+                  <CoronaImg />
+                </div>
               </div>
-            </div>
-          </main-card>
+            </main-card>
+          </router-link>
         </div>
+
         <div class="col-span-2">
           <main-card>
             <div class="flex justify-between">
@@ -119,9 +122,9 @@
                   icon="healthicons:thermometer"
                 ></main-icon>
 
-                <main-heading customStyle="ml-4 mt-1 text-lg text-blue"
-                  >Temperatur</main-heading
-                >
+                <main-heading customStyle="ml-4 mt-1 text-lg text-blue">{{
+                  $t("temperature")
+                }}</main-heading>
               </div>
               <iconify-icon
                 icon="ph:caret-right-bold"
@@ -148,9 +151,9 @@
                   icon="noto:drop-of-blood"
                 ></main-icon>
 
-                <main-heading customStyle="ml-4 mt-1 text-lg text-blue"
-                  >Blutdruck</main-heading
-                >
+                <main-heading customStyle="ml-4 mt-1 text-lg text-blue">{{
+                  $t("blood pressure")
+                }}</main-heading>
               </div>
               <iconify-icon
                 icon="ph:caret-right-bold"

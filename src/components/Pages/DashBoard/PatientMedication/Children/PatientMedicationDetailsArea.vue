@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="main-card md:hidden !py-5">
+    <div class="main-card lg:hidden !py-5">
       <div class="flex justify-between items-center">
-        <main-heading>Medikation</main-heading>
+        <main-heading>{{ $t("medication") }}</main-heading>
         <button class="px-3">
           <main-icon icon="material-symbols:add"></main-icon>
         </button>
       </div>
     </div>
-    <h4 class="text-lg text-blue mt-1">Aktuelle</h4>
+    <h4 class="text-lg text-blue mt-1">{{ $t("Current") }}</h4>
 
     <div id="accordion-collapse" data-accordion="collapse">
       <PatientMedicationBox
@@ -30,14 +30,14 @@
         :refill="3"
         title="Lorsartan 50mg  Tablet"
       />
-      <h4 class="text-lg text-blue mt-1">Bedarf</h4>
+      <h4 class="text-lg text-blue mt-1">{{ $t("Requirement") }}</h4>
       <PatientMedicationBox
         :id="4"
         icon="quill:paper"
         :refill="1"
         title="Minomycin 20mg Tablet"
       />
-      <h4 class="text-lg text-blue mt-1">Abgelaufen</h4>
+      <h4 class="text-lg text-blue mt-1">{{ $t("Expired") }}</h4>
       <PatientMedicationBox
         :id="5"
         icon="quill:paper"

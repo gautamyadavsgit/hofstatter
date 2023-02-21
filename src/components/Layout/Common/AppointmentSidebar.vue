@@ -24,7 +24,11 @@
       <!-- doctors data for appointments -->
       <div>
         <ul class="list-none mt-2">
-          <li class="my-2" v-for="user in users" :key="user.id">
+          <li
+            class="my-2"
+            v-for="user in this.$store.state.appointments.DoctorsData"
+            :key="user.id"
+          >
             <div
               :class="user.color"
               class="p-2 flex rounded-lg w-full justify-between"
@@ -32,7 +36,7 @@
               <div class="flex justify-between">
                 <img
                   :src="user.img"
-                  class="inline-block rounded-full h-[55px] w-[55px] border border-black"
+                  class="inline-block rounded-full h-[55px] w-[55px] border border-black object-cover"
                 />
                 <div class="py-1 pl-3">
                   <h4 class="font-bold font-oxygen text-sm">
@@ -60,11 +64,13 @@
       <div class="py-4">
         <div class="grid grid-cols-2">
           <div>
-            <main-button to="/appointments">{{ $t('Book an appointment') }}</main-button>
+            <main-button to="/appointments">{{
+              $t("Book an appointment")
+            }}</main-button>
           </div>
           <div class="text-center flex">
             <router-link to="/" class="text-blue font-bold m-auto"
-              >{{ $t('Show-all') }}
+              >{{ $t("Show-all") }}
               <iconify-icon
                 class="inline m-auto"
                 icon="material-symbols:chevron-right-rounded"
@@ -78,7 +84,6 @@
 </template>
 
 <script>
-
 const randomDate = (start, end) => {
   return new Date(
     start.getTime() + Math.random() * (end.getTime() - start.getTime())
@@ -94,32 +99,6 @@ const d = randomDate(new Date(2023, 2, 1), new Date());
 export default {
   data() {
     return {
-      users: [
-        {
-          id: "1",
-          name: "Dr. Pickem Christian",
-          img: "https://randomuser.me/api/portraits/women/3.jpg",
-          color: "bg-[#DAF8F480]",
-        },
-        {
-          id: "2",
-          name: "Dr. Jennie Nichols",
-          img: "https://randomuser.me/api/portraits/thumb/men/75.jpg",
-          color: "bg-[#FFDFDF80]",
-        },
-        {
-          id: "3",
-          name: "Dr. Ken Butler",
-          img: "https://randomuser.me/api/portraits/men/87.jpg",
-          color: "bg-[#FFF3D780]",
-        },
-        {
-          id: "4",
-          name: "Dr. Natasha Romanoff",
-          img: "https://randomuser.me/api/portraits/women/33.jpg",
-          color: "bg-[#E7E7FF80]",
-        },
-      ],
       // attributes for highlighting dates
       attributes: [
         {
