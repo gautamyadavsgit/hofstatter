@@ -6,12 +6,13 @@ const DashboardRoutes = [
     // router group for all the dashboard views
     path: "/dashboardMain",
     name: "dashboardMain",
+    redirect: { name: 'dashboard' },
     component: () => import("../../components/Pages/DashBoard/IndexMain.vue"),
     beforeEnter: (_, _2, next) => {
       if (store.state.login.isLoggedIn) {
         next();
       } else {
-        next('/login');
+        next("/login");
       }
     },
     children: [
@@ -51,6 +52,14 @@ const DashboardRoutes = [
             "../../components/Pages/DashBoard/PatientMedication/PatientMedication.vue"
           ),
       },
+      {
+        path: "/healthstatus",
+        name: "HealthStatus",
+        component: () =>
+          import(
+            "@/components/Pages/DashBoard/PatientHealth/PatientHealth.vue"
+          ),
+      },
 
       {
         path: "/questions",
@@ -59,16 +68,7 @@ const DashboardRoutes = [
           import(
             "../../components/Pages/DashBoard/PatientQuestionaries/PatientQuestionaries.vue"
           ),
-      },
-
-      {
-        path: "/health-status",
-        name: "HealthStatus",
-        component: () =>
-          import(
-            "../../components/Pages/DashBoard/PatientHealth/PatientHealth.vue"
-          ),
-      },
+      },   
       {
         path: "/diagnostic-center",
         name: "PatientDiagnosticCenter",

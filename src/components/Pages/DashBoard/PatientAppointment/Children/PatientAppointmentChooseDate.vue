@@ -35,13 +35,12 @@
 
           <v-calendar
             :attributes="attributes"
-            class="mt-6"
             :masks="{
               title: 'MMM YYYY',
               weekdays: 'WWW',
             }"
-            @dayclick="onDayClick"
             is-expanded
+            @dayclick="onDayClick"
           />
         </div>
       </div>
@@ -53,15 +52,19 @@
 export default {
   data() {
     return {
-      chooseDate: "",
-      attributes: [
+      date: new Date(),
+    };
+  },
+  computed: {
+    attributes() {
+      return [
         {
           key: this.date,
-          highlight: true,
+          highlight: "green",
           dates: this.date,
         },
-      ],
-    };
+      ];
+    },
   },
 
   methods: {
@@ -72,8 +75,7 @@ export default {
       }, 100);
     },
     onDayClick(day) {
-      this.chooseDate = day.date;
-      console.log(this.chooseDate);
+      this.date = day.date;
     },
     dateSubmit() {
       if (this.chooseDate == "") {

@@ -3,10 +3,11 @@
   <div class="container m-auto font-oxygen">
     <login-card>
       <logo-area></logo-area>
-      <RouterView v-slot="slotProps">
-        <Transition name="fade" mode="out-in">
-          <component :is="slotProps.Component" />
-        </Transition> </RouterView
+      <router-view v-slot="{ Component, route }">
+        <!-- Use any custom transition and  to `fade` -->
+        <transition :name="route.meta.transition || 'fade'">
+          <component :is="Component" />
+        </transition> </router-view
     ></login-card>
   </div>
 </template>

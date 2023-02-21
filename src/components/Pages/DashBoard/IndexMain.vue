@@ -24,13 +24,14 @@
 
               <!-- main page content -->
               <div id="main-page">
-                <!-- <RouterView v-slot="slotProps">
-                  <Transition name="fade" mode="out-in">
-                    <component :is="slotProps.Component" />
-                  </Transition>
-                </RouterView>
-             -->
-                <RouterView />
+                <router-view v-slot="{ Component, route }">
+                  <!-- Use any custom transition and  to `fade` -->
+                  <transition :name="route.meta.transition || 'fade'">
+                    <component :is="Component" />
+                  </transition>
+                </router-view>
+
+                <!-- <RouterView /> -->
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->
@@ -91,7 +92,7 @@ export default {
         this.conditionalClasses = "";
       }
     },
-    // function for setting the side bar value true or false according to setup in the route
+    //function for setting the side bar value true or false according to setup in the route
     setSideBar() {
       this.sidebar = this.$route.meta.sidebar;
     },
