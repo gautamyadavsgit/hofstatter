@@ -1,6 +1,6 @@
 <template>
   <div class="mt-12 px-3">
-    <div class="main-card hidden md:block">
+    <div class="main-card hidden lg:block">
       <div class="md:grid grid-cols-3 gap-12 px-4">
         <div class="flex justify-between items-center">
           <!-- getStringDate computed propery to show date in string -->
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="grid md:grid-cols-3 grid-cols-1 md:gap-12 mt-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:gap-12 mt-8">
       <PatientMedicineTimesArea
         :date="getStringDate"
         @ChangeOneDay="ChangeOneDay"

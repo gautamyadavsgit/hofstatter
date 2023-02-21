@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="main-card md:hidden !py-5">
+    <div class="main-card lg:hidden !py-5">
       <div class="flex items-center justify-center">
-        <main-heading>Organisation</main-heading>
+        <main-heading>{{$t('organization')}}</main-heading>
       </div>
     </div>
     <ul class="list-none md:mt-14">

@@ -55,5 +55,19 @@
   "Book your vaccination appointment": "Book your vaccination appointment",
   "Today": "Today",
   "medication": "Medication",
-  "organization": "Organization"
+  "organization": "Organization",
+  "Midday": "Mittag",
+  "Night": "Night",
+  "Current": "Current",
+  "Requirement": "Requirement",
+  "Expired": "Expired",
+  "vaccinations": "Vaccinations",
+  "Number": "Number",
+  "Last vaccination": "Last vaccination",
+  "Automatic analysis": "Automatic analysis",
+  "Requests": "Requests",
+  "View More": "View More",
+  "No Result": "No Result",
+  "prev": "prev",
+  "next": "next"
 }

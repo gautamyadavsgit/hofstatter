@@ -3,9 +3,9 @@
   <div class="container m-auto font-oxygen">
     <login-card>
       <logo-area></logo-area>
-      <router-view v-slot="{ Component, route }">
+      <router-view v-slot="{ Component }">
         <!-- Use any custom transition and  to `fade` -->
-        <transition :name="route.meta.transition || 'fade'">
+        <transition name="fade" mode="out-in">
           <component :is="Component" />
         </transition> </router-view
     ></login-card>
@@ -27,7 +27,7 @@ export default {
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-enter-from,

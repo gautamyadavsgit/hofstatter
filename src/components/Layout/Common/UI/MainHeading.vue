@@ -1,7 +1,7 @@
 <!-- base componnt for headings -->
 <template>
   <h2
-    class="font-oxygenBold font-bold whitespace-nowrap text-black"
+    class="font-oxygenBold font-bold whitespace-nowrap text-black capitalize "
     :class="customStyle"
   >
     <slot> </slot>

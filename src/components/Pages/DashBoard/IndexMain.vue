@@ -24,7 +24,7 @@
 
               <!-- main page content -->
               <div id="main-page">
-                <router-view v-slot="{ Component, route }">
+                <router-view mode="out-in" v-slot="{ Component, route }">
                   <!-- Use any custom transition and  to `fade` -->
                   <transition :name="route.meta.transition || 'fade'">
                     <component :is="Component" />
@@ -36,7 +36,7 @@
             </div>
             <!-- if condition for checking if page has sidebar -->
 
-            <transition name="fade">
+            <transition name="fade" mode="out-in">
               <div v-if="sidebar" class="md:w-[50%] lg:w-[30%]" id="sidebar">
                 <div class="top-[0] sticky">
                   <AppointmentSidebar />
