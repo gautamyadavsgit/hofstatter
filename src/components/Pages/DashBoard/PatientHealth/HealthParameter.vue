@@ -18,7 +18,7 @@
           ></main-heading
         >
       </div>
-      <p class="font-bold text-blue text-lg py-5 px-1">{{ label }}</p>
+      <p class="font-bold text-blue text-lg py-5 px-1 capitalize">{{ label }}</p>
       <small-text icon="uiw:reload" icoStyles="text-xs">{{
         updatedTime
       }}</small-text>

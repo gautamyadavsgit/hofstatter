@@ -7,14 +7,14 @@
       class="text-sm border-blue font-oxygenLight cursor-pointer transition-all delay-150 py-5 h-[65px] ease-in-out"
       :class="{ 'text-black border-b-4 font-bold': activeElement == 'all' }"
       @click="applyContactFilter('all')"
-      >All</a
+      >{{$t("All")}}</a
     >
     <a
       href="javascript:void(0)"
       class="text-sm text-[#82837E] border-blue font-oxygenLight cursor-pointer transition-all delay-150 py-5 h-[65px] ease-in-out"
       :class="{ 'text-black border-b-4 font-bold': activeElement == 'unread' }"
       @click="applyContactFilter('unread')"
-      >Unread</a
+      >{{$t("Unread")}}</a
     >
 
     <a
@@ -25,13 +25,13 @@
         'text-black border-b-4 font-bold': activeElement == 'unresolve',
       }"
       @click="applyContactFilter('unresolve')"
-      >Unresolve</a
+      >{{$t("Unresolve")}}</a
     >
     <a
       class="text-sm text-[#82837E] font-oxygenLight border-blue cursor-pointer transition-all delay-150 py-5 h-[65px] ease-in-out"
       :class="{ 'text-black border-b-4 font-bold': activeElement == 'filter' }"
       @click="applyContactFilter('filter')"
-      >Filter</a
+      >{{$t('Filter')}}</a
     >
   </div>
 </template>
@@ -48,6 +48,7 @@ export default {
     // trigger an event when clicked on any filter
     applyContactFilter(filter) {
       this.activeElement = filter;
+      this.$emit('apply-filter',filter)
     },
   },
 };

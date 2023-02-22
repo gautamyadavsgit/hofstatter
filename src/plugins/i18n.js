@@ -24,9 +24,7 @@ function loadLocaleMessages() {
 }
 
 export default createI18n({
-  // condition for getting default browser languge
-  locale:
-    navigator.language.split("-")[0] || process.env.VUE_APP_I18N_LOCALE || "gr",
+  locale: process.env.VUE_APP_I18N_LOCALE || "gr",
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "gr",
   messages: loadLocaleMessages(),
 });

@@ -1,16 +1,27 @@
 <template>
   <!-- component -->
 
-  <div class="container mx-auto mt-6 chat-shadow-double">
+  <div class="container mx-auto lg:mt-6 chat-shadow-double">
     <div class="h-[77vh]">
       <div class="md:flex rounded h-full">
-        <div class="md:w-40% lg:w-[30%] w-full flex flex-col chat-shadow z-20">
-          <PatientChatFilter />
+        <div
+          class="md:w-40% lg:w-[30%] w-full flex flex-col chat-shadow z-20"
+          :class="isChatRoute ? 'hidden md:flex' : ''"
+        >
+          <PatientChatFilter @apply-filter="applyFilter" />
           <!-- Left -->
-          <PatientChatContact />
+          <PatientChatContact :filter="filter" />
         </div>
-        <!-- Right -->
-        <router-view />
+        <router-view
+          v-if="isChatRoute"
+          mode="out-in"
+          v-slot="{ Component, route }"
+        >
+          <!-- Use any custom transition and  to `fade` -->
+          <transition :name="route.meta.transition || 'fade'">
+            <component :is="Component" />
+          </transition>
+        </router-view>
       </div>
     </div>
   </div>
@@ -23,6 +34,35 @@ export default {
   components: {
     PatientChatFilter,
     PatientChatContact,
+  },
+  data() {
+    return {
+      isChatRoute: true,
+      filter: "",
+    };
+  },
+  methods: {
+    hideContact() {
+      if (this.$route.name === "chatMessages") {
+        this.isChatRoute = true;
+      } else {
+        this.isChatRoute = false;
+      }
+    },
+    applyFilter(filter) {
+      this.filter = filter;
+    },
+  },
+  watch: {
+    $route() {
+      this.hideContact();
+    },
+  },
+  created() {
+    this.hideContact();
+  },
+  updated() {
+    this.hideContact();
   },
 };
 </script>

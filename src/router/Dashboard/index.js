@@ -20,7 +20,7 @@ const DashboardRoutes = [
         path: "/dashboard",
         name: "dashboard",
         component: () =>
-          import("../../components/Pages/DashBoard/Home/DashBoard.vue"),
+          import("@/components/Pages/DashBoard/Home/DashBoard.vue"),
         meta: { sidebar: true },
       },
       // router for appointments
@@ -30,7 +30,7 @@ const DashboardRoutes = [
         redirect: { name: "PatientAppointmentsData" },
         component: () =>
           import(
-            "../../components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
+            "@/components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
           ),
         meta: { sidebar: true },
         // children group for appointments components
@@ -41,7 +41,7 @@ const DashboardRoutes = [
         name: "Requests",
         component: () =>
           import(
-            "../../components/Pages/DashBoard/PatientRequests/PatientRequest.vue"
+            "@/components/Pages/DashBoard/PatientRequests/PatientRequest.vue"
           ),
       },
       {
@@ -49,11 +49,11 @@ const DashboardRoutes = [
         name: "Medications",
         component: () =>
           import(
-            "../../components/Pages/DashBoard/PatientMedication/PatientMedication.vue"
+            "@/components/Pages/DashBoard/PatientMedication/PatientMedication.vue"
           ),
       },
       {
-        path: "/healthstatus",
+        path: "/health-status",
         name: "HealthStatus",
         component: () =>
           import(
@@ -66,7 +66,7 @@ const DashboardRoutes = [
         name: "Questions",
         component: () =>
           import(
-            "../../components/Pages/DashBoard/PatientQuestionaries/PatientQuestionaries.vue"
+            "@/components/Pages/DashBoard/PatientQuestionaries/PatientQuestionaries.vue"
           ),
       },   
       {
@@ -74,7 +74,7 @@ const DashboardRoutes = [
         name: "PatientDiagnosticCenter",
         component: () =>
           import(
-            "../../components/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue"
+            "@/components/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue"
           ),
       },
       {
@@ -82,7 +82,7 @@ const DashboardRoutes = [
         name: "PatientVaccination",
         component: () =>
           import(
-            "../../components/Pages/DashBoard/PatientVaccination/PatientVaccination.vue"
+            "@/components/Pages/DashBoard/PatientVaccination/PatientVaccination.vue"
           ),
       },
       {
@@ -96,10 +96,9 @@ const DashboardRoutes = [
       {
         path: "/chat",
         name: "PatientChat",
-        redirect: { path: "/chat/gautam" },
         component: () =>
           import(
-            "../../components/Pages/DashBoard/PatientChat/PatientChat.vue"
+            "@/components/Pages/DashBoard/PatientChat/PatientChat.vue"
           ),
         // children group for chat page
         children: [
@@ -108,7 +107,7 @@ const DashboardRoutes = [
             name: "chatMessages",
             component: () =>
               import(
-                "../../components/Pages/DashBoard/PatientChat/Children/PatientChatmessages.vue"
+                "@/components/Pages/DashBoard/PatientChat/Children/PatientChatmessages.vue"
               ),
           },
         ],

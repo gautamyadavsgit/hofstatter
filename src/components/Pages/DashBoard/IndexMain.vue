@@ -30,8 +30,6 @@
                     <component :is="Component" />
                   </transition>
                 </router-view>
-
-                
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->
@@ -88,8 +86,11 @@ export default {
   methods: {
     // when the route view is Patientchat this method is called each time the component is mounted or updated  for eliminating the padding from the dahsboard main content area.
     addChatClasses() {
-      if (this.$route.name == "PatientChat") {
-        this.conditionalClasses = "!pl-2 !pr-2  z-50";
+      if (
+        this.$route.name == "PatientChat" ||
+        this.$route.name == "chatMessages"
+      ) {
+        this.conditionalClasses = "lg:!pl-2 lg:!pr-2  z-50";
       } else {
         this.conditionalClasses = "";
       }
@@ -112,14 +113,3 @@ export default {
 };
 </script>
 
-<style>
-.route-enter-from {
-  filter: blur(5px);
-}
-.route-enter-active {
-  filter: blur(10px);
-}
-.route-enter-to {
-  filter: blur(0px);
-}
-</style>

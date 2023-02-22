@@ -31,7 +31,7 @@
     </div>
     <div class="w-full bg-gray-200 h-[7px] mt-2 rounded-2xl">
       <div
-        class="bg-blue h-[7px] rounded-2xl duration-1000 ease-in-out"
+        class="bg-blue h-[7px] rounded-2xl ease-in-out"
         :style="'width:' + organHealthValue + '%'"
         :class="barColor"
       ></div>
@@ -62,19 +62,23 @@ export default {
     // computed propery for applying the progress bar color according to the organHealth
     barColor() {
       if (this.organHealth <= 25) {
-        return "bg-[#FD5957]";
+        return "!bg-[#FD5957]";
       } else if (this.organHealth <= 50) {
-        return "bg-[#FEB500]";
+        return "!bg-[#FEB500]";
       } else {
-        return "bg-[#00958F]";
+        return "!bg-[#00958F]";
       }
     },
   },
   mounted() {
-    setTimeout(() => {
+    setInterval(() => {
       // this.organHealthValue = this.organHealth;
-      this.organHealthValue = this.organHealth;
-    }, 500);
+      if (this.organHealthValue < this.organHealth) {
+        this.organHealthValue++;
+      } else {
+        return;
+      }
+    }, 50);
   },
 };
 </script>
