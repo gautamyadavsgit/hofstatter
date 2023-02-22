@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable  -->
   <!-- form-area -->
   <div class="py-2 px-4">
     <form class="account-setting" @submit.prevent="changeAccountSetting">
@@ -11,6 +12,7 @@
             id="ppn"
             type="text"
             name="private-phone-number"
+            v-model="privatePhone"
           />
         </div>
         <div>
@@ -20,6 +22,7 @@
             id="wpn"
             type="text"
             name="work-phone"
+            v-model="workPhone"
           />
         </div>
         <div>
@@ -29,6 +32,7 @@
             id="fpn"
             type="text"
             name="fix-phone"
+            v-model="fixPhone"
           />
         </div>
       </div>
@@ -41,6 +45,7 @@
             id="p-email"
             type="text"
             name="private-email"
+            v-model="privateEmail"
           />
         </div>
         <div>
@@ -51,6 +56,7 @@
             id="w-email"
             type="text"
             name="work-email"
+            v-model="workEmail"
           />
         </div>
         <div>
@@ -62,9 +68,18 @@
                 id="at"
                 name="a-type"
                 class="mt-1"
+                value="Home"
+                v-model="addressType"
               />
               <label for="home" class="!py-0 px-2">Home</label
-              ><input type="radio" id="work" name="a-type" class="mt-1" />
+              ><input
+                type="radio"
+                id="work"
+                value="work"
+                v-model="addressType"
+                name="a-type"
+                class="mt-1"
+              />
               <label for="work" class="!py-0 px-2">work</label></span
             >
           </label>
@@ -73,6 +88,7 @@
             id="address"
             type="text"
             name="address"
+            v-model="Address"
           />
         </div>
       </div>
@@ -142,6 +158,13 @@
 export default {
   data() {
     return {
+      privatePhone: null,
+      workPhone: null,
+      fixPhone: null,
+      privateEmail: "",
+      workEmail: "",
+      addressType: "",
+      Address: "",
       dummyDatas: [
         {
           id: 1,
@@ -159,8 +182,24 @@ export default {
     };
   },
   methods: {
-    changeAccountSetting(e) {
-     console.log(e)
+    async changeAccountSetting(e) {
+      const response = fetch(
+        "https://hofstatter-cf012-default-rtdb.asia-southeast1.firebasedatabase.app/user.json",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            privatePhone: this.privatePhone,
+            workPhone: this.workPhone,
+            fixPhone: this.fixPhone,
+            privateEmail: this.privateEmail,
+            workEmail: this.workEmail,
+            addressType: this.addressType,
+            Address: this.Address,
+          }),
+        }
+      );
+      const responseData = response.json;
+      console.log(responseData);
     },
   },
 };

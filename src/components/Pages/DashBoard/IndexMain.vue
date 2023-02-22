@@ -24,14 +24,6 @@
 
               <!-- main page content -->
               <div id="main-page">
-<<<<<<< HEAD
-                <!-- <RouterView v-slot="slotProps">
-                  <Transition name="route" mode="out-in">
-                    <component :is="slotProps.Component" />
-                  </Transition>
-                </RouterView> -->
-                <router-view />
-=======
                 <router-view mode="out-in" v-slot="{ Component, route }">
                   <!-- Use any custom transition and  to `fade` -->
                   <transition :name="route.meta.transition || 'fade'">
@@ -39,8 +31,7 @@
                   </transition>
                 </router-view>
 
-                <!-- <RouterView /> -->
->>>>>>> main
+                
               </div>
             </div>
             <!-- if condition for checking if page has sidebar -->
