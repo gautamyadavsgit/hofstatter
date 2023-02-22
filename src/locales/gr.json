@@ -69,5 +69,10 @@
   "View More": "Weiter",
   "No Result": "No Result",
   "prev": "vorh",
-  "next": "nächste"
+  "next": "nächste",
+  "All": "Alles",
+  "Unread": "Ungelesen",
+  "Unresolve": "Ungelöst",
+  "Filter": "Filter",
+  "Write Your reply here": "Schreiben Sie hier Ihre Antwort"
 }

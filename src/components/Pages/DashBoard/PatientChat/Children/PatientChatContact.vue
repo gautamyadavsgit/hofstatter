@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 overflow-auto">
+  <div class="flex-1 overflow-auto" ref="chatContact">
     <router-link to="/chat/gautam" class="w-full">
       <div
         class="px-5 flex items-center bg-grey-light cursor-pointer border-b border-[#82837E26]"
@@ -89,4 +89,27 @@
     </router-link>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  props: ["filter"],
+  data(){
+    return {
+      fullPage:false
+    }
+  },
+  watch: {
+    filter() {
+      let loader = this.$loading.show({
+        // Pass props by their camelCased names
+        container: this.fullPage ? null : this.$refs.chatContact,
+        color: "#000000",
+        loader: "bars",
+     
+      });
+      setTimeout(() => {
+        loader.hide();
+      },1000);
+    },
+  },
+};
+</script>

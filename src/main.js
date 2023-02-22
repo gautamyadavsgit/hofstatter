@@ -15,7 +15,9 @@ import { Icon } from "@iconify/vue";
 // adding v-calndar
 import VCalendar from "v-calendar";
 import "v-calendar/dist/style.css";
-
+//importing loading plugin for overlays loading
+import { LoadingPlugin } from "vue-loading-overlay";
+import 'vue-loading-overlay/dist/css/index.css';
 // importing sweetalert
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
@@ -26,6 +28,7 @@ app.use(i18n);
 app.use(router);
 app.use(vuex);
 app.use(VCalendar);
+app.use(LoadingPlugin)
 app.use(VueSweetalert2);
 // registering layout components
 app.component("main-card", MainCard);
