@@ -54,14 +54,14 @@
           icon="material-symbols:edit-square-outline"
           class="inline-block text-lg md:text-2xl mt-[-8px]"
         />
-        Profil Bearbeiten</main-button
+       {{$t("Profile.Edit profile")}}</main-button
       >
       <router-link
         v-if="this.$route.name === 'ProfileSetting'"
         class="font-bold text-sm text-blue"
         :to="{ name: 'AccountSetting' }"
         ><iconify-icon icon="ion:chevron-back" class="inline-block" />
-        Rücken</router-link
+        {{ $t("Back") }}</router-link
       >
     </div>
   </div>
