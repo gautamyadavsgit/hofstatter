@@ -2,7 +2,7 @@
   <div class="w-full overflow-scroll no-scrollbar mt-6 md:mt-12 p-4">
     <div class="w-full md:my-4">
       <div class="md:flex md:justify-between p-4 md:p-0">
-        <main-heading>Login-Daten</main-heading>
+        <main-heading>{{ $t("AccessLog.Login Data") }}</main-heading>
         <div class="md:w-2/5">
           <!-- filter and search form -->
           <form class="flex justify-between mt-4 md:mt-0">
@@ -15,9 +15,11 @@
             <input
               type="text"
               class="w-64 rounded-full h-9 border-none mr-2 px-4"
-              placeholder="suche"
+              :placeholder="$t('search')"
             />
-            <main-button :link="false" mode="!py-1 !px-3">Apply</main-button>
+            <main-button :link="false" mode="!py-1 !px-3">{{
+              $t("Apply")
+            }}</main-button>
           </form>
         </div>
       </div>
@@ -25,9 +27,9 @@
       <main-card customStyle="!mt-4 !w-[580px] lg:!w-full">
         <table class="table-fixed w-full border-collapse">
           <tr>
-            <th class="w-[60%]">Beschreibung</th>
-            <th class="">Zeit</th>
-            <th class="float-right">Zeitstempel</th>
+            <th class="w-[60%]">{{$t('AccessLog.Description')}}</th>
+            <th class="">{{$t('AccessLog.Time')}}</th>
+            <th class="float-right">{{ $t('AccessLog.time stamp') }}</th>
           </tr>
         </table>
       </main-card>
