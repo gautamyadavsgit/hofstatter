@@ -4,8 +4,8 @@
       <h4 class="text-lg font-oxygenBold text-black">
         {{ $t("basic information") }}-
       </h4>
-      <div class="md:flex justify-between w-11/12">
-        <div>
+      <div class="md:flex md:space-x-11">
+        <div class="w-full">
           <label for="firstname">{{ $t("firstname") }}: </label>
           <input
             :placeholder="$t('Enter your') + ' ' + $t('firstname')"
@@ -13,7 +13,7 @@
             type="text"
           />
         </div>
-        <div>
+        <div class="w-full">
           <label for="lastname">{{ $t("lastname") }}: </label>
           <input
             :placeholder="$t('Enter your') + $t('lastname')"
@@ -21,13 +21,13 @@
             type="text"
           />
         </div>
-        <div>
+        <div class="w-full">
           <label for="phone"> {{ $t("Phone Number") }}:</label>
           <input placeholder="(000)-000-00000" id="phone" type="text" />
         </div>
       </div>
-      <div class="lg:flex justify-between w-full md:w-11/12 mt-5">
-        <div>
+      <div class="md:flex md:space-x-11 mt-5">
+        <div class="w-full">
           <h5 class="text-black py-3">{{ $t("Profile.gender") }}:</h5>
 
           <input type="radio" id="male" class="!inline-block" name="gender" />
@@ -39,11 +39,11 @@
             {{ $t("female") }}
           </label>
         </div>
-        <div>
+        <div class="w-full">
           <label for="dob"> D.O.B </label>
           <input placeholder="dd/mm/yyyy" id="dob" type="date" />
         </div>
-        <div>
+        <div class="w-full">
           <label for="age">{{ $t("age") }}: </label>
           <input
             :placeholder="$t('Enter your') + ' ' + $t('age')"
@@ -52,15 +52,15 @@
           />
         </div>
       </div>
-      <div class="lg:flex justify-between w-full md:w-11/12 mt-5">
-        <div>
+      <div class="md:flex md:space-x-11 mt-5">
+        <div class="w-full">
           <label>{{ $t("Profile.height") }}</label>
           <input
             type="text"
             :placeholder="$t('Enter your') + ' ' + $t('Profile.height')"
           />
         </div>
-        <div>
+        <div class="w-full">
           <label for="weight"> {{ $t("Profile.weight") }}: </label>
           <input
             :placeholder="$t('Enter your') + ' ' + $t('Profile.weight')"
@@ -68,7 +68,7 @@
             type="text"
           />
         </div>
-        <div>
+        <div class="w-full">
           <label for="bloodgroup">{{ $t("Profile.blood group") }}: </label>
           <input
             :placeholder="$t('Enter your') + ' ' + $t('Profile.blood group')"
@@ -77,8 +77,8 @@
           />
         </div>
       </div>
-      <div class="lg:flex justify-between w-full md:w-11/12 mt-5">
-        <div>
+      <div class="md:flex md:space-x-11 mt-5">
+        <div class="w-full">
           <h5 class="text-black py-3">
             {{ $t("Profile.membership status") }}:
           </h5>
@@ -102,11 +102,11 @@
             {{ $t("Inactive") }}
           </label>
         </div>
-        <div>
+        <div class="w-full">
           <label for="ppn"> {{ $t("Registered date") }}: </label>
           <input placeholder="dd/mm/yyyy" id="ppn" type="date" />
         </div>
-        <div>
+        <div class="w-full">
           <label for="has">{{ $t("Profile.house number and street") }}: </label>
           <input
             :placeholder="
@@ -117,8 +117,8 @@
           />
         </div>
       </div>
-      <div class="lg:flex justify-between w-11/12">
-        <div>
+      <div class="md:flex md:space-x-11 mt-5">
+        <div class="w-full">
           <label for="city">{{ $t("city") }}: </label>
           <input
             :placeholder="$t('enter') + ' ' + $t('city')"
@@ -126,7 +126,7 @@
             type="text"
           />
         </div>
-        <div>
+        <div class="w-full">
           <label for="postcode">{{ $t("Profile.postcode") }}: </label>
           <input
             :placeholder="$t('Enter') + ' ' + $t('Profile.postcode')"
@@ -134,7 +134,8 @@
             type="text"
           />
         </div>
-        <div class="w-72"></div>
+        <div class="w-full"></div>
+        <!-- <div class="w-72"></div> -->
       </div>
 
       <div class="flex mt-5 justify-around md:justify-end">

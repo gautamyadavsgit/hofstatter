@@ -6,8 +6,8 @@
         <h4 class="text-lg font-oxygenBold text-black">
           {{ $t("Change") + " " + $t("Phone Number") }}-
         </h4>
-        <div class="lg:flex justify-between w-11/12">
-          <div>
+        <div class="md:flex md:space-x-11">
+          <div class="w-full">
             <label for="ppn">
               {{ $t("Private") }} {{ $t("Phone Number") }}:
             </label>
@@ -23,7 +23,7 @@
               type="text"
             />
           </div>
-          <div>
+          <div class="w-full">
             <label for="wpn">
               {{ $t("Work") }} {{ $t("Phone Number") }}:
             </label>
@@ -35,7 +35,7 @@
               type="text"
             />
           </div>
-          <div>
+          <div class="w-full">
             <label for="fpn">
               {{ $t("Fix") + " " + $t("Phone Number") }}
             </label>
@@ -48,8 +48,8 @@
             />
           </div>
         </div>
-        <div class="lg:flex justify-between w-full md:w-11/12 mt-5">
-          <div>
+        <div class="md:flex mt-5 md:space-x-11">
+          <div class="w-full">
             <h4 class="text-lg font-oxygenBold text-black">
               {{ $t("Change") }} {{ $t("Email") }}-
             </h4>
@@ -62,7 +62,7 @@
               type="text"
             />
           </div>
-          <div>
+          <div class="w-full">
             <h4 class="hidden md:block text-lg font-oxygenBold text-white">
               -
             </h4>
@@ -75,7 +75,7 @@
               type="text"
             />
           </div>
-          <div>
+          <div class="w-full">
             <h4 class="text-lg font-oxygenBold text-black">
               {{ $t("Change Address") }}-
             </h4>
@@ -109,7 +109,7 @@
         </div>
       </form>
       <div
-        class="col-span-10 px-2 md:px-0 lg:flex justify-between my-5 border-y py-4"
+        class="col-span-10 md:px-0 lg:flex justify-between my-5 border-y py-4"
       >
         <div>
           <h2
@@ -135,7 +135,7 @@
               </select>
               <input
                 type="text"
-                class="md:w-64 w-36 rounded-full h-9 border-none mr-2 px-4 bg-[#80808026]"
+                class="md:w-full w-full rounded-full h-9 border-none mr-2 px-4 bg-[#80808026]"
                 :placeholder="$t('search')"
               />
               <main-button :link="false" mode="!py-1 !px-3">{{
