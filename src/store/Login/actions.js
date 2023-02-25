@@ -23,6 +23,7 @@ export default {
       console.log(responseData);
       const data = {
         userId: responseData.localId,
+        token: responseData.idToken,
       };
       context.commit("setLogin", data);
     }

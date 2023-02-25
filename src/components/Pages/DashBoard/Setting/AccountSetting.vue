@@ -184,7 +184,10 @@ export default {
   methods: {
     async changeAccountSetting(e) {
       const response = fetch(
-        "https://hofstatter-cf012-default-rtdb.asia-southeast1.firebasedatabase.app/user.json",
+        "https://hofstatter-cf012-default-rtdb.asia-southeast1.firebasedatabase.app/users/" +
+          this.$store.state.login.userId +
+          ".json?auth=" +
+          this.$store.state.login.token,
         {
           method: "POST",
           body: JSON.stringify({

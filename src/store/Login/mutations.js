@@ -8,9 +8,11 @@ export default {
   },
   setLogin(state, payload) {
     state.userId = payload.userId;
+    state.token = payload.token
     state.isLoggedIn = true;
     console.log(payload);
     localStorage.setItem("userId", state.userId);
+    localStorage.setItem("token", state.token);
   },
   // add auto login when login value is present in localStorage
   autoLogin(state) {

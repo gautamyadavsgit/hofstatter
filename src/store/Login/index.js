@@ -7,6 +7,7 @@ export default {
       userId: "",
       isLoggedIn: false,
       loginToken: "",
+      token:'',
       loginData: {
         phone: null,
         ssn: null,
