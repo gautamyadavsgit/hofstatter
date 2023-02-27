@@ -81,7 +81,7 @@ body {
   @apply h-auto w-auto bg-white transition delay-100 ease-in-out relative my-2 mx-1 font-oxygen rounded-[10px] px-2 py-2 md:px-4 md:py-4;
 }
 .account-setting input:not([type="checkbox"]):not([type="radio"]) {
-  @apply form-input w-72 h-9 placeholder-light-grey rounded-md border-[#82837e26];
+  @apply form-input w-full h-9 placeholder-light-grey rounded-md border-[#82837e26];
 }
 .account-setting label {
   @apply block text-black py-3;

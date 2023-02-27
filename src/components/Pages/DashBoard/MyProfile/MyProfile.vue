@@ -39,7 +39,7 @@
                 3
                 <span
                   class="font-oxygenLight block text-light-grey text-sm text-center"
-                  >Bevorstehende
+                  >{{ $t("MyProfile.forthcoming")}}
                 </span>
               </div>
             </div>
@@ -49,7 +49,7 @@
                   icon="material-symbols:edit-square-outline"
                   class="inline-block text-lg md:text-2xl mt-[-8px]"
                 />
-                Profil Bearbeiten123</main-button
+                {{ $t("MyProfile.EditProfile")}}</main-button
               >
             </div>
           </div>
@@ -60,9 +60,9 @@
           <table class="w-full table-auto">
             <thead class="md:text-left text-center text-black">
               <tr>
-                <th>Geschlecht</th>
-                <th>Geburtstag</th>
-                <th>Alter</th>
+                <th>{{ $t("MyProfile.Gender")}}</th>
+                <th>{{ $t("MyProfile.Birthday")}}</th>
+                <th>{{ $t("MyProfile.Old")}}</th>
               </tr>
             </thead>
             <tbody>
@@ -74,9 +74,9 @@
             </tbody>
             <thead class="md:text-left text-center text-black">
               <tr>
-                <th>Höhe</th>
-                <th>Gewicht</th>
-                <th>Blutgruppe</th>
+                <th>{{ $t("MyProfile.Height")}}</th>
+                <th>{{ $t("MyProfile.Weight")}}</th>
+                <th>{{ $t("MyProfile.BloodType")}}</th>
               </tr>
             </thead>
             <tbody>
@@ -88,9 +88,9 @@
             </tbody>
             <thead class="md:text-left text-center text-black">
               <tr>
-                <th>Mitgliedsstatus</th>
-                <th>Eingetragenes Datum</th>
-                <th>Telefonnummer</th>
+                <th>{{ $t("MyProfile.MembershipStatus")}}</th>
+                <th>{{ $t("MyProfile.RegisteredDate")}}</th>
+                <th>{{ $t("MyProfile.PhoneNumber")}}</th>
               </tr>
             </thead>
             <tbody>
@@ -102,9 +102,9 @@
             </tbody>
             <thead class="md:text-left text-center text-black">
               <tr>
-                <th>Hausnummer und Straße</th>
-                <th>Stadt</th>
-                <th>PLZ</th>
+                <th>{{ $t("MyProfile.HouseNumber")}}</th>
+                <th>{{ $t("MyProfile.City")}}</th>
+                <th>{{ $t("MyProfile.Postcode")}}</th>
               </tr>
             </thead>
             <tbody>
@@ -123,12 +123,12 @@
         <main-card customStyle="!py-4 !px-4">
           <div class="flex">
             <div>
-              <main-heading>Notizen</main-heading>
+              <main-heading>{{ $t("MyProfile.Notes") }}</main-heading>
             </div>
             <div class="w-full">
               <div class="flex float-right">
                 <router-link to="/" class="text-blue font-bold"
-                  >Alle anzeigen
+                  >{{ $t("Show-all") }}
                   <iconify-icon
                     class="inline m-auto"
                     icon="material-symbols:chevron-right-rounded"
@@ -145,9 +145,9 @@
             </ul>
           </div>
           <div class="flex mt-5 justify-around md:justify-end">
-            <main-button :link="false">Hinweis Speichern</main-button>
+            <main-button :link="false">{{ $t("MyProfile.NoteSave") }}</main-button>
           </div>
-          <p class="px-2 mt-6 font-medium text-black">Anmerkung 1</p>
+          <p class="px-2 mt-6 font-medium text-black">{{ $t("MyProfile.NoteOne") }}</p>
           <div class="p-2 flex rounded-lg w-full justify-between">
             <div class="flex">
               <span
@@ -172,12 +172,12 @@
         <main-card customStyle="!py-4 !px-4">
           <div class="flex">
             <div>
-              <main-heading>Dokumente/Dateien</main-heading>
+              <main-heading>{{ $t("MyProfile.Documents") }}</main-heading>
             </div>
             <div class="w-full">
               <div class="flex float-right">
                 <router-link to="/" class="text-blue font-bold"
-                  >Alle anzeigen
+                  >{{ $t("Show-all") }}
                   <iconify-icon
                     class="inline m-auto"
                     icon="material-symbols:chevron-right-rounded"
@@ -200,7 +200,7 @@
                     <h4
                       class="font-bold font-oxygen text-blue text-[16px] pl-3 pt-1"
                     >
-                      PCR Ergebnis.pdf
+                    {{ $t("MyProfile.Pcr") }}
                     </h4>
                   </div>
                   <div class="flex float-right">
@@ -220,7 +220,7 @@
                     <h4
                       class="font-bold font-oxygen text-blue text-[16px] pl-3 pt-1"
                     >
-                      Röntgenbefund.pdf
+                    {{ $t("MyProfile.Xray") }}
                     </h4>
                   </div>
                   <div class="flex float-right">
@@ -240,7 +240,7 @@
                     <h4
                       class="font-bold font-oxygen text-blue text-[16px] pl-3 pt-1"
                     >
-                      Blutbefund.pdf
+                    {{ $t("MyProfile.BloodReport") }}
                     </h4>
                   </div>
                   <div class="flex float-right">
