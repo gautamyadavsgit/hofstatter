@@ -2,7 +2,8 @@
 import { RouterView } from "vue-router";
 import "./style.css";
 import store from "./store/store";
-
+</script>
+<script>
 if (localStorage.getItem("login")) {
   store.commit("login/autoLogin");
 }

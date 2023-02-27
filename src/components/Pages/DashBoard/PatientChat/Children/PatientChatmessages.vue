@@ -85,7 +85,12 @@
 </template>
 
 <script>
+import myAudioFile from "@/assets/Audio/send.mp3";
+import DateHelper from "@/mixins/DateHelper";
+const audio = new Audio(myAudioFile);
+
 export default {
+  mixins: [DateHelper],
   data() {
     return {
       isRoute: "",
@@ -156,20 +161,15 @@ export default {
   },
   computed: {
     date() {
-      let date = new Date();
-      let hours = date.getHours();
-      if (hours.length == 1) {
-        hours = "0" + hours;
-      }
-      let minute = date.getMinutes();
-      if (minute.length == 1) {
-        minute = "0" + minute;
-      }
-      var ampm = hours >= 12 ? "PM" : "AM";
-      return hours + ":" + minute + " " + ampm;
+      return this.formatTime(new Date());
     },
   },
   methods: {
+    scrollBottom() {
+      // method for scrolling chat into bottom
+      this.$refs.chatSection.scrollTop = this.$refs.chatSection.scrollHeight;
+    },
+    // function for sending msg
     sendMsg() {
       if (this.msg != "") {
         let newMsg = {
@@ -182,10 +182,22 @@ export default {
       }
       // use $nextTick for scroll the section after the dom is updated
       this.$nextTick(() => {
-        this.$refs.chatSection.scrollTop = this.$refs.chatSection.scrollHeight;
+        this.scrollBottom();
+        audio.play();
       });
       this.msg = "";
     },
+  },
+  created() {
+    // scroll the chat to bottom after the dom is update
+    this.$nextTick(() => {
+      this.scrollBottom();
+    });
+  },
+  updated() {
+    this.$nextTick(() => {
+      this.scrollBottom();
+    });
   },
 };
 </script>

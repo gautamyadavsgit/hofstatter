@@ -154,9 +154,9 @@
     <!-- fourth box started -->
     <div class="col-span-12 font-oxygen">
       <main-card>
-        <main-heading>{{ $t('Emergency Data Sheet') }}</main-heading>
+        <main-heading>{{ $t("Emergency Data Sheet") }}</main-heading>
         <div class="grid grid-cols-12 mt-5">
-          <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
+          <div class="col-span-5 pt-2 md:pt-0">
             <p class="pb-2 text-lg">Art</p>
             <ul class="list-none">
               <li class="text-blue font-bold">Notfalldatenblatt</li>
@@ -166,7 +166,7 @@
               <!-- ... -->
             </ul>
           </div>
-          <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
+          <div class="col-span-4 pt-2 md:pt-0">
             <div class="flex justify-center">
               <div class="inline-block">
                 <p class="pb-2 text-lg">Datum</p>
@@ -180,7 +180,7 @@
               </div>
             </div>
           </div>
-          <div class="md:col-span-4 col-span-6 pt-2 md:pt-0">
+          <div class="col-span-3 pt-2 md:pt-0">
             <div class="m-auto inline-block md:float-right">
               <p class="pb-2 text-lg">Dauer</p>
               <ul class="list-none">

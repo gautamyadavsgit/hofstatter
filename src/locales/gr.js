@@ -126,6 +126,7 @@ const translation = {
     gender: "Geschlecht",
     "house number and street": "Hausnummer und Straße",
     "Edit profile": "Profil Bearbeiten",
+   
   },
   AccessLog: {
     ...AccessLog,

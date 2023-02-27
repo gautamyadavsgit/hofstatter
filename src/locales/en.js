@@ -126,6 +126,7 @@ const translation = {
     postcode: "Zip Code",
     gender: "Gender",
     "Edit profile": "Edit profile",
+   
   },
   AccessLog: {
     ...AccessLog,

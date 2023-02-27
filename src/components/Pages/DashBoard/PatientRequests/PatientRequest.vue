@@ -1,39 +1,13 @@
 <template>
   <div>
-    <div class="w-full overflow-scroll no-scrollbar mt-8">
-      <div class="w-full md:my-4">
-        <div class="md:flex md:justify-between p-4 md:p-0">
-          <main-heading>{{ $t("Personal Questionnaires") }}</main-heading>
-          <div class="md:w-2/5">
-            <!-- filter and search form -->
-            <form class="flex justify-between mt-4 md:mt-0">
-              <label class="text-sm m-auto mr-2 font-bold">Filter</label>
-              <select
-                class="w-64 h-9 border-1 border-[#82837E26] rounded-md text-sm !font-oxygen mr-2"
-              >
-                <option selected value="all" class="font-oxygen">All</option>
-              </select>
-              <input
-                Name="text"
-                class="w-64 rounded-full h-9 border-none mr-2 px-4"
-                :placeholder="$t('search')"
-              />
-              <main-button :link="false" mode="!py-1 !px-3">{{
-                $t("Apply")
-              }}</main-button>
-            </form>
-          </div>
-        </div>
-        <main-card customStyle="!mt-4 !w-[1080px] lg:!w-full">
-          <table class="table-fixed w-full border-collapse">
-            <tr>
-              <th class="w-[35%]">{{ $t("Name") }}</th>
-              <th>{{ $t("Status") }}</th>
-              <th>{{ $t("Category") }}</th>
-              <th>{{ $t("Notes") }}</th>
-            </tr>
-          </table>
-        </main-card>
+    <main-table Heading="Personal Questionnaires">
+      <template v-slot:Header>
+        <th class="w-[35%]">{{ $t("Name") }}</th>
+        <th>{{ $t("Status") }}</th>
+        <th>{{ $t("Category") }}</th>
+        <th>{{ $t("Notes") }}</th>
+      </template>
+      <template v-slot:Body>
         <main-card
           customStyle="!mt-4 !w-[1080px] lg:!w-full"
           v-for="dummyData in dummyDatas"
@@ -65,42 +39,49 @@
             </tr>
           </table>
         </main-card>
-      </div>
-    </div>
-    <div class="w-full overflow-scroll no-scrollbar mt-8">
-      <div class="w-full md:my-4">
-        <div class="md:flex md:justify-between p-4 md:p-0">
-          <main-heading>Allgemeine Fragebögen</main-heading>
-          <div class="md:w-2/5">
-            <!-- filter and search form -->
-            <form class="flex justify-between mt-4 md:mt-0">
-              <label class="text-sm m-auto mr-2 font-bold">Filter</label>
-              <select
-                class="w-64 h-9 border-1 border-[#82837E26] rounded-md text-sm !font-oxygen mr-2"
-              >
-                <option selected value="all" class="font-oxygen">All</option>
-              </select>
-              <input
-                Name="text"
-                class="w-64 rounded-full h-9 border-none mr-2 px-4"
-                :placeholder="$t('search')"
-              />
-              <main-button :link="false" mode="!py-1 !px-3">{{
-                $t("Apply")
-              }}</main-button>
-            </form>
-          </div>
-        </div>
-        <main-card customStyle="!mt-4 !w-[1080px] lg:!w-full">
+      </template>
+    </main-table>
+    <main-table Heading="Allgemeine Fragebögen">
+      <template v-slot:Header>
+        <th class="w-[35%]">{{ $t("Name") }}</th>
+        <th>{{ $t("Status") }}</th>
+        <th>{{ $t("Category") }}</th>
+        <th>{{ $t("Notes") }}</th>
+      </template>
+      <template v-slot:Body>
+        <main-card
+          customStyle="!mt-4 !w-[1080px] lg:!w-full"
+          v-for="dummyData in dummyDatas"
+          :key="dummyData.id"
+        >
           <table class="table-fixed w-full border-collapse">
             <tr>
-              <th class="w-[35%]">{{ $t("Name") }}</th>
-              <th>{{ $t("Status") }}</th>
-              <th>{{ $t("Category") }}</th>
-              <th>{{ $t("Notes") }}</th>
+              <td class="w-[35%]">
+                <a href="" download>
+                  <iconify-icon
+                    icon="material-symbols:download-sharp"
+                    class="inline-block text-3xl font-bold text-cyan mr-2"
+                  />
+                  <iconify-icon
+                    icon="carbon:report"
+                    class="inline-block text-3xl font-bold text-site-grey mr-2"
+                  />{{ dummyData.Name }}</a
+                >
+              </td>
+              <td
+                :class="{
+                  '!text-skyblue !font-bold': dummyData.Status === 'Open',
+                }"
+              >
+                {{ dummyData.Status }}
+              </td>
+              <td>{{ dummyData.Kategorie }}</td>
+              <td>{{ dummyData.Notes }}</td>
             </tr>
           </table>
         </main-card>
+      </template>
+      <template v-slot:body>
         <main-card
           customStyle="!mt-4 !w-[1080px] lg:!w-full"
           v-for="dummyData2 in dummyDatas2"
@@ -132,8 +113,8 @@
             </tr>
           </table>
         </main-card>
-      </div>
-    </div>
+      </template>
+    </main-table>
   </div>
 </template>
 <script>

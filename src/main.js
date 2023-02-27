@@ -3,13 +3,15 @@ import App from "./App.vue";
 
 import router from "./router"; // importing router
 // importing login component
-import vuex from "./store/store.js";
+import vuex from "./store/store.js"; // importing vuex for global state management
+// importing ui component for global use
 import BackButton from "./components/Layout/Login/BackButton.vue";
 import MainCard from "./components/Layout/Common/UI/MainCard.vue";
 import MainHeading from "./components/Layout/Common/UI/MainHeading.vue";
 import MainButton from "./components/Layout/Common/UI/MainButton.vue";
 import MainIcon from "./components/Layout/Common/UI/MainIcon.vue";
 import SmallText from "./components/Layout/Common/UI/SmallText.vue";
+import MainTable from "./components/Layout/Common/UI/Tables/MainTable.vue";
 // importing iconnify icons
 import { Icon } from "@iconify/vue";
 // adding v-calndar
@@ -17,7 +19,7 @@ import VCalendar from "v-calendar";
 import "v-calendar/dist/style.css";
 //importing loading plugin for overlays loading
 import { LoadingPlugin } from "vue-loading-overlay";
-import 'vue-loading-overlay/dist/css/index.css';
+import "vue-loading-overlay/dist/css/index.css";
 // importing sweetalert
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
@@ -28,7 +30,7 @@ app.use(i18n);
 app.use(router);
 app.use(vuex);
 app.use(VCalendar);
-app.use(LoadingPlugin)
+app.use(LoadingPlugin);
 app.use(VueSweetalert2);
 // registering layout components
 app.component("main-card", MainCard);
@@ -36,7 +38,7 @@ app.component("main-heading", MainHeading);
 app.component("main-button", MainButton);
 app.component("main-icon", MainIcon);
 app.component("small-text", SmallText);
-
+app.component("main-table", MainTable);
 app.component("back-button", BackButton); // back component for adding backbutton
 
 app.component("iconify-icon", Icon); // component for iconify icons
