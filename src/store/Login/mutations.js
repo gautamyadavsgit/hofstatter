@@ -14,4 +14,9 @@ export default {
   autoLogin(state) {
     state.isLoggedIn = true;
   },
+  setLogout(state) {
+    state.isLoggedIn = !state.isLoggedIn;
+    localStorage.removeItem("login");
+    window.location.href = "/";
+  },
 };

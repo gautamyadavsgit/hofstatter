@@ -20,5 +20,7 @@ export default {
   Documents:"Documents/Files",
   Pcr:"PCR Result.pdf",
   Xray:"X-ray Findings.pdf",
-  BloodReport:"Blood Report.pdf"
+  BloodReport:"Blood Report.pdf",
+  profile : "Profile",
+  logout:"Logout"
 };
