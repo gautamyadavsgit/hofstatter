@@ -1,3 +1,24 @@
 export default {
-  Past: "Past"
+  Past: "Past",
+  forthcoming:"forthcoming",
+  EditProfile:"Edit Profile",
+  Gender:"Gender",
+  Birthday:"Birthday",
+  Old:"Old",
+  Height:"Height",
+  Weight:"Weight",
+  BloodType:"Blood Type",
+  MembershipStatus:"Membership Status",
+  RegisteredDate:"Registered Date",
+  PhoneNumber:"Phone Number",
+  HouseNumber:"House Number and Street",
+  City:"City",
+  Postcode:"Postcode",
+  Notes:"Notes",
+  NoteSave:"Note Save",
+  NoteOne:"Note 1",
+  Documents:"Documents/Files",
+  Pcr:"PCR Result.pdf",
+  Xray:"X-ray Findings.pdf",
+  BloodReport:"Blood Report.pdf"
 };
