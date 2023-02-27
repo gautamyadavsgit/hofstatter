@@ -49,7 +49,7 @@
                   icon="material-symbols:edit-square-outline"
                   class="inline-block text-lg md:text-2xl mt-[-8px]"
                 />
-                Profil Bearbeiten</main-button
+                Profil Bearbeiten123</main-button
               >
             </div>
           </div>
