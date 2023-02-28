@@ -90,7 +90,7 @@
 
     <div>
       <div class="mt-8 flex">
-        <main-button :link="false" mode="md:!py-2 m-auto">{{ $t('Apply') }}</main-button>
+        <main-button :link="false" mode="md:!py-2 mx-auto md:mr-[0px]">{{ $t('Apply') }}</main-button>
       </div>
     </div>
   </form>

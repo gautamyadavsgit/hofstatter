@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full overflow-scroll no-scrollbar mt-6 md:mt-12 p-4">
+  <div class="w-full overflow-x-scroll lg:overflow-visible mt-6 md:mt-12 px-1">
     <div class="w-full md:my-4">
       <div class="md:flex md:justify-between p-4 md:p-0">
         <div>
@@ -7,13 +7,13 @@
             $t(this.Heading)
           }}</main-heading>
         </div>
-        <div class="md:w-2/5">
+        <div class="md:w-3/5 lg:w-2/5">
           <!-- filter and search form -->
           <FilterForm />
         </div>
       </div>
 
-      <main-card customStyle="!mt-4 !w-[580px] lg:!w-full">
+      <main-card :customStyle="'!mt-4 lg:!w-full !mx-0 ' + customClass">
         <table class="table-fixed w-full border-collapse">
           <tr>
             <slot name="Header"></slot>
@@ -30,6 +30,10 @@ export default {
   props: {
     Heading: {
       Type: String,
+    },
+    cwidth: {
+      Type: String,
+      default: "!w-[580px]",
     },
   },
   components: {
@@ -84,6 +88,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    customClass() {
+      return this.cwidth;
+    },
   },
 };
 </script>

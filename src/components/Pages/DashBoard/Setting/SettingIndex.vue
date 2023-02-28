@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-12 mt-3 md:mt-12">
-    <div class="lg:col-span-11 col-span-12">
+    <div class="col-span-12">
       <!-- main-profile-area -->
       <div class="main-card">
         <main-heading>{{ Heading }}</main-heading>

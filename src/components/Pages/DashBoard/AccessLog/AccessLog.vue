@@ -1,31 +1,33 @@
 <template>
-  <main-table Heading="AccessLog.Login Data">
-    <template v-slot:Header>
-      <th class="w-[60%]">{{ $t("AccessLog.Description") }}</th>
-      <th class="">{{ $t("AccessLog.Time") }}</th>
-      <th class="float-right">{{ $t("AccessLog.time stamp") }}</th>
-    </template>
-    <template v-slot:Body>
-      <main-card
-        customStyle="!mt-4 !w-[580px] lg:!w-full"
-        v-for="dummyData in dummyDatas"
-        :key="dummyData.id"
-      >
-        <table class="table-fixed !w-[580px] lg:!w-full border-collapse">
-          <tr>
-            <td class="w-[60%]">
-              {{ dummyData.Type }}
-            </td>
-            <td>{{ dummyData.Institut }}</td>
-            <td class="float-right">
-              {{ dummyData.Datum.toISOString().substring(0, 10) + "     " }}
-              {{ "    " + dummyData.Datum.toLocaleTimeString() }}
-            </td>
-          </tr>
-        </table>
-      </main-card>
-    </template>
-  </main-table>
+  <section>
+    <main-table Heading="AccessLog.Login Data" cwidth="!w-full">
+      <template v-slot:Header>
+        <th class="w-[60%]">{{ $t("AccessLog.Description") }}</th>
+        <th class="">{{ $t("AccessLog.Time") }}</th>
+        <th class="float-right">{{ $t("AccessLog.time stamp") }}</th>
+      </template>
+      <template v-slot:Body>
+        <main-card
+          customStyle="!mt-4 !w-[580px] md:!w-full"
+          v-for="dummyData in dummyDatas"
+          :key="dummyData.id"
+        >
+          <table class="table-fixed !w-[580px] md:!w-full border-collapse">
+            <tr>
+              <td class="w-[60%]">
+                {{ dummyData.Type }}
+              </td>
+              <td>{{ dummyData.Institut }}</td>
+              <td class="float-right">
+                {{ dummyData.Datum.toISOString().substring(0, 10) + "     " }}
+                {{ "    " + dummyData.Datum.toLocaleTimeString() }}
+              </td>
+            </tr>
+          </table>
+        </main-card>
+      </template>
+    </main-table>
+  </section>
 </template>
 <script>
 export default {

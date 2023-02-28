@@ -1,7 +1,7 @@
 <template>
   <!-- adding a sidebar prop in page wrapper to show a side bar area in main page -->
 
-  <div class="grid grid-cols-12">
+  <div class="grid grid-cols-12 md:px-1 lg:px-0">
     <!-- first box started -->
     <div class="col-span-12">
       <!-- custom style prop for adding custom classes in maincard -->

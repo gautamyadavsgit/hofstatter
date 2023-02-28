@@ -2,7 +2,7 @@
 <template>
   <div class="sticky top-24 bg-white z-40">
     <header class="pb-2 pt-3">
-      <div class="overflow-x-scroll w-screen no-scrollbar">
+      <div class="overflow-x-scroll w-screen sidenavScroll md:no-scrollbar">
         <ul class="flex [&>*]:mx-4">
           <the-menu />
         </ul>

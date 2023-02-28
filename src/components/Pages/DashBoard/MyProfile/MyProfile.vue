@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="md:px-1 lg:px-0">
     <main-card>
       <div class="grid grid-cols-12">
         <div class="md:col-span-4 col-span-12 border-r-2 border-gray-100">

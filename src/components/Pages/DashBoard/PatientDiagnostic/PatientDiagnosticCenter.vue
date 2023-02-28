@@ -1,41 +1,58 @@
 <template>
-  <div class="container mx-auto">
-    <div
-      class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 mt-6 lg:mt-12 p-4"
-    >
+  <div class="md:px-1 lg:px-0">
+    <!-- boxes grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 mt-6 lg:mt-12">
       <main-card class="!p-5">
-        <h4 class="text-blue font-bold text-lg">{{ $t("x-Ray") }}</h4>
+        <h4 class="text-blue font-bold text-center lg:text-left text-lg">
+          {{ $t("x-Ray") }}
+        </h4>
         <XRayImg class="m-auto mt-2" />
-        <small-text class="mt-4" icon="uiw:reload" icoStyles="text-xs">{{
-          $t("min ago", { number: "16" })
-        }}</small-text>
+        <small-text
+          class="mt-4 justify-center"
+          icon="uiw:reload"
+          icoStyles="text-xs"
+          >{{ $t("min ago", { number: "16" }) }}</small-text
+        >
       </main-card>
       <main-card class="!p-5">
-        <h4 class="text-blue font-bold text-lg">{{ $t("Laboratory") }}</h4>
+        <h4 class="text-blue font-bold text-lg text-center lg:text-left">
+          {{ $t("Laboratory") }}
+        </h4>
         <LaborImg class="m-auto mt-2" />
-        <small-text class="mt-4" icon="uiw:reload" icoStyles="text-xs">{{
-          $t("min ago", { number: "16" })
-        }}</small-text>
+        <small-text
+          class="mt-4 justify-center"
+          icon="uiw:reload"
+          icoStyles="text-xs"
+          >{{ $t("min ago", { number: "16" }) }}</small-text
+        >
       </main-card>
       <main-card class="!p-5">
-        <h4 class="text-blue font-bold text-lg">
+        <h4 class="text-blue font-bold text-lg text-center lg:text-left">
           {{ $t("medical findings") }}
         </h4>
         <MedicalFindingsImgVue class="m-auto mt-2" />
-        <small-text class="mt-4" icon="uiw:reload" icoStyles="text-xs">{{
-          $t("min ago", { number: "16" })
-        }}</small-text>
+        <small-text
+          class="mt-4 justify-center"
+          icon="uiw:reload"
+          icoStyles="text-xs"
+          >{{ $t("min ago", { number: "16" }) }}</small-text
+        >
       </main-card>
       <main-card class="!p-5">
-        <h4 class="text-blue font-bold text-lg">{{ $t("Advanced Filter") }}</h4>
+        <h4 class="text-blue font-bold text-lg text-center lg:text-left">
+          {{ $t("Advanced Filter") }}
+        </h4>
         <AdvancedFilterImg class="m-auto mt-2" />
-        <small-text class="mt-4" icon="uiw:reload" icoStyles="text-xs">{{
-          $t("min ago", { number: "16" })
-        }}</small-text>
+        <small-text
+          class="mt-4 justify-center"
+          icon="uiw:reload"
+          icoStyles="text-xs"
+          >{{ $t("min ago", { number: "16" }) }}</small-text
+        >
       </main-card>
     </div>
-
-    <main-table Heading="">
+    <!-- table -->
+    <main-table Heading="" cwidth="!w-[1080px]">
       <template v-slot:Header>
         <th>
           Type
@@ -50,11 +67,11 @@
       </template>
       <template v-slot:Body>
         <main-card
-          customStyle="!mt-4 !w-[1180px] lg:!w-full"
+          customStyle="!mt-4 !w-[1080px] lg:!w-full"
           v-for="dummyData in dummyDatas"
           :key="dummyData.id"
         >
-          <table class="table-fixed w-[1180px] border-collapse">
+          <table class="table-fixed w-[1080px] border-collapse">
             <tr>
               <td>
                 <a href="" download>

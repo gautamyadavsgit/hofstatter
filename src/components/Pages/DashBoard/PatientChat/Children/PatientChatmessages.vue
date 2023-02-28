@@ -5,9 +5,17 @@
       class="py-2 px-3 bg-grey-lighter flex flex-row justify-between items-center chat-shadow-double h-[70px]"
     >
       <div class="flex items-center">
+        <div class="block lg:hidden">
+          <RouterLink :to="{ name: 'PatientChat' }">
+            <iconify-icon
+              icon="material-symbols:arrow-back-rounded"
+              class="text-2xl"
+            />
+          </RouterLink>
+        </div>
         <div>
           <img
-            class="w-9 h-9 rounded-full ml-3"
+            class="w-9 h-9 rounded-full"
             src="https://darrenjameseeley.files.wordpress.com/2014/09/expendables3.jpeg"
           />
         </div>

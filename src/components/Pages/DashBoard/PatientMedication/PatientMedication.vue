@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-12 px-3">
+  <div class="mt-12 md:px-2 lg:px-0">
     <div class="main-card hidden lg:block">
       <div class="md:grid grid-cols-3 gap-12 px-4">
         <div class="flex justify-between items-center">
@@ -94,3 +94,9 @@ export default {
   },
 };
 </script>
+
+<style>
+h4{
+  margin-left: 5px;
+}
+</style>

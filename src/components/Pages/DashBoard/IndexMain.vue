@@ -23,7 +23,7 @@
               <mobile-menu class="lg:hidden"></mobile-menu>
 
               <!-- main page content -->
-              <div id="main-page">
+              <div id="main-page" class="px-1 md:px-2 lg:px-0">
                 <router-view mode="out-in" v-slot="{ Component, route }">
                   <!-- Use any custom transition and  to `fade` -->
                   <transition :name="route.meta.transition || 'fade'">
@@ -35,7 +35,7 @@
             <!-- if condition for checking if page has sidebar -->
 
             <transition name="fade" mode="out-in">
-              <div v-if="sidebar" class="md:w-[50%] lg:w-[30%]" id="sidebar">
+              <div v-if="sidebar" class="md:w-[50%] lg:w-[30%] md:px-1 lg:px-0" id="sidebar">
                 <div class="top-[0] sticky">
                   <AppointmentSidebar />
                 </div>
@@ -112,3 +112,5 @@ export default {
   },
 };
 </script>
+
+

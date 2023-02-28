@@ -1,7 +1,7 @@
 <template>
  <div>
-  <div class="grid grid-cols-12 mt-12">
-    <div class="col-span-11 px-2 md:px-0 md:flex justify-between mb-5">
+  <div class="grid grid-cols-12 mt-12 md:px-1 lg:px-0">
+    <div class="col-span-12 lg:col-span-11 px-2 md:px-0 md:flex justify-between mb-5">
       <div>
         <main-heading>
           {{$t('vaccinations')}}
@@ -13,7 +13,7 @@
       </div>
     </div>
     <!-- question divs  -->
-    <div class="col-span-12 md:col-span-11">
+    <div class="col-span-12 lg:col-span-11">
       <div class="grid grid-cols-12 gap-2">
         <div
           class="col-span-12 md:col-span-4"
@@ -148,3 +148,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+</style>

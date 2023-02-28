@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-12 mt-12 gap-2 p-2 lg:p-0">
-    <div class="col-span-12 md:col-span-8 lg:col-span-4">
+  <div class="grid grid-cols-12  mt-4 lg:mt-12 gap-2 p-2 lg:p-0">
+    <div class="col-span-12 lg:col-span-4">
       <main-card>
         <div class="flex justify-between">
           <main-heading> {{ $t("health status") }} </main-heading>
@@ -12,7 +12,7 @@
             >{{ $t("Today") }}</small-text
           >
         </div>
-        <div class="grid grid-cols-12 sticky top-0">
+        <div class="grid grid-cols-12">
           <div class="col-span-8">
             <humanbody-img />
           </div>
@@ -89,7 +89,7 @@
           updatedTime="16 min ago"
         />
 
-        <div class="col-span-2">
+        <div class="md:col-span-2 col-span-3">
           <router-link :to="{ name: 'PatientAppoinetments' }">
             <main-card customStyle="!bg-[#6068A9]">
               <div class="flex justify-end">
@@ -106,7 +106,7 @@
                   >
                 </div>
                 <div class="col-span-2">
-                  <CoronaImg />
+                  <CoronaImg  class="float-right"/>
                 </div>
               </div>
             </main-card>

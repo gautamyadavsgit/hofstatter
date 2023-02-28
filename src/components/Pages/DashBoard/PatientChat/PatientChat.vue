@@ -1,7 +1,7 @@
 <template>
   <!-- component -->
 
-  <div class="container mx-auto lg:mt-6 chat-shadow-double">
+  <div class="lg:container lg:px-0 mx-auto md:mt-6 chat-shadow-double ">
     <div class="h-[77vh]">
       <div class="md:flex rounded h-full">
         <div

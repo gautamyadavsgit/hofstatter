@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <main-table Heading="Personal Questionnaires">
+  <div class="">
+    <main-table Heading="Personal Questionnaires" cwidth="!w-[1080px]">
       <template v-slot:Header>
         <th class="w-[35%]">{{ $t("Name") }}</th>
         <th>{{ $t("Status") }}</th>
@@ -9,7 +9,7 @@
       </template>
       <template v-slot:Body>
         <main-card
-          customStyle="!mt-4 !w-[1080px] lg:!w-full"
+          customStyle="!mt-4 !w-[1080px] lg:!w-full !mx-0"
           v-for="dummyData in dummyDatas"
           :key="dummyData.id"
         >
@@ -41,7 +41,7 @@
         </main-card>
       </template>
     </main-table>
-    <main-table Heading="Allgemeine Fragebögen">
+    <main-table Heading="Allgemeine Fragebögen" cwidth="!w-[1080px]">
       <template v-slot:Header>
         <th class="w-[35%]">{{ $t("Name") }}</th>
         <th>{{ $t("Status") }}</th>
@@ -50,7 +50,7 @@
       </template>
       <template v-slot:Body>
         <main-card
-          customStyle="!mt-4 !w-[1080px] lg:!w-full"
+          customStyle="!mt-4 !w-[1080px] lg:!w-full !mx-0"
           v-for="dummyData in dummyDatas"
           :key="dummyData.id"
         >

@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="md:px-1 lg:px-0">
     <div class="grid grid-cols-12 mt-12">
-      <div class="col-span-10 px-2 md:px-0 md:flex justify-between mb-5">
+      <div class="col-span-12 lg:col-span-10 px-2 md:px-0 md:flex justify-between mb-5">
         <div>
           <main-heading>
             {{ $t("Requests") }}
@@ -33,7 +33,7 @@
       <!-- question divs  -->
     </div>
     <div class="grid grid-cols-12" v-if="ques.length > 0">
-      <div class="col-span-12 md:col-span-5" v-for="que in ques" :key="que.id">
+      <div class="col-span-12 md:col-span-6 lg:col-span-5" v-for="que in ques" :key="que.id">
         <main-card customStyle="!py-4 !px-4">
           <div class="flex">
             <div class="w-9/12">

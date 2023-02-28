@@ -17,13 +17,27 @@
     src: url("./assets/fonts/Oxygen/Oxygen-Bold.ttf");
   }
   ::-webkit-scrollbar {
+    height: 4px;
     width: 8px;
     background-color: #c5c6e5;
   }
   ::-webkit-scrollbar-thumb {
+    height: 4px;
     width: 8px;
     background-color: #2e3192;
     border-radius: 10px;
+  }
+  .sidenavScroll::-webkit-scrollbar-thumb {
+    width: 4px !important;
+    background-color: #2e3192;
+    border-radius: 10px;
+  }
+  .sidenavScroll::-webkit-scrollbar {
+    width: 4px !important;
+    background-color: #c5c6e5;
+  }
+  .sidenavScroll::-webkit-scrollbar-x {
+    display: none !important;
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;

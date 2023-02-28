@@ -1,7 +1,7 @@
 <!-- component for top navbar -->
 <template>
-  <header class="sticky z-50 top-0 bg-[#f3f7fa] pt-4">
-    <div class="mx-auto px-2 py-4 flex justify-between">
+  <header class="sticky lg:static z-50 top-0 bg-[#f3f7fa] pt-4">
+    <div class="mx-auto md:px-4 lg:px-2 py-4 flex justify-between">
       <div class="sm:flex">
         <!-- logo -->
         <div class="md:w-48 flex-shrink-0">

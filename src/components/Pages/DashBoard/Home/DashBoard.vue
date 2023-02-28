@@ -49,7 +49,7 @@
             <main-heading>{{ $t("Contact us") }}</main-heading>
           </div>
           <div class="w-full">
-            <div class="w-[60%] flex float-right">
+            <div class="w-1/2 flex float-right justify-between">
               <!-- adding bgStyle prop for adding background classes and icostyle prop for icon styles -->
               <main-icon
                 icon="mdi:map-marker"
