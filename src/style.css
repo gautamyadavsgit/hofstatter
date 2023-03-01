@@ -16,52 +16,112 @@
     font-family: "Oxygen-Bold";
     src: url("./assets/fonts/Oxygen/Oxygen-Bold.ttf");
   }
-  ::-webkit-scrollbar {
-    height: 4px;
-    width: 8px;
-    background-color: #c5c6e5;
-  }
-  ::-webkit-scrollbar-thumb {
-    height: 4px;
-    width: 8px;
-    background-color: #2e3192;
-    border-radius: 10px;
-  }
-  .sidenavScroll::-webkit-scrollbar-thumb {
-    width: 4px !important;
-    background-color: #2e3192;
-    border-radius: 10px;
-  }
-  .sidenavScroll::-webkit-scrollbar {
-    width: 4px !important;
-    background-color: #c5c6e5;
-  }
-  .sidenavScroll::-webkit-scrollbar-x {
-    display: none !important;
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .d-scrollbar::-webkit-scrollbar {
-    width: 2px !important;
-  }
-  .d-scrollbar::-webkit-scrollbar-thumb {
-    width: 2px !important;
-  }
+  /* Scrollbar styles */
+::-webkit-scrollbar {
+  height: 4px;
+  width: 8px;
+  background-color: #c5c6e5;
+}
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-  /* remove the increase decrease arrows from the input type number */
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
-  }
+::-webkit-scrollbar-thumb {
+  height: 4px;
+  width: 8px;
+  background-color: #2e3192;
+  border-radius: 10px;
+}
+
+.sidenavScroll::-webkit-scrollbar-thumb {
+  width: 4px !important;
+  background-color: #2e3192;
+  border-radius: 10px;
+}
+
+.sidenavScroll::-webkit-scrollbar {
+  width: 4px !important;
+  background-color: #c5c6e5;
+}
+
+.sidenavScroll::-webkit-scrollbar-x {
+  display: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.d-scrollbar::-webkit-scrollbar {
+  width: 2px !important;
+}
+
+.d-scrollbar::-webkit-scrollbar-thumb {
+  width: 2px !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Remove the increase/decrease arrows from the input type number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Scrollbar styles for Firefox */
+/* Firefox requires vendor prefixes */
+/* Height and width of the scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2e3192 #c5c6e5;
+}
+
+/* Color of the scrollbar thumb */
+html::-webkit-scrollbar-thumb {
+  background-color: #2e3192;
+}
+
+/* Color of the scrollbar track */
+html::-webkit-scrollbar-track {
+  background-color: #c5c6e5;
+}
+
+/* Scrollbar styles for Edge */
+/* Edge requires vendor prefixes */
+/* Hide scrollbar initially */
+body::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+/* Show scrollbar on hover */
+body::-webkit-scrollbar-thumb {
+  background-color: #2e3192;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #c5c6e5;
+}
+
+/* Scrollbar styles for IE */
+/* IE requires proprietary scrollbar styling */
+/* Hide scrollbar initially */
+body {
+  scrollbar-base-color: #c5c6e5;
+  scrollbar-face-color: #2e3192;
+  scrollbar-track-color: #c5c6e5;
+  scrollbar-arrow-color: #2e3192;
+  scrollbar-shadow-color: #2e3192;
+}
+
+/* Show scrollbar on hover */
+body:hover {
+  scrollbar-face-color: #c5c6e5;
+  scrollbar-track-color: #2e3192;
+}
 }
 body {
   @apply font-oxygen;
