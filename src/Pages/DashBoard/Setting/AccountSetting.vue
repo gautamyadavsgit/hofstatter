@@ -155,15 +155,26 @@
         <h2 class="text-blue font-oxygenBold">{{ dummyData.name }}</h2>
         <div class="flex justify-between">
           <button
-            class="bg-cyan mx-2 text-white px-2 py-1 border-cyan border-2 hover:text-cyan font-oxygenBold hover:bg-transparent transition-all delay-150"
+            class="hidden md:inline-block bg-cyan mx-2 text-white px-2 py-1 border-cyan border-2 hover:text-cyan font-oxygenBold hover:bg-transparent transition-all delay-150"
           >
             {{ $t("Request") }}
           </button>
           <button
-            class="bg-[#FF2C29] mx-2 text-white px-2 py-1 border-[#FF2C29] border-2 hover:text-[#FF2C29] font-oxygenBold hover:bg-transparent transition-all delay-150"
+            class="hidden md:inline-block bg-[#FF2C29] mx-2 text-white px-2 py-1 border-[#FF2C29] border-2 hover:text-[#FF2C29] font-oxygenBold hover:bg-transparent transition-all delay-150"
           >
             {{ $t("Delete") }}
           </button>
+          <div class="md:hidden">
+            <router-link
+              to="/"
+              class="text-cyan font-oxygenBold inline-block mr-2"
+            >
+              {{ $t("Request") }}</router-link
+            >
+            <router-link to="/" class="text-red font-oxygenBold">
+              {{ $t("Delete") }}</router-link
+            >
+          </div>
         </div>
       </main-card>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12  mt-4 lg:mt-12 gap-2 p-2 lg:p-0">
+  <div class="grid grid-cols-12 mt-4 lg:mt-12 gap-2 p-2 lg:p-0">
     <div class="col-span-12 lg:col-span-4">
       <main-card>
         <div class="flex justify-between">
@@ -35,7 +35,7 @@
     </div>
     <div class="col-span-12 lg:col-span-8">
       <div
-        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-2"
+        class="grid grid-cols-12 gap-1 lg:gap-2"
       >
         <health-parameter
           bgStyle="bg-[#E7EEF6]"
@@ -89,7 +89,7 @@
           updatedTime="16 min ago"
         />
 
-        <div class="md:col-span-2 col-span-3">
+        <div class="col-span-12 lg:col-span-6">
           <router-link :to="{ name: 'PatientAppoinetments' }">
             <main-card customStyle="!bg-[#6068A9]">
               <div class="flex justify-end">
@@ -106,14 +106,14 @@
                   >
                 </div>
                 <div class="col-span-2">
-                  <CoronaImg  class="float-right"/>
+                  <CoronaImg class="float-right" />
                 </div>
               </div>
             </main-card>
           </router-link>
         </div>
 
-        <div class="col-span-2">
+        <div class="md:col-span-12 lg:col-span-6 col-span-12">
           <main-card>
             <div class="flex justify-between">
               <div class="flex justify-between">
@@ -142,7 +142,7 @@
             >
           </main-card>
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-12 lg:col-span-6 col-span-12">
           <main-card>
             <div class="flex justify-between">
               <div class="flex justify-between">

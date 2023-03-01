@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-12" id="dateSection">
+  <div class="col-span-12" ref="dateSectionid">
     <main-card>
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">
@@ -49,7 +49,9 @@
 </template>
 
 <script>
+import Scroll from "@/mixins/Appointment/Scroll";
 export default {
+  mixins: [Scroll], // importing scroll mixins
   data() {
     return {
       date: new Date(),
@@ -68,14 +70,9 @@ export default {
   },
 
   methods: {
-    scroll() {
-      setTimeout(() => {
-        const element = document.getElementById("dateSection");
-        element.scrollIntoView();
-      }, 100);
-    },
     onDayClick(day) {
       this.date = day.date;
+      this.eventSectionScroll();
     },
     dateSubmit() {
       if (this.chooseDate == "") {
@@ -85,7 +82,6 @@ export default {
         });
         return;
       }
-      console.log(this.chooseDate);
       //setting the data into the local storage of type value and date
       localStorage.setItem("date", this.chooseDate);
       localStorage.setItem("type", this.$route.query.type);
@@ -94,10 +90,18 @@ export default {
     },
   },
   created() {
-    this.scroll();
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.scroll(this.$refs.dateSectionid);
+      }, 1000);
+    });
   },
   updated() {
-    this.scroll();
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.scroll(this.$refs.dateSectionid);
+      }, 1000);
+    });
   },
 };
 </script>

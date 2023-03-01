@@ -1,29 +1,30 @@
 <template>
   <!-- template for different health parameter boxes on PatientHealth page -->
-  <div>
-    <main-card>
-      <div class="flex justify-between">
-        <main-icon
-          :bgStyle="bgStyle"
-          :icoStyle="icoStyle"
-          :icon="icon"
-        ></main-icon>
 
-        <main-heading class="text-black"
-          >{{ healthParameterValue
-          }}<sub class="ml-1"
-            ><small class="text-xs text-light-grey font-thin">{{
-              healthParameterUnit
-            }}</small></sub
-          ></main-heading
-        >
-      </div>
-      <p class="font-bold text-blue text-lg py-5 px-1 capitalize">{{ label }}</p>
-      <small-text icon="uiw:reload" icoStyles="text-xs">{{
-        updatedTime
-      }}</small-text>
-    </main-card>
-  </div>
+ <div class="col-span-6 md:col-span-4 lg:col-span-3">
+  <main-card>
+    <div class="flex justify-between">
+      <main-icon
+        :bgStyle="bgStyle"
+        :icoStyle="icoStyle"
+        :icon="icon"
+      ></main-icon>
+
+      <main-heading class="text-black"
+        >{{ healthParameterValue
+        }}<sub class="ml-1"
+          ><small class="text-xs text-light-grey font-thin">{{
+            healthParameterUnit
+          }}</small></sub
+        ></main-heading
+      >
+    </div>
+    <p class="font-bold text-blue text-lg py-5 px-1 capitalize">{{ label }}</p>
+    <small-text icon="uiw:reload" icoStyles="text-xs">{{
+      updatedTime
+    }}</small-text>
+  </main-card>
+ </div>
 </template>
 <script>
 export default {

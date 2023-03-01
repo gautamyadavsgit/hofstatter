@@ -128,6 +128,7 @@ const translation = {
     "Edit profile": "Edit profile",
    
   },
+  "General Questionnaires":"General Questionnaires",
   AccessLog: {
     ...AccessLog,
   },

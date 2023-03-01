@@ -18,12 +18,18 @@
               </p>
             </div>
             <div class="pt-6 flex md:grid md:grid-cols-3 md:gap-2 m-auto">
-              <main-button>{{ $t("vaccination questionnaire") }}</main-button>
-              <main-button class="ml-10 md:ml-0"
+              <main-button :to="{ name: 'Questions' }">{{
+                $t("vaccination questionnaire")
+              }}</main-button>
+              <main-button
+                :to="{ name: 'PatientAppoinetments' }"
+                class="ml-10 md:ml-0"
                 ><span>{{ $t("lung-test") }}</span></main-button
               >
               <div class="m-auto ml-0 hidden md:block">
-                <router-link to="/" class="text-blue font-bold"
+                <router-link
+                  :to="{ name: 'Requests' }"
+                  class="text-blue font-bold"
                   >{{ $t("Show-all") }}
                   <iconify-icon
                     class="inline m-auto"
@@ -69,7 +75,7 @@
             </div>
           </div>
         </div>
-        <p class="mt-4 min-[1400px]:mb-2  ">
+        <p class="mt-4 min-[1400px]:mb-2">
           <span class="font-bold text-blue"> GEÖFFNET,</span> heute von 08:00
           bis 14:00 und 15:00 bis 20:00
         </p>
@@ -209,4 +215,3 @@ export default {
   },
 };
 </script>
-

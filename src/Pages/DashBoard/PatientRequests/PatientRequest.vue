@@ -41,7 +41,7 @@
         </main-card>
       </template>
     </main-table>
-    <main-table Heading="Allgemeine Fragebögen" cwidth="!w-[1080px]">
+    <main-table Heading="General Questionnaires" cwidth="!w-[1080px]">
       <template v-slot:Header>
         <th class="w-[35%]">{{ $t("Name") }}</th>
         <th>{{ $t("Status") }}</th>

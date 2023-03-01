@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-12" id="time-section">
+  <div class="col-span-12" ref="timeSection">
     <main-card>
       <div class="grid grid-cols-2">
         <div class="col-span-2 flex items-center justify-between">
@@ -38,7 +38,7 @@
           </p>
           <div class="mt-5">
             <form>
-              <p>{{$t("Morning")}}</p>
+              <p>{{ $t("Morning") }}</p>
               <label class="label" for="1m">
                 <p
                   class="whitespace-nowrap disabled my-2 mx-2 text-sm font-oxygenBold border-2 rounded-md border-[#3F3D56] p-1 inline-block"
@@ -207,7 +207,7 @@
                 />
               </label>
 
-              <p>{{$t("Afternoon")}}</p>
+              <p>{{ $t("Afternoon") }}</p>
               <label class="label" for="12e">
                 <p
                   class="whitespace-nowrap my-2 mx-2 text-sm font-oxygenBold border-2 rounded-md border-[#3F3D56] p-1 inline-block cursor-pointer"
@@ -298,7 +298,7 @@
                   @change="clickHandler"
                 />
               </label>
-              <p>{{$t("Evening")}}</p>
+              <p>{{ $t("Evening") }}</p>
               <label class="label" for="6E">
                 <p
                   class="whitespace-nowrap my-2 mx-2 text-sm font-oxygenBold border-2 rounded-md border-[#3F3D56] p-1 inline-block cursor-pointer"
@@ -397,7 +397,9 @@
   </div>
 </template>
 <script>
+import Scroll from "@/mixins/Appointment/Scroll";
 export default {
+  mixins: [Scroll], // importing scroll mixins
   data() {
     return {
       slotTime: "",
@@ -414,6 +416,7 @@ export default {
       let element = document.getElementById(e.target.id);
       element.parentElement.classList.add("l-active");
       this.slotTime = e.target.value;
+      this.eventSectionScroll();
     },
     submitHandler() {
       if (this.slotTime == "") {
@@ -423,6 +426,20 @@ export default {
       localStorage.setItem("timeSlot", this.slotTime);
       this.$router.push({ name: "PatientAppointmentDone" });
     },
+  },
+  created() {
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.scroll(this.$refs.timeSection);
+      },1000);
+    });
+  },
+  updated() {
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.scroll(this.$refs.timeSection);
+      },1000);
+    });
   },
 };
 </script>

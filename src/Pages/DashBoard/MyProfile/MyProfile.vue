@@ -22,7 +22,7 @@
               </span>
 
               <h4 class="font-oxygenBold text-blue pt-2 text-center">
-                {{ $t("Termine") }}
+                {{ $t("appointments") }}
               </h4>
             </div>
             <div class="grid grid-cols-12 text-center mt-2">
@@ -39,7 +39,7 @@
                 3
                 <span
                   class="font-oxygenLight block text-light-grey text-sm text-center"
-                  >{{ $t("MyProfile.forthcoming")}}
+                  >{{ $t("MyProfile.forthcoming") }}
                 </span>
               </div>
             </div>
@@ -49,72 +49,55 @@
                   icon="material-symbols:edit-square-outline"
                   class="inline-block text-lg md:text-2xl mt-[-8px]"
                 />
-                {{ $t("MyProfile.EditProfile")}}</main-button
+                {{ $t("MyProfile.EditProfile") }}</main-button
               >
             </div>
           </div>
         </div>
         <div
           class="md:col-span-8 col-span-12 px-0 md:px-6 pt-6 text-center md:text-left"
-        >
-          <table class="w-full table-auto">
-            <thead class="md:text-left text-center text-black">
-              <tr>
-                <th>{{ $t("MyProfile.Gender")}}</th>
-                <th>{{ $t("MyProfile.Birthday")}}</th>
-                <th>{{ $t("MyProfile.Old")}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="pb-8 text-[#82837e] text-[14px]">männlich</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">June 01, 1995</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">48</td>
-              </tr>
-            </tbody>
-            <thead class="md:text-left text-center text-black">
-              <tr>
-                <th>{{ $t("MyProfile.Height")}}</th>
-                <th>{{ $t("MyProfile.Weight")}}</th>
-                <th>{{ $t("MyProfile.BloodType")}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
+        > 
+          <div class="grid grid-cols-2 md:grid-cols-3">
+            <div>
+              <th>{{ $t("MyProfile.Gender") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">männlich</td>
+
+              <div>
+                <th>{{ $t("MyProfile.Height") }}</th>
                 <td class="pb-8 text-[#82837e] text-[14px]">150 Cm</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">60 Kg</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">O+</td>
-              </tr>
-            </tbody>
-            <thead class="md:text-left text-center text-black">
-              <tr>
-                <th>{{ $t("MyProfile.MembershipStatus")}}</th>
-                <th>{{ $t("MyProfile.RegisteredDate")}}</th>
-                <th>{{ $t("MyProfile.PhoneNumber")}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="pb-8 text-[#82837e] text-[14px]">Aktiv</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">24.06.2019</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">(012)-345-67890</td>
-              </tr>
-            </tbody>
-            <thead class="md:text-left text-center text-black">
-              <tr>
-                <th>{{ $t("MyProfile.HouseNumber")}}</th>
-                <th>{{ $t("MyProfile.City")}}</th>
-                <th>{{ $t("MyProfile.Postcode")}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
+              </div>
+              <div>
+                <th>{{ $t("MyProfile.MembershipStatus") }}</th>
                 <td class="pb-8 text-[#82837e] text-[14px]">25, Lorem Ipsum</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">Indore</td>
-                <td class="pb-8 text-[#82837e] text-[14px]">452056</td>
-              </tr>
-            </tbody>
-          </table>
+              </div>
+              <div>
+                <th>{{ $t("MyProfile.HouseNumber") }}</th>
+
+                <td class="pb-8 text-[#82837e] text-[14px]">25, Lorem Ipsum</td>
+              </div>
+            </div>
+            <div>
+              <th>{{ $t("MyProfile.Birthday") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">June 01, 1995</td>
+
+              <th>{{ $t("MyProfile.Weight") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">60 Kg</td>
+              <th>{{ $t("MyProfile.RegisteredDate") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">24.06.2019</td>
+              <th>{{ $t("MyProfile.City") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">Indore</td>
+            </div>
+            <div>
+              <th>{{ $t("MyProfile.Old") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">48</td>
+              <th>{{ $t("MyProfile.BloodType") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">O+</td>
+              <th>{{ $t("MyProfile.PhoneNumber") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">452056</td>
+              <th>{{ $t("MyProfile.Postcode") }}</th>
+              <td class="pb-8 text-[#82837e] text-[14px]">452056</td>
+            </div>
+          </div>
         </div>
       </div>
     </main-card>
@@ -145,9 +128,13 @@
             </ul>
           </div>
           <div class="flex mt-5 justify-around md:justify-end">
-            <main-button :link="false">{{ $t("MyProfile.NoteSave") }}</main-button>
+            <main-button :link="false">{{
+              $t("MyProfile.NoteSave")
+            }}</main-button>
           </div>
-          <p class="px-2 mt-6 font-medium text-black">{{ $t("MyProfile.NoteOne") }}</p>
+          <p class="px-2 mt-6 font-medium text-black">
+            {{ $t("MyProfile.NoteOne") }}
+          </p>
           <div class="p-2 flex rounded-lg w-full justify-between">
             <div class="flex">
               <span
@@ -200,7 +187,7 @@
                     <h4
                       class="font-bold font-oxygen text-blue text-[16px] pl-3 pt-1"
                     >
-                    {{ $t("MyProfile.Pcr") }}
+                      {{ $t("MyProfile.Pcr") }}
                     </h4>
                   </div>
                   <div class="flex float-right">
@@ -220,7 +207,7 @@
                     <h4
                       class="font-bold font-oxygen text-blue text-[16px] pl-3 pt-1"
                     >
-                    {{ $t("MyProfile.Xray") }}
+                      {{ $t("MyProfile.Xray") }}
                     </h4>
                   </div>
                   <div class="flex float-right">
@@ -240,7 +227,7 @@
                     <h4
                       class="font-bold font-oxygen text-blue text-[16px] pl-3 pt-1"
                     >
-                    {{ $t("MyProfile.BloodReport") }}
+                      {{ $t("MyProfile.BloodReport") }}
                     </h4>
                   </div>
                   <div class="flex float-right">
@@ -264,3 +251,10 @@
 </template>
 
 <script></script>
+
+<style scoped>
+th,
+td {
+  display: block;
+}
+</style>
