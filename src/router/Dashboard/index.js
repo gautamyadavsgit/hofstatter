@@ -7,7 +7,7 @@ const DashboardRoutes = [
     path: "/dashboardMain",
     name: "dashboardMain",
     redirect: { name: 'dashboard' },
-    component: () => import("../../components/Pages/DashBoard/IndexMain.vue"),
+    component: () => import("@/Pages/DashBoard/IndexMain.vue"),
     beforeEnter: (_, _2, next) => {
       if (store.state.login.isLoggedIn) {
         next();
@@ -20,7 +20,7 @@ const DashboardRoutes = [
         path: "/dashboard",
         name: "dashboard",
         component: () =>
-          import("@/components/Pages/DashBoard/Home/DashBoard.vue"),
+          import("@/Pages/DashBoard/Home/DashBoard.vue"),
         meta: { sidebar: true },
       },
       // router for appointments
@@ -30,7 +30,7 @@ const DashboardRoutes = [
         redirect: { name: "PatientAppointmentsData" },
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
+            "@/Pages/DashBoard/PatientAppointment/PatientAppointment.vue"
           ),
         meta: { sidebar: true },
         // children group for appointments components
@@ -41,7 +41,7 @@ const DashboardRoutes = [
         name: "Requests",
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientRequests/PatientRequest.vue"
+            "@/Pages/DashBoard/PatientRequests/PatientRequest.vue"
           ),
       },
       {
@@ -49,7 +49,7 @@ const DashboardRoutes = [
         name: "Medications",
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientMedication/PatientMedication.vue"
+            "@/Pages/DashBoard/PatientMedication/PatientMedication.vue"
           ),
       },
       {
@@ -57,7 +57,7 @@ const DashboardRoutes = [
         name: "HealthStatus",
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientHealth/PatientHealth.vue"
+            "@/Pages/DashBoard/PatientHealth/PatientHealth.vue"
           ),
       },
 
@@ -66,7 +66,7 @@ const DashboardRoutes = [
         name: "Questions",
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientQuestionaries/PatientQuestionaries.vue"
+            "@/Pages/DashBoard/PatientQuestionaries/PatientQuestionaries.vue"
           ),
       },   
       {
@@ -74,7 +74,7 @@ const DashboardRoutes = [
         name: "PatientDiagnosticCenter",
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue"
+            "@/Pages/DashBoard/PatientDiagnostic/PatientDiagnosticCenter.vue"
           ),
       },
       {
@@ -82,7 +82,7 @@ const DashboardRoutes = [
         name: "PatientVaccination",
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientVaccination/PatientVaccination.vue"
+            "@/Pages/DashBoard/PatientVaccination/PatientVaccination.vue"
           ),
       },
       {
@@ -90,7 +90,7 @@ const DashboardRoutes = [
         name: "Setting",
         redirect: { name: "AccountSetting" },
         component: () =>
-          import("@/components/Pages/DashBoard/Setting/SettingIndex.vue"),
+          import("@/Pages/DashBoard/Setting/SettingIndex.vue"),
         children: [...SettingRoutes],
       },
       {
@@ -98,7 +98,7 @@ const DashboardRoutes = [
         name: "PatientChat",
         component: () =>
           import(
-            "@/components/Pages/DashBoard/PatientChat/PatientChat.vue"
+            "@/Pages/DashBoard/PatientChat/PatientChat.vue"
           ),
         // children group for chat page
         children: [
@@ -107,7 +107,7 @@ const DashboardRoutes = [
             name: "chatMessages",
             component: () =>
               import(
-                "@/components/Pages/DashBoard/PatientChat/Children/PatientChatmessages.vue"
+                "@/Pages/DashBoard/PatientChat/Children/PatientChatmessages.vue"
               ),
           },
         ],
@@ -116,13 +116,13 @@ const DashboardRoutes = [
         path: "/access-log",
         name: "AccessLog",
         component: () =>
-          import("@/components/Pages/DashBoard/AccessLog/AccessLog.vue"),
+          import("@/Pages/DashBoard/AccessLog/AccessLog.vue"),
       },
       {
         path: "/my-profile",
         name: "MyProfile",
         component: () =>
-          import("@/components/Pages/DashBoard/MyProfile/MyProfile.vue"),
+          import("@/Pages/DashBoard/MyProfile/MyProfile.vue"),
         meta: { sidebar: true },
       },
     ],

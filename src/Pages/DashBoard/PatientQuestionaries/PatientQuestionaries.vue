@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import UnsuscribeIcon from "../../../icons/Anfragen/UnsubscribeIcon.vue";
+import UnsuscribeIcon from "@/components/icons/Anfragen/UnsubscribeIcon.vue";
 // import TransfersIcon from "@/components/icons/Anfragen/TransfersIcon.vue";
 // import XRayImg from "@/components/icons/PatientDiagnosticCenter/XRayImg.vue";
 // import AttesteIcon from "@/components/icons/Anfragen/AttesteIcon.vue";

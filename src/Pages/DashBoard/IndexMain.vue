@@ -52,13 +52,13 @@
 <script>
 import { defineAsyncComponent } from "vue";
 const SideNav = defineAsyncComponent(() =>
-  import("../../Layout/Common/Menus/SideNav.vue")
+  import("@/components/Layout/Common/Menus/SideNav.vue")
 );
 const TopNav = defineAsyncComponent(() =>
-  import("../../Layout/Common/Menus/TopNav.vue")
+  import("@/components/Layout/Common/Menus/TopNav.vue")
 );
 const MobileMenu = defineAsyncComponent(() =>
-  import("../../Layout/Common/Menus/MobileMenu.vue")
+  import("@/components/Layout/Common/Menus/MobileMenu.vue")
 );
 const AppointmentSidebar = defineAsyncComponent(() =>
   import("@/components/Layout/Common/AppointmentSidebar.vue")
