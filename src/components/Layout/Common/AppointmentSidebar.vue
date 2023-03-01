@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 pl-2">
+  <div class="py-4 md:pl-2 px-1 md:px-2 lg:px-0">
     <main-card>
       <div class="pb-2">
         <div>

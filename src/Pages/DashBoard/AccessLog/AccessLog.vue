@@ -1,6 +1,6 @@
 <template>
   <section>
-    <main-table Heading="AccessLog.Login Data" cwidth="!w-full">
+    <main-table Heading="AccessLog.Login Data" cwidth="!w-[580px] md:!w-full">
       <template v-slot:Header>
         <th class="w-[60%]">{{ $t("AccessLog.Description") }}</th>
         <th class="">{{ $t("AccessLog.Time") }}</th>

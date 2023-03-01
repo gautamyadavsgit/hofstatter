@@ -69,7 +69,7 @@
             </div>
           </div>
         </div>
-        <p class="mt-4">
+        <p class="mt-4 min-[1400px]:mb-2  ">
           <span class="font-bold text-blue"> GEÖFFNET,</span> heute von 08:00
           bis 14:00 und 15:00 bis 20:00
         </p>
@@ -209,3 +209,4 @@ export default {
   },
 };
 </script>
+

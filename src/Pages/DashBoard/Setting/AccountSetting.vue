@@ -101,7 +101,7 @@
             />
           </div>
         </div>
-        <div class="flex mt-5 justify-around md:justify-end">
+        <div class="flex mt-5 justify-between md:justify-end">
           <main-button :link="false">{{ $t("update") }}</main-button>
           <main-button class="!bg-white !text-blue mx-2">{{
             $t("cancel")
