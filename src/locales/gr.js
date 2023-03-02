@@ -1,5 +1,5 @@
 import AccessLog from "./AccessLog/gr";
-import Profile from "./Profile/gr"
+import Profile from "./Profile/gr";
 const translation = {
   Hello: "Hallo",
   Appointments: "Termine",
@@ -133,5 +133,6 @@ const translation = {
   MyProfile: {
     ...Profile,
   },
+  "General Questionnaires": "Allgemeine Fragebögen",
 };
 export default translation;

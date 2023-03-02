@@ -9,7 +9,7 @@
       </a>
     </div>
     <div
-      class="md:h-[80%] h-[70%] fixed overflow-scroll no-scrollbar bg-white md:bg-transparent"
+      class="md:h-[80%] h-[70%] fixed overflow-scroll no-scrollbar overflow-x-hidden bg-white md:bg-transparent"
     >
       <nav class="w-20 justify-between flex flex-col h-auto">
         <div class="my-10">

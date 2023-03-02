@@ -1,7 +1,7 @@
 <!-- base componnt for headings -->
 <template>
   <h2
-    class="font-oxygenBold font-bold whitespace-nowrap text-black capitalize "
+    class="font-oxygenBold main-heading font-bold whitespace-nowrap text-black capitalize"
     :class="customStyle"
   >
     <slot> </slot>
@@ -20,3 +20,11 @@ export default {
   },
 };
 </script>
+
+<style>
+@media screen and (min-width: 720px) {
+  .main-heading:not(.main-card .main-heading) {
+    margin-left: 5px;
+  }
+}
+</style>

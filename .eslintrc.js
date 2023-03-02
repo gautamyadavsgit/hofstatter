@@ -1,17 +1,21 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-  },
-  extends: ["plugin:vue/essential", "eslint:recommended"],
-  parserOptions: {
-    parser: "babel-eslint",
-  },
-  rules: {
-    "no-console": "off",
-    "no-debugger": "off",
-    "vue/no-unused-vars": "warn",
-    "no-unused-vars": "warn",
-    "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }],
-  },
-};
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/vue3-essential"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": [
+      "vue"
+    ],
+    "rules": {
+    }
+  }
+  

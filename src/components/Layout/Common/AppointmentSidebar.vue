@@ -1,11 +1,13 @@
 <template>
-  <div class="py-4 pl-2">
+  <div class="py-4 md:pl-2 px-1 md:px-2">
     <main-card>
       <div class="pb-2">
         <div>
           <div class="flex justify-between py-2">
             <main-heading class="py-2">{{ $t("appointments") }}</main-heading>
-            <main-icon icon="material-symbols:add"></main-icon>
+            <router-link to="appointments">
+              <main-icon icon="material-symbols:add"></main-icon
+            ></router-link>
           </div>
           <p class="text-base text-[#82837E]">
             {{ $t("appointment-number", { number: 6 }) }}
@@ -69,7 +71,9 @@
             }}</main-button>
           </div>
           <div class="text-center flex">
-            <router-link to="/" class="text-blue font-bold m-auto"
+            <router-link
+              :to="{ name: 'Requests' }"
+              class="text-blue font-bold m-auto"
               >{{ $t("Show-all") }}
               <iconify-icon
                 class="inline m-auto"

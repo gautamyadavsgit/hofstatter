@@ -16,7 +16,7 @@ const router = createRouter({
       path: "/login",
       name: "login",
       redirect: { name: "welcome" },
-      component: () => import("../components/Pages/Login/LoginMain.vue"),
+      component: () => import("@/Pages/Login/LoginMain.vue"),
       //checking the condition if user is logged in or not and redirecting
       beforeEnter: (_, _2, next) => {
         if (store.state.login.isLoggedIn) {
@@ -30,25 +30,25 @@ const router = createRouter({
           path: "/welcome",
           name: "welcome",
           component: () =>
-            import("../components/Pages/Login/Childrens/WelCome.vue"),
+            import("@/Pages/Login/Childrens/WelCome.vue"),
         },
         {
           path: "/austria-login",
           name: "austria-login",
           component: () =>
-            import("../components/Pages/Login/Childrens/AustriaLogin.vue"),
+            import("@/Pages/Login/Childrens/AustriaLogin.vue"),
         },
         {
           path: "/sms-login",
           name: "sms-login",
           component: () =>
-            import("../components/Pages/Login/Childrens/SmsLogin.vue"),
+            import("@/Pages/Login/Childrens/SmsLogin.vue"),
         },
         {
           path: "/enter-tpn",
           name: "enter-tpn",
           component: () =>
-            import("../components/Pages/Login/Childrens/EnterTpn.vue"),
+            import("@/Pages/Login/Childrens/EnterTpn.vue"),
             //chcking the condition of phone and social security token is entered
           beforeEnter: (_, _2, next) => {
             if (!store.state.login.phoneVerified) {

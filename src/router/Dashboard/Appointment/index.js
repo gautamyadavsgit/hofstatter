@@ -4,7 +4,7 @@ const AppointmentRoutes = [
     name: "PatientAppointmentsData",
     component: () =>
       import(
-        "@/components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentSearchResult.vue"
+        "@/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentSearchResult.vue"
       ),
   },
   {
@@ -12,7 +12,7 @@ const AppointmentRoutes = [
     name: "PatientAppointmentsChooseDate",
     component: () =>
       import(
-        "@/components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentChooseDate.vue"
+        "@/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentChooseDate.vue"
       ),
   },
   {
@@ -20,7 +20,7 @@ const AppointmentRoutes = [
     name: "PatientAppointmentChooseTime",
     component: () =>
       import(
-        "@/components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentChooseTime.vue"
+        "@/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentChooseTime.vue"
       ),
   },
   {
@@ -28,7 +28,7 @@ const AppointmentRoutes = [
     name: "PatientAppointmentDone",
     component: () =>
       import(
-        "@/components/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentSuccessfull.vue"
+        "@/Pages/DashBoard/PatientAppointment/Children/PatientAppointmentSuccessfull.vue"
       ),
   },
 ];

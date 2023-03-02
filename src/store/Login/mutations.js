@@ -20,4 +20,9 @@ export default {
     state.userId = localStorage.getItem("userId");
     state.isLoggedIn = true;
   },
+  setLogout(state) {
+    state.isLoggedIn = !state.isLoggedIn;
+    localStorage.removeItem("login");
+    window.location.href = "/";
+  },
 };
