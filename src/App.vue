@@ -3,7 +3,7 @@ import { RouterView } from "vue-router";
 import "./style.css";
 import store from "./store/store";
 
-if (localStorage.getItem("login")) {
+if (localStorage.getItem("token") && localStorage.getItem("userId")) {
   store.commit("login/autoLogin");
 }
 </script>

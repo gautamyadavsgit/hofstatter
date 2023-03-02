@@ -1,103 +1,147 @@
 <template>
   <div class="py-2 px-4">
     <form class="account-setting">
-      <h4 class="text-lg font-oxygenBold text-black">Grundinformation-</h4>
+      <h4 class="text-lg font-oxygenBold text-black">
+        {{ $t("basic information") }}-
+      </h4>
       <div class="md:flex justify-between w-11/12">
         <div>
-          <label for="ppn">Vorname: </label>
-          <input placeholder="Enter your first name" id="ppn" type="text" />
+          <label for="firstname">{{ $t("firstname") }}: </label>
+          <input
+            :placeholder="$t('Enter your') + ' ' + $t('firstname')"
+            id="firstname"
+            type="text"
+          />
         </div>
         <div>
-          <label for="ppn">Nachname: </label>
-          <input placeholder="Enter your last name" id="ppn" type="text" />
+          <label for="lastname">{{ $t("lastname") }}: </label>
+          <input
+            :placeholder="$t('Enter your') + $t('lastname')"
+            id="lastname"
+            type="text"
+          />
         </div>
         <div>
-          <label for="ppn"> Telefonnummer:</label>
-          <input placeholder="(000)-000-00000" id="ppn" type="text" />
+          <label for="phone"> {{ $t("Phone Number") }}:</label>
+          <input placeholder="(000)-000-00000" id="phone" type="text" />
         </div>
       </div>
-      <div class="md:flex justify-between w-full md:w-11/12 mt-5">
+      <div class="lg:flex justify-between w-full md:w-11/12 mt-5">
         <div>
-          <h5 class="text-black py-3">Geschlecht:</h5>
+          <h5 class="text-black py-3">{{ $t("Profile.gender") }}:</h5>
 
           <input type="radio" id="male" class="!inline-block" name="gender" />
           <label for="male" class="!inline-block px-2 text-black !py-1">
-            Männlich
+            {{ $t("male") }}
           </label>
           <input id="female" type="radio" name="gender" class="!inline-block" />
           <label for="female" class="!inline-block px-2 text-black !py-0">
-            Weiblich
+            {{ $t("female") }}
           </label>
         </div>
         <div>
-          <label for="ppn"> D.O.B </label>
-          <input placeholder="dd/mm/yyyy" id="ppn" type="date" />
+          <label for="dob"> D.O.B </label>
+          <input placeholder="dd/mm/yyyy" id="dob" type="date" />
         </div>
         <div>
-          <label for="ppn">Alter: </label>
-          <input placeholder="Enter your age" id="ppn" type="text" />
-        </div>
-      </div>
-      <div class="md:flex justify-between w-full md:w-11/12 mt-5">
-        <div>
-          <label>Höhe:</label>
-          <input type="text" placeholder="Enter your height" />
-        </div>
-        <div>
-          <label for="ppn"> Gewicht: </label>
-          <input placeholder="Enter your weight" id="ppn" type="text" />
-        </div>
-        <div>
-          <label for="ppn">Blutgruppe: </label>
-          <input placeholder="Enter your blood group" id="ppn" type="text" />
-        </div>
-      </div>
-      <div class="md:flex justify-between w-full md:w-11/12 mt-5">
-        <div>
-          <h5 class="text-black py-3">Mitgliedsstatus:</h5>
-
-          <input type="radio" id="active" class="!inline-block" name="gender" />
-          <label for="active" class="!inline-block px-4 text-black !py-1">
-            Active
-          </label>
+          <label for="age">{{ $t("age") }}: </label>
           <input
-            id="inactive"
-            type="radio"
-            name="gender"
-            class="!inline-block"
-          />
-          <label for="inactive" class="!inline-block px-4 text-black !py-0">
-            Inactive
-          </label>
-        </div>
-        <div>
-          <label for="ppn"> Eingetragenes Datum: </label>
-          <input placeholder="dd/mm/yyyy" id="ppn" type="date" />
-        </div>
-        <div>
-          <label for="ppn">Hausnummer und Straße: </label>
-          <input
-            placeholder="Enter house number and street"
-            id="ppn"
+            :placeholder="$t('Enter your') + ' ' + $t('age')"
+            id="age"
             type="text"
           />
         </div>
       </div>
-      <div class="md:flex justify-between w-11/12">
+      <div class="lg:flex justify-between w-full md:w-11/12 mt-5">
         <div>
-          <label for="ppn">Stadt: </label>
-          <input placeholder="Enter city" id="ppn" type="text" />
+          <label>{{ $t("Profile.height") }}</label>
+          <input
+            type="text"
+            :placeholder="$t('Enter your') + ' ' + $t('Profile.height')"
+          />
         </div>
         <div>
-          <label for="ppn">PLZ: </label>
-          <input placeholder="Enter zip code" id="ppn" type="text" />
+          <label for="weight"> {{ $t("Profile.weight") }}: </label>
+          <input
+            :placeholder="$t('Enter your') + ' ' + $t('Profile.weight')"
+            id="weight"
+            type="text"
+          />
+        </div>
+        <div>
+          <label for="bloodgroup">{{ $t("Profile.blood group") }}: </label>
+          <input
+            :placeholder="$t('Enter your') + ' ' + $t('Profile.blood group')"
+            id="bloodgroup"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="lg:flex justify-between w-full md:w-11/12 mt-5">
+        <div>
+          <h5 class="text-black py-3">
+            {{ $t("Profile.membership status") }}:
+          </h5>
+
+          <input
+            type="radio"
+            id="active"
+            class="!inline-block"
+            name="member-status"
+          />
+          <label for="active" class="!inline-block px-4 text-black !py-1">
+            {{ $t("Active") }}
+          </label>
+          <input
+            id="inactive"
+            type="radio"
+            name="member-status"
+            class="!inline-block"
+          />
+          <label for="inactive" class="!inline-block px-4 text-black !py-0">
+            {{ $t("Inactive") }}
+          </label>
+        </div>
+        <div>
+          <label for="ppn"> {{ $t("Registered date") }}: </label>
+          <input placeholder="dd/mm/yyyy" id="ppn" type="date" />
+        </div>
+        <div>
+          <label for="has">{{ $t("Profile.house number and street") }}: </label>
+          <input
+            :placeholder="
+              $t('Enter') + ' ' + $t('Profile.house number and street')
+            "
+            id="has"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="lg:flex justify-between w-11/12">
+        <div>
+          <label for="city">{{ $t("city") }}: </label>
+          <input
+            :placeholder="$t('enter') + ' ' + $t('city')"
+            id="city"
+            type="text"
+          />
+        </div>
+        <div>
+          <label for="postcode">{{ $t("Profile.postcode") }}: </label>
+          <input
+            :placeholder="$t('Enter') + ' ' + $t('Profile.postcode')"
+            id="postcode"
+            type="text"
+          />
         </div>
         <div class="w-72"></div>
       </div>
 
       <div class="flex mt-5 justify-around md:justify-end">
-        <main-button :link="false">Aktualisieren</main-button>
-        <main-button class="!bg-white !text-blue mx-2">Absagen</main-button>
+        <main-button :link="false">{{ $t("update") }}</main-button>
+        <main-button class="!bg-white !text-blue mx-2">{{
+          $t("cancel")
+        }}</main-button>
       </div>
     </form>
   </div>
