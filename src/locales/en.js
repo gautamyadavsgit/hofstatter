@@ -125,15 +125,16 @@ const translation = {
     "house number and street": "House number and street",
     postcode: "Zip Code",
     gender: "Gender",
-    "Edit profile": "Edit profile",
-   
+    "Edit profile": "Edit profile"
   },
-  "General Questionnaires":"General Questionnaires",
+  "General Questionnaires": "General Questionnaires",
   AccessLog: {
     ...AccessLog,
   },
   MyProfile: {
     ...Profile,
   },
+  accountSetting: "Account Setting",
+  editProfile: "Edit Profile",
 };
 export default translation;

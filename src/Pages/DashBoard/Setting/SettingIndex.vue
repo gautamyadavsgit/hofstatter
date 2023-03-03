@@ -3,7 +3,7 @@
     <div class="col-span-12">
       <!-- main-profile-area -->
       <div class="main-card">
-        <main-heading>{{ Heading }}</main-heading>
+        <main-heading>{{ $t(Heading) }}</main-heading>
 
         <AccountSettingHeader />
         <router-view v-slot="{ Component, route }">
@@ -28,15 +28,26 @@ export default {
       Heading: "",
     };
   },
-  // watch: {
-  //   $route() {
-  //     if (this.$route.name === "AccountSetting") {
-  //       this.Heading = "Account Setting";
-  //     }
-  //     if (this.$route.name === "ProfileSetting") {
-  //       this.Heading = "Profil Bearbeiten";
-  //     }
-  //   },
-  // },
+  methods: {
+    addHeading() {
+      if (this.$route.name == "AccountSetting") {
+        this.Heading = "accountSetting";
+      }
+      if (this.$route.name == "ProfileSetting") {
+        this.Heading = "editProfile";
+      }
+    },
+  },
+  watch: {
+    $route() {
+      this.addHeading();
+    },
+  },
+  created() {
+    this.addHeading();
+  },
+  updated() {
+    this.addHeading();
+  },
 };
 </script>
