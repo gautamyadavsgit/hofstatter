@@ -1,12 +1,15 @@
 <template>
   <section>
+    <!-- A custom table component with a header and body slot -->
     <main-table Heading="AccessLog.Login Data" cwidth="!w-[580px] md:!w-full">
       <template v-slot:Header>
+        <!-- The column headers for the table -->
         <th class="w-[60%]">{{ $t("AccessLog.Description") }}</th>
         <th class="">{{ $t("AccessLog.Time") }}</th>
         <th class="float-right">{{ $t("AccessLog.time stamp") }}</th>
       </template>
       <template v-slot:Body>
+        <!-- A custom card component for each row of data -->
         <main-card
           customStyle="!mt-4 !w-[580px] md:!w-full"
           v-for="dummyData in dummyDatas"
@@ -14,6 +17,7 @@
         >
           <table class="table-fixed !w-[580px] md:!w-full border-collapse">
             <tr>
+              <!-- The data for each column in the row -->
               <td class="w-[60%]">
                 {{ dummyData.Type }}
               </td>
@@ -29,10 +33,12 @@
     </main-table>
   </section>
 </template>
+
 <script>
 export default {
   data() {
     return {
+      // An array of dummy data objects for the table
       dummyDatas: [
         {
           id: 1,
@@ -75,7 +81,9 @@ export default {
   },
 };
 </script>
+
 <style scoped>
+/* Styling for the table and card components */
 td {
   font-size: 16px;
   line-height: 20px;
