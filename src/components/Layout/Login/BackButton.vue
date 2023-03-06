@@ -9,7 +9,7 @@ material-symbols:arrow-back-ios"
           class="inline-block"
         ></iconify-icon
       ></span>
-      Back</a
+      {{ $t("Back") }}</a
     >
   </div>
 </template>
