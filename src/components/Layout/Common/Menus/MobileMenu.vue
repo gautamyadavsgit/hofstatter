@@ -2,7 +2,9 @@
 <template>
   <div class="sticky top-24 bg-white z-40">
     <header class="pb-2 pt-3">
-      <div class="overflow-x-scroll w-screen sidenavScroll pb-3 md:no-scrollbar">
+      <div
+        class="overflow-x-scroll w-screen sidenavScroll pb-3 md:no-scrollbar"
+      >
         <ul class="flex [&>*]:mx-4">
           <the-menu />
         </ul>
@@ -11,10 +13,8 @@
   </div>
 </template>
 <script>
-// import { defineAsyncComponent } from "vue";
-// TheMenus componenets for showing the mensu
-// const TheMenusVue = defineAsyncComponent(() => import("./TheMenus.vue"));
-import TheMenusVue from "./TheMenus.vue";
+import { defineAsyncComponent } from "vue";
+const TheMenusVue = defineAsyncComponent(() => import("./TheMenus.vue"));
 export default {
   components: {
     "the-menu": TheMenusVue,
