@@ -21,7 +21,7 @@
               class="w-20 h-20 rounded-full border-2 border-solid border-black"
             />
             <div
-              class="h-8 w-8 edit-btn absolute top-[55%] left-[70%] rounded-full bg-white"
+              class="h-8 w-8 edit-btn absolute top-[55%] left-[29%] md:left-[70%] rounded-full bg-white"
             >
               <iconify-icon
                 icon="material-symbols:edit"
@@ -54,7 +54,7 @@
           icon="material-symbols:edit-square-outline"
           class="inline-block text-lg md:text-2xl mt-[-8px]"
         />
-       {{$t("Profile.Edit profile")}}</main-button
+        {{ $t("Profile.Edit profile") }}</main-button
       >
       <router-link
         v-if="this.$route.name === 'ProfileSetting'"

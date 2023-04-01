@@ -1,5 +1,5 @@
 import AppointmentRoutes from "./Appointment"; // importing appointment children routes
-import SettingRoutes from "./Setting";
+import SettingRoutes from "./Setting"; // importing setting children route
 import store from "@/store/store";
 const DashboardRoutes = [
   {

@@ -17,7 +17,7 @@
                 “ {{ $t("You have 2 requests in your board") }} ”
               </p>
             </div>
-            <div class="pt-6 flex md:grid md:grid-cols-3 md:gap-2 m-auto">
+            <div class="pt-6 flex md:gap-2 m-auto">
               <main-button :to="{ name: 'Questions' }">{{
                 $t("vaccination questionnaire")
               }}</main-button>

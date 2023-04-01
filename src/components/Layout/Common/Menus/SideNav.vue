@@ -19,7 +19,7 @@
           </ul>
         </div>
       </nav>
-    </div>
+    </div> 
   </div>
 </template>
 <script>

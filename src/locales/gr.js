@@ -134,5 +134,7 @@ const translation = {
     ...Profile,
   },
   "General Questionnaires": "Allgemeine Fragebögen",
+  accountSetting: "Konto-Einstellung",
+  editProfile: "Profil bearbeiten",
 };
 export default translation;

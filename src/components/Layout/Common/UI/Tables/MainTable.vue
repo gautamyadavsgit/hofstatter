@@ -39,56 +39,6 @@ export default {
   components: {
     FilterForm, // registering filter form component for filter and search
   },
-  data() {
-    return {
-      dummyDatas: [
-        {
-          id: 1,
-          Name: "Vorsorgeuntersuchung",
-          Status: "Open",
-          Kategorie: "Vorsorge",
-          Notes: "Dr. Julia Saleta",
-        },
-        {
-          id: 2,
-          Name: "Impffragebogen",
-          Status: "Open",
-          Kategorie: "Aufklärungsbogen",
-          Notes: "Dr. Pickem Christian",
-        },
-        {
-          id: 3,
-          Name: "COPD Lungentest (CAT-Score)",
-          Status: "Closed",
-          Kategorie: "Lunge",
-          Notes: "Dr. Pickem Christian",
-        },
-      ],
-      dummyDatas2: [
-        {
-          id: 1,
-          Name: "Depressionsvorsorge",
-          Status: "Open",
-          Kategorie: "Vorsorge",
-          Notes: "Dr. Julia Saleta",
-        },
-        {
-          id: 2,
-          Name: "Chronische Wunden",
-          Status: "Open",
-          Kategorie: "Prävention",
-          Notes: "Dr. Pickem Christian",
-        },
-        {
-          id: 3,
-          Name: "Alkoholcheck",
-          Status: "Closed",
-          Kategorie: "Prävention",
-          Notes: "---",
-        },
-      ],
-    };
-  },
   computed: {
     customClass() {
       return this.cwidth;

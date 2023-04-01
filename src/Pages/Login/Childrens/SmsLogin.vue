@@ -1,7 +1,9 @@
 <template>
+  <!-- Login form using SMS -->
   <form @submit.prevent="smsloginSubmit">
     <div class="content-area">
       <div class="m-auto w-full">
+        <!-- Phone number input field -->
         <div class="mb-5">
           <label
             class="text-center block text-[16px] leading-[20px] font-bold"
@@ -17,6 +19,7 @@
             v-model.trim="input.phone"
           />
         </div>
+        <!-- Social security number input field -->
         <div class="mb-5">
           <label
             class="text-center block text-[16px] leading-[20px] font-bold"
@@ -34,11 +37,14 @@
         </div>
       </div>
     </div>
+    <!-- Buttons area -->
     <div class="btn-area">
       <div class="m-auto w-[300px]">
+        <!-- Button to request SMS TAN -->
         <button class="main-button">{{ $t("Request-SMS-TAN") }}</button>
       </div>
 
+      <!-- Back button component -->
       <back-button />
     </div>
   </form>
@@ -48,6 +54,7 @@
 export default {
   data() {
     return {
+      // Input fields data
       input: {
         phone: null,
         ssn: null,
@@ -55,8 +62,11 @@ export default {
     };
   },
   methods: {
+    // Submit form function
     smsloginSubmit() {
+      // Check if the phone or ssn fields are empty
       if (this.input.phone == null || this.input.ssn == null) {
+        // Show warning message using sweetalert library
         this.$swal({
           title: this.$t("error"),
           text: this.$t("error-text"),
@@ -64,11 +74,12 @@ export default {
         });
         return;
       }
-      console.log(this.$store.state.login.dummyLoginData.phone);
+      // Check if the phone number and ssn match the dummy data stored in the login state
       if (
         this.input.phone != this.$store.state.login.dummyLoginData.phone ||
         this.input.ssn != this.$store.state.login.dummyLoginData.ssn
       ) {
+        // Show error message using sweetalert library
         this.$swal({
           title: this.$t("error"),
           text: this.$t("global-error"),
@@ -76,7 +87,7 @@ export default {
         });
         return;
       }
-      //setting the global phone and ssn data
+      // Set the global phone and ssn data using Vuex store dispatch and commit functions
       this.$store
         .dispatch("login/setSmsLoginData", {
           phone: this.input.phone,

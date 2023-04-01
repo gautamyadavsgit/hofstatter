@@ -1,18 +1,22 @@
 <template>
+  <!-- The login form -->
   <form @submit.prevent="ausLoginSubmit">
     <div class="content-area">
       <div class="m-auto w-full">
         <div class="mb-5">
+          <!-- Title of the login form -->
           <p
             class="text-[22px] leading-[22px] font-bold m-auto grid justify-center mb-5"
           >
             {{ $t("authenticate-with-id-austria") }}
           </p>
+          <!-- Image displayed on the login form -->
           <div>
             <img :src="AusLoginImg" class="m-auto" width="60" height="42" />
           </div>
         </div>
 
+        <!-- Input field for the username or phone number -->
         <div class="mb-5">
           <label
             class="text-center block text-[16px] leading-[20px] font-bold"
@@ -28,13 +32,15 @@
             v-model.trim="username"
           />
         </div>
+
+        <!-- Input field for the signature password -->
         <div class="mb-5">
           <label
             class="text-center block text-[16px] leading-[20px] font-bold"
             for="password"
           >
             {{ $t("Signature-Password") }}
-          </label>
+        </label>
           <input
             type="password"
             id="password"
@@ -45,11 +51,14 @@
         </div>
       </div>
     </div>
+
+    <!-- Button to submit the form -->
     <div class="btn-area">
       <div class="m-auto mt-1 w-[300px]">
         <button class="main-button">{{ $t("Identity") }}</button>
       </div>
 
+      <!-- Back button to navigate back to the previous page -->
       <back-button></back-button>
     </div>
   </form>
@@ -61,11 +70,15 @@ import AusLoginImg from "@/assets/images/auslogin.svg";
 export default {
   data() {
     return {
-      AusLoginImg, // adding image as datapropery
+      // The image displayed on the login form
+      AusLoginImg,
+
+      // The username and password entered by the user
       username: "",
       password: "",
     };
   },
+
   methods: {
     async ausLoginSubmit() {
       if (this.username === "" || this.password === "") {
@@ -98,7 +111,6 @@ export default {
       //   this.$swal({
       //     title: this.$t("error"),
       //     text: this.$t("global-error"),
-      //     icon: "error",
       //   });
       //   return;
       // }
@@ -107,26 +119,4 @@ export default {
     },
   },
 };
-</script>
-<i18n>
-  {
-    "en":{
-      "authenticate-with-id-austria":"Authenticate with ID Austria",
-      "Username-Phone":"Username/Phone",
-      "Signature-Password":"Signature Password",
-      "Identity":"Identity",
-      "error": "Error",
-      "error-text": "Field cannot be empty",
-      "global-error": "Username and password didn't match"
-    },
-    "gr":{
-      "authenticate-with-id-austria":"Authentifizieren Sie sich mit ID Austria",
-      "Username-Phone":"Benutzername/Telefon",
-      "Signature-Password":"Signatur-Passwort",
-      "Identity":"Identität",
-      "error": "Fehler",
-      "error-text": "Feld darf nicht leer sein",
-      "global-error": "Benutzername und Passwort stimmen nicht überein"
-    }
-  }
-</i18n>
+      

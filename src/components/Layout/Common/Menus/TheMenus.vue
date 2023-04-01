@@ -75,6 +75,7 @@ export default {
       Type: String,
       required: false,
     },
+    // sideNav prop for adding gap between the main menus and profile menus in the dashabord
     sideNav: {
       Type: Boolean,
       required: false,

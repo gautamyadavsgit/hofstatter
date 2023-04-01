@@ -1,23 +1,25 @@
+// importing necessary modules
 import { createRouter, createWebHistory } from "vue-router";
-// importing Dashboard routes
 import DashboardRoutes from "./Dashboard/index.js";
 import store from "@/store/store.js";
 
+// creating router instance
 const router = createRouter({
   history: createWebHistory(),
+  // defining routes for the application
   routes: [
     {
+      // setting up the default route to redirect to login page
       path: "/",
-      // redirecting the root to the login welcome page
       redirect: { name: "login" },
     },
     {
-      // creating a group path for all the login pages
+      // setting up the login page
       path: "/login",
       name: "login",
       redirect: { name: "welcome" },
       component: () => import("@/Pages/Login/LoginMain.vue"),
-      //checking the condition if user is logged in or not and redirecting
+      // before entering login page, checking if user is logged in or not
       beforeEnter: (_, _2, next) => {
         if (store.state.login.isLoggedIn) {
           next("/dashboard");
@@ -25,6 +27,7 @@ const router = createRouter({
           next();
         }
       },
+      // defining child routes for login page
       children: [
         {
           path: "/welcome",
@@ -49,7 +52,7 @@ const router = createRouter({
           name: "enter-tpn",
           component: () =>
             import("@/Pages/Login/Childrens/EnterTpn.vue"),
-            //chcking the condition of phone and social security token is entered
+            // before entering enter-tpn page, checking if phone and social security token is entered
           beforeEnter: (_, _2, next) => {
             if (!store.state.login.phoneVerified) {
               next("/sms-login");
@@ -60,9 +63,10 @@ const router = createRouter({
         },
       ],
     },
-    // using Dashboard Routes
+    // including the Dashboard Routes
     ...DashboardRoutes,
   ],
+  // configuring the scroll behavior when navigating between pages
   scrollBehavior(_, _2, savedPosition) {
     if (savedPosition) {
       window.scrollTo(savedPosition);
@@ -72,4 +76,5 @@ const router = createRouter({
   },
 });
 
+// exporting the router instance
 export default router;
