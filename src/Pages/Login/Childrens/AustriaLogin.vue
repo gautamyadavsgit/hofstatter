@@ -40,7 +40,7 @@
             for="password"
           >
             {{ $t("Signature-Password") }}
-        </label>
+          </label>
           <input
             type="password"
             id="password"
@@ -119,4 +119,4 @@ export default {
     },
   },
 };
-      
+</script>

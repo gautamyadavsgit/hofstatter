@@ -1,17 +1,6 @@
 <template>
   <div>
     <div class="py-2 px-4">
-<<<<<<< HEAD:src/components/Pages/DashBoard/Setting/AccountSetting.vue
-      <form
-        class="account-setting"
-        @submit.prevent="changeAccountSetting"
-        ref="accountForm"
-      >
-        <h4 class="text-lg font-oxygenBold text-black">Change Phone Number-</h4>
-        <div class="md:flex justify-between w-11/12">
-          <div>
-            <label for="ppn"> Private Phone Number: </label>
-=======
       <form class="account-setting" @submit.prevent="">
         <h4 class="text-lg font-oxygenBold text-black">
           {{ $t("Change") + " " + $t("Phone Number") }}-
@@ -21,7 +10,6 @@
             <label for="ppn">
               {{ $t("Private") }} {{ $t("Phone Number") }}:
             </label>
->>>>>>> main:src/Pages/DashBoard/Setting/AccountSetting.vue
             <input
               placeholder="Enter your private phone number"
               id="ppn"
@@ -29,15 +17,10 @@
               v-model="privatePhone"
             />
           </div>
-<<<<<<< HEAD:src/components/Pages/DashBoard/Setting/AccountSetting.vue
-          <div>
-            <label for="ppn"> Work Phone Number: </label>
-=======
           <div class="w-full">
             <label for="wpn">
               {{ $t("Work") }} {{ $t("Phone Number") }}:
             </label>
->>>>>>> main:src/Pages/DashBoard/Setting/AccountSetting.vue
             <input
               placeholder="Enter your Work Phone Number"
               id="ppn"
@@ -45,15 +28,10 @@
               v-model="workPhone"
             />
           </div>
-<<<<<<< HEAD:src/components/Pages/DashBoard/Setting/AccountSetting.vue
-          <div>
-            <label for="ppn"> Fix Phone Number: </label>
-=======
           <div class="w-full">
             <label for="fpn">
               {{ $t("Fix") + " " + $t("Phone Number") }}
             </label>
->>>>>>> main:src/Pages/DashBoard/Setting/AccountSetting.vue
             <input
               placeholder="Enter your Fix Phone Number"
               id="ppn"
@@ -62,12 +40,6 @@
             />
           </div>
         </div>
-<<<<<<< HEAD:src/components/Pages/DashBoard/Setting/AccountSetting.vue
-        <div class="md:flex justify-between w-full md:w-11/12 mt-5">
-          <div>
-            <h4 class="text-lg font-oxygenBold text-black">Change Email-</h4>
-            <label for="ppn"> Private E-mail: </label>
-=======
         <div class="md:flex mt-5 md:space-x-11">
           <div class="w-full">
             <h4 class="text-lg font-oxygenBold text-black">
@@ -76,7 +48,6 @@
             <label for="p-email">
               {{ $t("Private") }} {{ $t("Email") }}:
             </label>
->>>>>>> main:src/Pages/DashBoard/Setting/AccountSetting.vue
             <input
               placeholder="Enter your private phone number"
               id="ppn"
@@ -96,17 +67,11 @@
               v-model="workEmail"
             />
           </div>
-<<<<<<< HEAD:src/components/Pages/DashBoard/Setting/AccountSetting.vue
-          <div>
-            <h4 class="text-lg font-oxygenBold text-black">Change Address-</h4>
-            <label for="ppn" class="flex">
-=======
           <div class="w-full">
             <h4 class="text-lg font-oxygenBold text-black">
               {{ $t("Change Address") }}-
             </h4>
             <label for="change-address" class="flex">
->>>>>>> main:src/Pages/DashBoard/Setting/AccountSetting.vue
               <span class="flex justify-between"
                 >Address Type:<input
                   type="radio"
@@ -136,15 +101,6 @@
             />
           </div>
         </div>
-<<<<<<< HEAD:src/components/Pages/DashBoard/Setting/AccountSetting.vue
-        <div class="flex mt-5 justify-around md:justify-end">
-          <main-button :link="false">Aktualisieren</main-button>
-          <main-button class="!bg-white !text-blue mx-2">Absagen</main-button>
-        </div>
-      </form>
-      <div
-        class="col-span-10 px-2 md:px-0 md:flex justify-between my-5 border-y py-4"
-=======
         <div class="flex mt-5 justify-between md:justify-end">
           <main-button :link="false">{{ $t("update") }}</main-button>
           <main-button class="!bg-white !text-blue mx-2">{{
@@ -154,7 +110,6 @@
       </form>
       <div
         class="col-span-10 md:px-0 lg:flex justify-between my-5 border-y py-4"
->>>>>>> main:src/Pages/DashBoard/Setting/AccountSetting.vue
       >
         <div>
           <h2
@@ -178,13 +133,8 @@
               </select>
               <input
                 type="text"
-<<<<<<< HEAD:src/components/Pages/DashBoard/Setting/AccountSetting.vue
-                class="md:w-64 w-36 rounded-full h-9 border-none mr-2 px-4 bg-[#80808026]"
-                placeholder="suche"
-=======
                 class="md:w-full w-full rounded-full h-9 border-none mr-2 px-4 bg-[#80808026]"
                 :placeholder="$t('search')"
->>>>>>> main:src/Pages/DashBoard/Setting/AccountSetting.vue
               />
               <main-button :link="false" mode="!py-1 !px-3">Apply</main-button>
             </form>
@@ -257,7 +207,7 @@ export default {
     };
   },
   methods: {
-    async changeAccountSetting(e) {
+    async changeAccountSetting() {
       const response = await fetch(
         "https://hofstatter-cf012-default-rtdb.asia-southeast1.firebasedatabase.app/users/" +
           this.$store.state.login.userId +

@@ -22,6 +22,7 @@
           weekdays: 'WWW',
         }"
         is-expanded
+        class="!w-full"
       />
       <!-- doctors data for appointments -->
       <div>
